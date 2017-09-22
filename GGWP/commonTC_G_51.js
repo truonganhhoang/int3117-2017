@@ -16,9 +16,9 @@ function getRandomInt(min,max){
 }
 const rand = getRandomInt(1, 99)
 const rand2 = getRandomInt(1, 5)
-describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', () => {
-    describe('Login with account admin_agency_10@gmail.com', () => {
-        it('Login ...', () => {
+describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', function () {
+    describe('Login with account admin_agency_10@gmail.com', function () {
+        it('Login ...', function () {
             cy.visit('http://52.187.8.102/signin')
             cy.get('input[name=email]').type('admin_agency_10@gmail.com')
             cy.get('input[name=password]').type('Methadone@2017')
@@ -26,8 +26,8 @@ describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', () => {
         })
     })
 
-    describe('Quan Ly Benh Nhan', () => {
-        it('Redirect ...', () => {
+    describe('Quan Ly Benh Nhan', function () {
+        it('Redirect ...', function () {
             cy.wait(delay)
             cy.visit('http://52.187.8.102/main/patients')
         })
@@ -64,9 +64,9 @@ describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', () => {
     })
 })
 
-describe('Kiem tra textarea voi tai khoan doctor_10@gmail.com', () => {
-    describe('Login with account doctor_10@gmail.com', () => {
-        it('Login ...', () => {
+describe('Kiem tra textarea voi tai khoan doctor_10@gmail.com', function () {
+    describe('Login with account doctor_10@gmail.com', function () {
+        it('Login ...', function () {
             cy.visit('http://52.187.8.102/signin')
             cy.get('input[name=email]').type('doctor_10@gmail.com')
             cy.get('input[name=password]').type('Methadone@2017')
@@ -74,8 +74,8 @@ describe('Kiem tra textarea voi tai khoan doctor_10@gmail.com', () => {
         })
     })
     
-    describe('Quan Ly Benh Nhan', () => {
-        it('Redirect ...', () => {
+    describe('Quan Ly Benh Nhan', function () {
+        it('Redirect ...', function () {
             cy.wait(delay)
             cy.visit('http://52.187.8.102/main/patients')
         })
