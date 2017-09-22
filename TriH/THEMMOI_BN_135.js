@@ -1,6 +1,6 @@
 describe('THEMMOI_BN', function() {
 
-	beforeEach(function(){
+	beforeEach(function(){ //Đăng nhập và chuyển tới trang thêm bệnh nhân
 
 		cy
 
@@ -15,122 +15,125 @@ describe('THEMMOI_BN', function() {
 	})
 
 	context('THEMMOI_BN_135',function(){
-
-		it("no fill date", function(){
+		// Kiểm tra khi nhập đủ các truong mà không nhập ngày cấp
+		it("Nhập đủ các trường nhưng không nhập 'Ngày cấp'", function(){
 
 			cy
+				//Nhập các trường bắt buộc
+				{
+					.get("label").contains("Họ và tên").parent().within(function(){
 
-				.get("label").contains("Họ và tên").parent().within(function(){
-
-					cy.get("input").focus().type("Nguyen Van A")
-
-				})
-
-				.get("input[name='birth_date']").focus().type("01/01/1999{enter}")
-
-				.get("label").contains("Giới tính").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-13").find("li").first().click()
-
-				.get("input[name='admission_date']").focus().type("01/11/1999{enter}")
-
-				.get("label").contains("Tỉnh/Thành phố thường trú").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-19").find("li").first().click()
-
-				.get("label").contains("Huyện/Quận thường trú").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-20").find("li").first().click()
-
-				.get("label").contains("Xã/Thị Trấn thường trú").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-21").find("li").first().click()
-
-				.get("label").contains("Tỉnh/Thành phố tạm trú").parent().within(function(){
-
-					cy.get("a").first().click()					
-
-				})
-
-				.get("label").contains("Huyện/Quận tạm trú").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-23").find("li").first().click()
-
-				.get("label").contains("Xã/Thị Trấn tạm trú").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-24").find("li").first().click()
-
-				.get("label").contains("Loại giấy tờ").parent().within(function(){
-
-					cy.get("a").click()					
-
-				})	
-
-				.get("#ui-select-choices-25").find("li").first().click()	
-
-				.get("label").contains("Số").parent().within(function(){
-
-					cy.get("input").focus().type("111111111")
-
-				})
-
-				.get("input[name='identification_issued_by']").focus().type("HN")
-
-				.get(".general-item-list").within(function(){
-
-					cy.get("label").contains("Họ và tên").parent().within(function(){
-
-						cy.get("input").focus().type("Nguyen Van B")
-
-					})	
-
-				})
-
-				.get("label").contains("Mối quan hệ").parent().within(function(){
-
-						cy.get("a").click()
+						cy.get("input").focus().type("Nguyen Van A")
 
 					})
 
-				.get("#ui-select-choices-26").find("li").first().click()
+					.get("input[name='birth_date']").focus().type("01/01/1999{enter}")
 
+					.get("label").contains("Giới tính").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-13").find("li").first().click()
+
+					.get("input[name='admission_date']").focus().type("01/11/1999{enter}")
+
+					.get("label").contains("Tỉnh/Thành phố thường trú").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-19").find("li").first().click()
+
+					.get("label").contains("Huyện/Quận thường trú").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-20").find("li").first().click()
+
+					.get("label").contains("Xã/Thị Trấn thường trú").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-21").find("li").first().click()
+
+					.get("label").contains("Tỉnh/Thành phố tạm trú").parent().within(function(){
+
+						cy.get("a").first().click()					
+
+					})
+
+					.get("label").contains("Huyện/Quận tạm trú").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-23").find("li").first().click()
+
+					.get("label").contains("Xã/Thị Trấn tạm trú").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-24").find("li").first().click()
+
+					.get("label").contains("Loại giấy tờ").parent().within(function(){
+
+						cy.get("a").click()					
+
+					})	
+
+					.get("#ui-select-choices-25").find("li").first().click()	
+
+					.get("label").contains("Số").parent().within(function(){
+
+						cy.get("input").focus().type("111111111")
+
+					})
+
+					.get("input[name='identification_issued_by']").focus().type("HN")
+
+					.get(".general-item-list").within(function(){
+
+						cy.get("label").contains("Họ và tên").parent().within(function(){
+
+							cy.get("input").focus().type("Nguyen Van B")
+
+						})	
+
+					})
+
+					.get("label").contains("Mối quan hệ").parent().within(function(){
+
+							cy.get("a").click()
+
+						})
+
+					.get("#ui-select-choices-26").find("li").first().click()
+				}
+				//Lưu
 				.get("button").contains("Lưu").click()
 				.wait(3000)
-
+				// Kiểm tra thông báo lỗi có hiển thị không
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
 					cy.get(".text-error").should("not.have.css","display","none")
 
 				})
+				// Kiểm tra thông báo lỗi đã đúng chưa
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
 						cy.get(".text-error").should("contain","Trường này không được để trống.")
 
-					})
+				})
 
 		})
 

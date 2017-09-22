@@ -1,6 +1,6 @@
 describe('THEMMOI_BN', function() {
 
-	beforeEach(function(){
+	beforeEach(function(){ //Đăng nhập và chuyển tới trang thêm bệnh nhân
 
 		cy
 
@@ -17,7 +17,7 @@ describe('THEMMOI_BN', function() {
 
 
 	context('THEMMOI_BN_132',function(){
-
+		//Thêm ngày vào trường "Ngày cấp"
 		beforeEach(function(){
 
 			cy.get("input[name='identification_issued_date']")
@@ -25,22 +25,20 @@ describe('THEMMOI_BN', function() {
 			.type("25/12/2012").type("{enter}")
 
 		})
-
-		it("click calender", function(){
+		//Kiểm tra xem Calendar có focus đúng ngày đã nhập không
+		it("Kiểm tra Calendar", function(){ 
 
 			cy
-
+				// Mở Calendar
 				.get("div[class='form-group']").contains("Ngày cấp").parent().within(function(){
 
 					cy.root().get("i[class='fa fa-calendar']").click()
 
 				})
-
-				.get("th[class='datepicker-switch']").should("contain","December 2012")
-
-				.get("td.active.day").should("contain","25")
-
-
+				//Kiểm tra tháng năm
+				.get("th[class='datepicker-switch']").should("contain","December 2012") 
+				//Kiểm tra ngày
+				.get("td.active.day").should("contain","25") 
 
 		})
 

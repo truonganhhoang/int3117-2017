@@ -1,6 +1,6 @@
 describe('THEMMOI_BN', function() {
 
-	beforeEach(function(){
+	beforeEach(function(){ //Đăng nhập và chuyển tới trang thêm bệnh nhân
 
 		cy
 
@@ -15,16 +15,16 @@ describe('THEMMOI_BN', function() {
 	})
 
 	context("THEMMOI_BN_136", function(){
-
-		it("calendar",function(){
+		//Kiểm tra thông báo khi ngày cấp > ngày hiện tại
+		it("Ngày cấp > Ngày hiện tại",function(){
 
 			cy
-
+				// Nhập ngày cấp > hiện tại 1 ngày
 				.get("div[class='form-group']").contains("Ngày cấp").parent().within(function(){
 
 					var now = new Date();
 
-					var date = now.getDate()+1;
+					var date = now.getDate() + 1;
 
 					var month = now.getMonth() + 1;
 
@@ -41,17 +41,17 @@ describe('THEMMOI_BN', function() {
 					cy.root().get(".ng-empty").focus().type(date_pick)// ko co lenh {tab}		
 
 				})
-
+				//Lưu
 				.get("button").contains("Lưu").click()
 
 				.wait(3000)
-				
+				// Kiểm tra thông báo lỗi có hiển thị không
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
 					cy.get(".text-error").should("not.have.css","display","none")
 
 				})
-
+				// Kiểm tra thông báo lỗi đã đúng chưa
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
 						cy.get(".text-error").should("contain","Vui lòng nhập ngày nhỏ hơn ngày hiện tại")

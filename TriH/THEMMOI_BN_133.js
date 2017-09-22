@@ -1,6 +1,6 @@
 describe('THEMMOI_BN', function() {
 
-	beforeEach(function(){
+	beforeEach(function(){ //Đăng nhập và chuyển tới trang thêm bệnh nhân
 
 		cy
 
@@ -15,21 +15,21 @@ describe('THEMMOI_BN', function() {
 	})
 
 	context('THEMMOI_BN_133',function(){
-
-		it("pick date", function(){
+		//Kiểm tra chọn từ Calendar có đúng không
+		it("Chọn ngày", function(){
 
 			cy
-
+				// Mở Calendar
 				.get("div[class='form-group']").contains("Ngày cấp").parent().within(function(){
 
 					cy.root().get("i[class='fa fa-calendar']").click()
 
 				})
-
+				//Chọn ngày
 				.get("div.datepicker-days").find("td.today.day").prev().click()
-
-				.get("div").should("not.have.class","datepicker-days") //Kiem tra calendar co dong hay khong
-
+				// Kiểm tra Calendar đã đóng chưa
+				.get("div").should("not.have.class","datepicker-days") 
+				//Kiểm tra ngày có đúng như đã chọn không
 				.get("div[class='form-group']").contains("Ngày cấp").parent().within(function(){
 
 					var now = new Date();
