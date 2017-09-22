@@ -4,7 +4,9 @@
   "description": "Test scripts for SQA 2017 Assigment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cypress:open": "./node_modules/.bin/cypress open"
   },
   "repository": {
     "type": "git",
