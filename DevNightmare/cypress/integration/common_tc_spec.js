@@ -1,13 +1,16 @@
-
-
 describe('Common TC_GUI', function(){
-	context('Numberic fields testing', function(){
+
+	context('Validate dữ liệu trường số', function(){
+
 		beforeEach(function(){
-			cy.visit("/")
+			cy.visit("/signin")
 		})
 
-		it('Assert sample url', function(){
-			cy.url().should('include', '/signin')
+		it('Thêm đơn thuốc - liều lượng', function(){
+			cy.fixture('users').then(users => {
+				cy.doLoginAs(users.doctor)
+			})
+
 		})
 	})
 })
