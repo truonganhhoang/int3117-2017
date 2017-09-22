@@ -1,6 +1,6 @@
 describe('THEMMOI_BN', function() {
 
-	beforeEach(function(){
+	beforeEach(function(){ //Đăng nhập và chuyển tới trang thêm bệnh nhân
 
 		cy
 
@@ -15,23 +15,25 @@ describe('THEMMOI_BN', function() {
 	})
 
 	context('THEMMOI_BN_134',function(){
-
-		it("fill date", function(){
+		// Kiểm tra thông báo khi nhập ngày sai định dạng
+		it("Nhập ngày sai định dạng", function(){
 
 			cy
-
+				//Nhập ngày sai định dạng
 				.get("div[class='form-group']").contains("Ngày cấp").parent().within(function(){
 
-					cy.root().get(".ng-empty").focus().type("12/12/122{enter}")// ko co lenh {tab}
+					cy.root().get(".ng-empty").focus().type("12/12/122{enter}")// ko co lenh {tab}, dung tam {enter}
 
 						
 
 				})
+				// Kiểm tra thông báo lỗi có hiển thị không
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
 					cy.get(".text-error").should("not.have.css","display","none")
 
 				})
+				// Kiểm tra thông báo lỗi đã đúng chưa
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
 					cy.get(".text-error").should("contain","Ngày tháng không đúng định dạng")
