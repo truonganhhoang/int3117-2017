@@ -1,3 +1,4 @@
 before_install: cd DevNightmare
 script:
-  - cypress run
+  - npm update
+  - npm run cypress:run
