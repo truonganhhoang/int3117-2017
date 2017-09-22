@@ -10,7 +10,7 @@
  * admin_10@gmail.com
  * storekeeper_10@gmail.com
  */
-let delay = 3000 // 3second delay trang mang lag
+const delay = 3000 // 3second delay trang mang lag
 function getRandomInt(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
 }
