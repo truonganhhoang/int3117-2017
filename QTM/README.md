@@ -24,8 +24,8 @@ $ npm install cypress --save-dev
 
 ```
 ##### Mở Cypress
-Tạo file `pagekage.json` trong thư mục chứa project
-Thêm đoạn mã sau vào file `pagekage.json`
+Tạo file `package.json` trong thư mục chứa project
+Thêm đoạn mã sau vào file `package.json`
 >{
 >  "scripts": {
 >      "cypress:open": "cypress open"
