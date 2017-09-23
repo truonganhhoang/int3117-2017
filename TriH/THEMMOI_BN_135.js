@@ -21,7 +21,7 @@ describe('THEMMOI_BN', function() {
 			cy
 				//Nhập các trường bắt buộc
 				
-					.get("label").contains("Họ và tên").parent().within(function(){
+					.get("label.required").contains("Họ và tên").parent().within(function(){
 
 						cy.get("input").focus().type("Nguyen Van A")
 
@@ -29,7 +29,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("input[name='birth_date']").focus().type("01/01/1999{enter}")
 
-					.get("label").contains("Giới tính").parent().within(function(){
+					.get("label.required").contains("Giới tính").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -39,7 +39,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("input[name='admission_date']").focus().type("01/11/1999{enter}")
 
-					.get("label").contains("Tỉnh/Thành phố thường trú").parent().within(function(){
+					.get("label.required").contains("Tỉnh/Thành phố thường trú").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -47,7 +47,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("#ui-select-choices-19").find("li").first().click()
 
-					.get("label").contains("Huyện/Quận thường trú").parent().within(function(){
+					.get("label.required").contains("Huyện/Quận thường trú").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -55,7 +55,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("#ui-select-choices-20").find("li").first().click()
 
-					.get("label").contains("Xã/Thị Trấn thường trú").parent().within(function(){
+					.get("label.required").contains("Xã/Thị Trấn thường trú").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -63,13 +63,13 @@ describe('THEMMOI_BN', function() {
 
 					.get("#ui-select-choices-21").find("li").first().click()
 
-					.get("label").contains("Tỉnh/Thành phố tạm trú").parent().within(function(){
+					.get("label.required").contains("Tỉnh/Thành phố tạm trú").parent().within(function(){
 
 						cy.get("a").first().click()					
 
 					})
 
-					.get("label").contains("Huyện/Quận tạm trú").parent().within(function(){
+					.get("label.required").contains("Huyện/Quận tạm trú").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -77,7 +77,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("#ui-select-choices-23").find("li").first().click()
 
-					.get("label").contains("Xã/Thị Trấn tạm trú").parent().within(function(){
+					.get("label.required").contains("Xã/Thị Trấn tạm trú").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -85,7 +85,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("#ui-select-choices-24").find("li").first().click()
 
-					.get("label").contains("Loại giấy tờ").parent().within(function(){
+					.get("label.required").contains("Loại giấy tờ").parent().within(function(){
 
 						cy.get("a").click()					
 
@@ -93,7 +93,7 @@ describe('THEMMOI_BN', function() {
 
 					.get("#ui-select-choices-25").find("li").first().click()	
 
-					.get("label").contains("Số").parent().within(function(){
+					.get("label.required").contains("Số").parent().within(function(){
 
 						cy.get("input").focus().type("111111111")
 
@@ -103,7 +103,7 @@ describe('THEMMOI_BN', function() {
 
 					.get(".general-item-list").within(function(){
 
-						cy.get("label").contains("Họ và tên").parent().within(function(){
+						cy.get("label.required").contains("Họ và tên").parent().within(function(){
 
 							cy.get("input").focus().type("Nguyen Van B")
 
@@ -111,7 +111,7 @@ describe('THEMMOI_BN', function() {
 
 					})
 
-					.get("label").contains("Mối quan hệ").parent().within(function(){
+					.get("label.required").contains("Mối quan hệ").parent().within(function(){
 
 							cy.get("a").click()
 
@@ -123,13 +123,13 @@ describe('THEMMOI_BN', function() {
 				.get("button").contains("Lưu").click()
 				.wait(3000)
 				// Kiểm tra thông báo lỗi có hiển thị không
-				.get("label").contains("Ngày cấp").parent().within(function(){
+				.get("label.required").contains("Ngày cấp").parent().within(function(){
 
 					cy.get(".text-error").should("not.have.css","display","none")
 
 				})
 				// Kiểm tra thông báo lỗi đã đúng chưa
-				.get("label").contains("Ngày cấp").parent().within(function(){
+				.get("label.required").contains("Ngày cấp").parent().within(function(){
 
 						cy.get(".text-error").should("contain","Trường này không được để trống.")
 
