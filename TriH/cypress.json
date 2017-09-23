@@ -1,0 +1,9 @@
+{
+	"projectId": "box56v",
+	"baseUrl": "http://52.187.8.102",
+	"env": {
+		"sign":"/signin",
+		"newPatient":"/main/patients/new"
+	}
+
+}
