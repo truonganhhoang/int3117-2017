@@ -1,0 +1,6 @@
+{
+  "env": {
+    "host": "http://52.187.8.102",
+    "edit_info_patient_504": "http://52.187.8.102/main/patients/405/edit"
+  }
+}
