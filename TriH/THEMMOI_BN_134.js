@@ -27,6 +27,8 @@ describe('THEMMOI_BN', function() {
 						
 
 				})
+				.get("button").contains("Lưu").click()
+				.wait(3000)
 				// Kiểm tra thông báo lỗi có hiển thị không
 				.get("label").contains("Ngày cấp").parent().within(function(){
 
