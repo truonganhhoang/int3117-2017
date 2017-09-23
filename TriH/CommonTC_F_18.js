@@ -1,5 +1,5 @@
-describe('CommonTC_F_16', function() {
-	it('CommonTC_F_16 hien thong bao xac nhan xoa',function(){
+describe('CommonTC_F_18', function() {
+	it('CommonTC_F_18 hien thong bao xac nhan xoa',function(){
 
 		cy
 

@@ -1,5 +1,5 @@
 describe('CommonTC_F_21', function() {
-	it('Test',function(){
+	it('CommonTC_F_21 xoa ban ghi co rang buoc',function(){
 
 		cy
 
