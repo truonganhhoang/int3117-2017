@@ -20,7 +20,7 @@ describe('THEMMOI_BN', function() {
 
 			cy
 				//Nhập các trường bắt buộc
-				{
+				
 					.get("label").contains("Họ và tên").parent().within(function(){
 
 						cy.get("input").focus().type("Nguyen Van A")
@@ -118,7 +118,7 @@ describe('THEMMOI_BN', function() {
 						})
 
 					.get("#ui-select-choices-26").find("li").first().click()
-				}
+				
 				//Lưu
 				.get("button").contains("Lưu").click()
 				.wait(3000)
