@@ -26,7 +26,7 @@ describe('THEMMOI_BN', function() {
 
 				})
 				//Nhập ngày sinh
-				.get("input[name='admission_date']").focus().type("01/01/2013")
+				.get("input[name='birth_date']").focus().type("01/01/2013")
 				//Lưu
 				.get("button").contains("Lưu").click()
 
