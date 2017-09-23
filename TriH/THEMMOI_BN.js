@@ -76,7 +76,7 @@ describe('THEMMOI_BN', function() {
 		})
 
 		// Kiểm tra thông báo khi nhập ngày sai định dạng
-		it("NTHEMMOI_BN_134_hập ngày sai định dạng", function(){
+		it("THEMMOI_BN_134_Nhập ngày sai định dạng", function(){
 
 			cy
 				// Nhập ngày sai định dạng
