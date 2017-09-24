@@ -1,22 +1,10 @@
-var METHADONE_URL = 'http://52.187.8.102';
-var METHADONE_URL_LOGIN = METHADONE_URL + '/signin';
-var METHADONE_URL_ADMIN = METHADONE_URL + '/main/admin/administrators';
-var METHADONE_URL_EMPLOYMENTS = METHADONE_URL_ADMIN + '/employments';
-
-var METHADONE_USER_ADMIN = 'admin_10@gmail.com';
-var METHADONE_USER_AGENCY = 'admin_agency_10@gmail.com';
-var METHADONE_USER_DOCTOR = 'doctor_10@gmail.com';
-var METHADONE_USER_NURSE = 'nurse_10@gmail.com';
-var METHADONE_USER_STORE = 'storekeeper_10@gmail.com';
-var METHADONE_LOGIN_PASSWORD = 'Methadone@2017';
-
 describe('Kiểm tra TextArea', function () {
 	describe('CommonTC_G_46 Kiểm tra giá trị mặc định', function () {
 		describe('Tài khoản quản trị hệ thống', function () {
 			it('Đăng nhập...', function () {
-				cy.visit(METHADONE_URL_LOGIN);
-				cy.get('input[name=email]').type(METHADONE_USER_ADMIN);
-				cy.get('input[name=password]').type(METHADONE_LOGIN_PASSWORD);
+				cy.visit(Cypress.env('URL_LOGIN'));
+				cy.get('input[name=email]').type(Cypress.env('USER_ADMIN'));
+				cy.get('input[name=password]').type(Cypress.env('LOGIN_PASSWORD'));
 				cy.get('button[type=submit]').click().should('not.exist');
 			});
 			
