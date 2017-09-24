@@ -18,27 +18,32 @@ describe('My First Test', function(){
 		it('Kiem tra so luong va sap xep cac gia tri combo', function(){
 			//cy.wait(delay)
 			cy.get('div[ng-model="patient.resident_district_id"]').first().click()
+			var values = [];
 			cy.get('div[ng-model="patient.resident_district_id"]').within(function(){
-				var values = [];
+				
 				cy.get('ul>li>div>span').each(function($span, index, $spans){// Iterate through each 'li'
 					values.push($span.text())
 				//	console.log(values)
-				})
-				console.log(values)
-				console.log(alphabet(values))
-				console.log(alphabet([1, 2, 2, 1]))
-				//check day co theo alphabet
-				assert.isTrue(alphabet(values));
-				console.log('ok')
+				}).then(() => {
+					console.log(values)
+					console.log(alphabet(values))
+					console.log(alphabet([1, 2, 2, 1]))
+					//check day co theo alphabet
+					assert.isTrue(alphabet(values));
+					console.log('ok')
+				})				
 				//}
 			})
+			
 		})
 	})
 })
 
 var alphabet = function(a){
 	var b = a.concat();
-	b.sort();
+	b.sort(function(x, y) { 
+    	return x.toString().localeCompare(y);
+	});
 	console.log(a)
 	console.log(b)
 	return arrayEquals(a, b)
