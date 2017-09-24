@@ -2,7 +2,7 @@ describe('Common TC_GUI', function() {
   context('Validate du lieu truong so', function() {
   
     const typeToDosage = function(dosage) {
-      return cy.get('input[name="dosage"]').type(dosage + '{enter}')
+      return cy.get('input[ng-model="new_prescription.dosage"]').type(dosage + '{enter}')
     }
 
     const dosageMustBeFocused = function() {
@@ -24,11 +24,10 @@ describe('Common TC_GUI', function() {
         .first().click()
       
       // chon don thuoc
-      cy.get('div[name="medicine_list_id"]').click()
-        .find('tr').last().click()
+      cy.doSelect2('div[name="medicine_list_id"]', 'Methadose')
     
       // dien thoi luong
-      cy.get('input[name="duration"]').type('90')
+      cy.get('input[ng-model="new_prescription.duration"]').type('90')
     })
 
     // dien qua lieu luong cho phep
@@ -53,7 +52,7 @@ describe('Common TC_GUI', function() {
 
     // dien lieu luong nam trong khoang cho phep
     it('Common_TC_G_31', function() {
-      typeToDosage(50)
+      cy.doRandInt(2, 999).then(value => typeToDosage(value))
       cy.get('body').should('contain', CREATE_PRESCRIPTION_SUCCESS)
     })
 
