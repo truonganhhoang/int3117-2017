@@ -2,11 +2,11 @@ var uuid = require('uuid');
 
 describe('Nhập dữ liệu là số có chữ số 0 đầu tiên', function() {
     beforeEach(function() {
-        cy.visit('signin');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
-        cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-        cy.wait(1000);
+        cy.visit(Cypress.env("routes.signin"));
+        cy.get('[name="email"]').type(Cypress.env("accounts.admin.email"));
+        cy.get('[name="password"]').type(Cypress.env("accounts.admin.password"));
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_sigin"));
     });
 
     var randInt = Date.now() % 100000000;
@@ -14,42 +14,42 @@ describe('Nhập dữ liệu là số có chữ số 0 đầu tiên', function()
     var randIntNotTrim = zero + randInt;
     var randStr = uuid.v4();
 
-    it('Danh mục tài chính', function () {
-        cy.visit('main/admin/administrators/financials');
-        cy.wait(500);
+    it('financials', function () {
+        cy.visit(Cypress.env("routes.main.financials"));
+        cy.wait(Cypress.env("delays.after_visit"));
 
         // add
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > a').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div > div:nth-child(2) > input').type(randIntNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div > div:nth-child(4) > input').type(randIntNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-footer > button').click();
-        cy.wait(1000);
+        cy.get('[ng-click="showCreateFinancialModal()"]').click();
+        cy.get('[name="fromfinancial"]').type(randIntNotTrim);
+        cy.get('[name="tofinancial"]').type(randIntNotTrim);
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_create"));
 
         // test
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.row > div > div:nth-child(1) > form > input').type(randInt).type('{enter}');
+        cy.get('[ng-model="keyword"]').type(randInt).type('{enter}');
         cy.get('#currency-no-fractions').should('not.contain', 'Từ ' + zero).and('not.contain', 'đến ' + zero);
     });
 
-    it('Danh mục thuốc', function () {
-        cy.visit('main/admin/administrators/medicine_list');
-        cy.wait(500);
+    it('medicine_list', function () {
+        cy.visit(Cypress.env("routes.main.medicine_list"));
+        cy.wait(Cypress.env("delays.after_visit"));
 
         // add
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > a').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(1) > div.col-xs-8.form-group > input').type(randStr);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(2) > div.col-xs-8.form-group > input').type(randStr);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(3) > div.col-xs-8.form-group > input').type(zero + '1111');
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(4) > div.col-xs-8.form-group > input').type(zero + '1111');
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(5) > div.col-xs-8.form-group > input').type(randStr);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(7) > div.col-xs-8.form-group > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a > span.select2-chosen.ng-binding').click();
+        cy.get('[ng-click="showCreateMedicineModal()"]').click();
+        cy.get('[name="name"]').type(randStr);
+        cy.get('[name="composition"]').type(randStr);
+        cy.get('[name="concentration"]').type(zero + '1111');
+        cy.get('[name="packing"]').type(zero + '1111');
+        cy.get('[name="unit"]').type(randStr);
+        cy.get('[name="medicine_type_id"]').click();
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-footer > button').click();
-        cy.wait(1000);
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_create"));
 
         // test
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.row > div > div:nth-child(1) > form > input').type(randStr).type('{enter}');
-        cy.wait(500);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(4)').should('not.contain', zero);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(5)').should('not.contain', zero);
+        cy.get('[ng-model="keyword"]').type(randStr).type('{enter}');
+        cy.wait(Cypress.env("delays.after_search"));
+        cy.get('tbody > tr:first-child > td:nth-child(4)').should('not.contain', zero);
+        cy.get('tbody > tr:first-child > td:nth-child(5)').should('not.contain', zero);
     });
 });
