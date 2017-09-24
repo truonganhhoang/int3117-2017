@@ -2,7 +2,7 @@ var homeLink = 'http://13.76.80.144';
 var signinLink = homeLink + '/signin';
 var newpatientsLink = homeLink + '/main/patients/new';
 
-describe('Kiem_tra_can_le_quan_huyen_tam_tru', function () {
+describe('Kiem_tra_quan_huyen_mac_dinh', function () {
   	it('signin', function () {
   		cy.visit(signinLink);
  		cy.get('input[name=email]').type('doctor_10@gmail.com');
@@ -10,6 +10,6 @@ describe('Kiem_tra_can_le_quan_huyen_tam_tru', function () {
   		cy.wait(500);
  		cy.visit(newpatientsLink);
  		cy.get('div[name=resident_district_id]').click();
- 		cy.get('.ui-select-choices ui-select-choices-content select2-results ng-scope li ul li div').should('have.css','text-align','left');
+ 		cy.get('.ui-select-choices-group ul li div').should('have.css','text-align','left');
   	});
   })
