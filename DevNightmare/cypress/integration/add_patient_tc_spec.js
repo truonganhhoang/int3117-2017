@@ -12,7 +12,7 @@ describe('Them moi benh nhan', function() {
 
       cy.fixture('sample_patient').then(patient => {
         cy.get('.portlet').last().within(function() {
-
+/*
           // ho va ten
           cy.get('input[ng-model="patient.name"]').type(patient.name)
 
@@ -49,13 +49,26 @@ describe('Them moi benh nhan', function() {
           // nguoi than
           cy.get('input[ng-model="contact.name"]').type(patient.contacts[0].name)
           cy.doSelect2('div[ng-model="contact.contact_type"]', patient.contacts[0].contact_type)
-
+*/
         })
       })
     })
 
+    const getPatientInfoPortlet = function() {
+      return cy.get('.portlet').eq(1)
+    }
+
     it('THEMMOI_BN_50', function() {
-      
+      getPatientInfoPortlet().within(function() {
+        cy.get('input[ng-model="patient.admission_date"]').type('20/10/2005')
+          .siblings('span').click()
+      })
+      cy.get('.datepicker-days').should('contain', 'October 2005')
+        .find('td.active').should('contain', '20')
+    })
+
+    it('THEMMOI_BN_52', function() {
+                                                                                                              
     })
   })
 })
