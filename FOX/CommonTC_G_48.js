@@ -1,5 +1,5 @@
 describe('Kiểm tra TextArea', function () {
-	describe('CommonTC_G_47 Kiểm tra dữ liệu là bắt buộc nhập', function () {
+	describe('CommonTC_G_48 Kiểm tra dữ liệu không được vượt quá maxlength', function () {
 		describe('Tài khoản quản trị hệ thống', function () {
 			it('Đăng nhập...', function () {
 				cy.visit(Cypress.env('URL_LOGIN'));
