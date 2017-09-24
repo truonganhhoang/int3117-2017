@@ -15,10 +15,13 @@ describe('My First Test', function(){
       	cy.visit('http://13.76.80.144/main/patients/new')
     })
 
-		it('Kiểm tra số lượng và sắp xếp các giá trị trong combo', function(){
-			cy.get('.ui-select-container[ng-model="patient.resident_district_id"]').text()
+		it('Check giá trị mặc định của combobox quận huyện tạm trú', function(){
+			cy.wait(delay)
+			cy.get('.ui-select-container[ng-model="patient.resident_district_id"]').within(function(){
+				cy.get('a').should('have.attr','placeholder','-- Vui lòng chọn --')//its('value').should('eq','--Vui lòng chọn')
+			})
 		})
-
 
 	})
 })
+
