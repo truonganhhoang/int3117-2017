@@ -1,7 +1,8 @@
 {
   "name": "Nguyen Van A",
-  "birth_date": "01/01/1990",
+  "birth_date": "14/07/1990",
   "gender": "Nam",
+  "admission_date": "25/05/2017",
   "province_id": "Hà Nội",
   "district_id": "Chương Mỹ",
   "ward_id": "Đại Yên",
