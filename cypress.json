@@ -12,6 +12,7 @@
     "URL_LOGIN":"/signin",
     "URL_ADMIN":"/main/admin/administrators",
     "URL_EDIT_INFO_PATIENT_405":"/main/patients/405/edit",
-    "URL_ADD_NEW_PATIENT": "/main/patients/new"
+    "URL_ADD_NEW_PATIENT": "/main/patients/new",
+    "URL_EXECUTIVE_INFO": "/detail/executive_info"
   }
 }
