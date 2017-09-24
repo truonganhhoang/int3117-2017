@@ -2,7 +2,7 @@ var uuid = require('uuid');
 
 describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
     beforeEach(function() {
-        cy.visit('http://52.187.8.102/');
+        cy.visit('signin');
     });
 
     var html = '</table>';
@@ -17,7 +17,7 @@ describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
         cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
         cy.wait(1000);
 
-        cy.visit('http://52.187.8.102/main/patients');
+        cy.visit('main/patients');
         cy.wait(500);
 
         // add
@@ -43,7 +43,7 @@ describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
         cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
         cy.wait(1000);
 
-        cy.visit('http://52.187.8.102/main/patients/new');
+        cy.visit('main/patients/new');
         cy.wait(500);
 
         // required fields
@@ -91,7 +91,7 @@ describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
         cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
         cy.wait(1000);
 
-        cy.visit('http://52.187.8.102/main/admin/administrators');
+        cy.visit('main/admin/administrators');
         cy.wait(500);
 
         // add
@@ -119,7 +119,7 @@ describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
         cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
         cy.wait(1000);
 
-        cy.visit('http://52.187.8.102/main/admin/administrators/issuing_agency');
+        cy.visit('main/admin/administrators/issuing_agency');
         cy.wait(500);
 
         // add
@@ -147,7 +147,7 @@ describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
         cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
         cy.wait(1000);
 
-        cy.visit('http://52.187.8.102/main/admin/administrators/medicine_list');
+        cy.visit('main/admin/administrators/medicine_list');
         cy.wait(500);
 
         // add
@@ -172,31 +172,31 @@ describe('Kiểm tra khi nhập dữ liệu là các thẻ html', function() {
 
     var testcases = [
         {
-            url: 'http://52.187.8.102/main/admin/administrators/employments',
+            url: 'main/admin/administrators/employments',
             name: 'Danh mục nghề nghiệp'
         },
         {
-            url: 'http://52.187.8.102/main/admin/administrators/maritals',
+            url: 'main/admin/administrators/maritals',
             name: 'Danh mục hôn nhân'
         },
         {
-            url: 'http://52.187.8.102/main/admin/administrators/educations',
+            url: 'main/admin/administrators/educations',
             name: 'Danh mục trình độ học vấn'
         },
         {
-            url: 'http://52.187.8.102/main/admin/administrators/stop_reasons',
+            url: 'main/admin/administrators/stop_reasons',
             name: 'Danh mục lý do ngừng điều trị'
         },
         {
-            url: 'http://52.187.8.102/main/admin/administrators/manufacturers',
+            url: 'main/admin/administrators/manufacturers',
             name: 'Danh mục nhà sản xuất'
         },
         {
-            url: 'http://52.187.8.102/main/admin/administrators/providers',
+            url: 'main/admin/administrators/providers',
             name: 'Danh mục nhà phân phối'
         },
         {
-            url: 'http://52.187.8.102/main/admin/administrators/sources',
+            url: 'main/admin/administrators/sources',
             name: 'Danh mục nguồn thuốc'
         }
     ];

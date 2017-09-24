@@ -2,7 +2,7 @@ var uuid = require('uuid');
 
 describe('Nhập dữ liệu là số có chữ số 0 đầu tiên', function() {
     beforeEach(function() {
-        cy.visit('http://52.187.8.102/');
+        cy.visit('signin');
         cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
         cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
         cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
@@ -15,7 +15,7 @@ describe('Nhập dữ liệu là số có chữ số 0 đầu tiên', function()
     var randStr = uuid.v4();
 
     it('Danh mục tài chính', function () {
-        cy.visit('http://52.187.8.102/main/admin/administrators/financials');
+        cy.visit('main/admin/administrators/financials');
         cy.wait(500);
 
         // add
@@ -31,7 +31,7 @@ describe('Nhập dữ liệu là số có chữ số 0 đầu tiên', function()
     });
 
     it('Danh mục thuốc', function () {
-        cy.visit('http://52.187.8.102/main/admin/administrators/medicine_list');
+        cy.visit('main/admin/administrators/medicine_list');
         cy.wait(500);
 
         // add
