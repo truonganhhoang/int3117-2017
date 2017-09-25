@@ -1,8 +1,12 @@
-const delay = 2000
+const delay = 2000;
+const homeLink = 'http://13.76.80.144';
+const signinLink = homeLink + '/signin';
+const newpatientsLink = homeLink + '/main/patients/new';
+
 describe('My First Test', function(){
 	describe('Đăng nhập ', function() {
 		it('Đăng nhập ', function(){
-		    cy.visit('http://13.76.80.144/signin')
+		    cy.visit(signinLink)
 		    cy.get('input[name=email]').type('doctor_10@gmail.com')
 		    cy.get('input[name=password]').type('Methadone@2017')
 				cy.get('button[type=submit]').click()
@@ -11,9 +15,9 @@ describe('My First Test', function(){
 
 	describe('Thêm mới bệnh nhân ', function(){
 		it('Chuyển đến trang thêm mới bệnh nhân', function () {
-        cy.wait(delay)
-      	cy.visit('http://13.76.80.144/main/patients/new')
-    })
+	        cy.wait(delay)
+	      	cy.visit(newpatientsLink)
+	    })
 
 		it('Check chuc nang tim kiem tren combobox', function(){
 			cy.get('div[ng-model="patient.resident_district_id"]').click()
