@@ -1,11 +1,16 @@
+const homeLink = 'http://13.76.80.144';
+const signinLink = homeLink + '/signin';
+const sample_executive_info = homeLink + '/main/patients/37/detail/executive_info';
+
+
 describe('GUI Testing', function() {
 	it('Starting', function() {
-		cy.visit('http://13.76.80.144/signin')
+		cy.visit(homeLink)
 		cy.get('input[name=email]').type('admin_agency_10@gmail.com')
 		cy.get('input[name=password]').type('Methadone@2017{enter}')
 		cy.wait(1234)
 
-		cy.visit('http://13.76.80.144/main/patients/37/detail/executive_info')
+		cy.visit(sample_executive_info)
 	})
 
 	it('Confirm before delete', function() {
