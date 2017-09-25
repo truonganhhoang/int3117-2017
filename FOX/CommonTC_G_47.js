@@ -1,5 +1,5 @@
 describe('Kiểm tra TextArea', function () {
-	describe('CommonTC_G_46 Kiểm tra giá trị mặc định', function () {
+	describe('CommonTC_G_47 Kiểm tra dữ liệu là bắt buộc nhập', function () {
 		describe('Tài khoản quản trị hệ thống', function () {
 			it('Đăng nhập...', function () {
 				cy.visit(Cypress.env('URL_LOGIN'));
@@ -192,12 +192,6 @@ describe('Kiểm tra TextArea', function () {
 						});
 						it('TextArea Thành phần...', function () {
 							cy.get('div.modal-dialog input[name=composition] + div.text-error').should('visible');
-						});
-						it('TextArea Hàm lượng / Nồng độ...', function () {
-							cy.get('div.modal-dialog input[name=concentration] + div.text-error').should('visible');
-						});
-						it('TextArea Quy cách đóng gói...', function () {
-							cy.get('div.modal-dialog input[name=packing] + div.text-error').should('visible');
 						});
 						it('TextArea Đơn vị tính...', function () {
 							cy.get('div.modal-dialog input[name=unit] + div.text-error').should('visible');
