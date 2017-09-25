@@ -1,8 +1,3 @@
-const homeLink = 'http://13.76.80.144';
-const signinLink = homeLink + '/signin';
-const newpatientsLink = homeLink + '/main/patients/new';
-const samplePatient = homeLink + '/main/patients/744/detail/executive_info';
-const reportLink = homeLink + '/main/admin/summary_report';
 
 describe('GUI Testing: Check spelling for buttons' , function() {
 	var testcases = ['Danh mục nghề nghiệp', 'Danh mục hôn nhân', 'Danh mục tài chính', 
@@ -10,7 +5,7 @@ describe('GUI Testing: Check spelling for buttons' , function() {
 					 'Danh mục nhà sản xuất', 'Danh mục nhà phân phối', 'Danh mục nguồn thuốc', 'n l'];
 
 	it('Login button', function() {
-		cy.visit(signinLink)
+		cy.visit(Cypress.env('URL_LOGIN'))
 
 		cy.get('.content button').should('contain', 'Đăng nhập')
 
@@ -41,7 +36,7 @@ describe('GUI Testing: Check spelling for buttons' , function() {
 	it('Buttons', function() {
 		cy.clearCookies()
 
-		cy.visit(signinLink)
+		cy.visit(Cypress.env('URL_LOGIN'))
 
 		cy.get('input[name=email]').type('admin_10@gmail.com')
 		cy.get('input[name=password]').type('Methadone@2017{enter}')
@@ -55,10 +50,10 @@ describe('GUI Testing: Check spelling for buttons' , function() {
 		cy.wait(1234)
 		cy.get('.blue-custom').should('contain', 'Thêm')
 
-		cy.visit(samplePatient)
+		cy.visit(Cypress.env('URL_SAMPLE_PATIENT'))
 		cy.get('.blue-custom').should('contain', 'Nâng cao')
 
-		cy.visit(reportLink)
+		cy.visit(Cypress.env('URL_REPORT'))
 		cy.get('.blue-custom').should('contain', 'Tạo báo cáo')
 	})
 })

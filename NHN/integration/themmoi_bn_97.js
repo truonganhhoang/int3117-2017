@@ -1,23 +1,21 @@
-const delay = 2000
-const homeLink = 'http://13.76.80.144';
-const signinLink = homeLink + '/signin';
-const newpatientsLink = homeLink + '/main/patients/new';
+const delay = 10000
 
 describe('My First Test', function(){
 	describe('Đăng nhập ', function() {
 		it('Đăng nhập ', function(){
-		    cy.visit(signinLink)
+		    cy.visit(Cypress.env('URL_LOGIN'))
+		    //cy.wait
 		    cy.get('input[name=email]').type('doctor_10@gmail.com')
 		    cy.get('input[name=password]').type('Methadone@2017')
-				cy.get('button[type=submit]').click()
+			cy.get('button[type=submit]').click()
 		  })
 	})
 
 	describe('Thêm mới bệnh nhân ', function(){
 		it('Chuyển đến trang thêm mới bệnh nhân', function () {
-        cy.wait(delay)
-      	cy.visit(newpatientsLink)
-    })
+	        cy.wait(delay)
+	      	cy.visit(Cypress.env('URL_NEW_PATIENT'))
+	    })
 
 		it('Check giá trị mặc định của combobox quận huyện tạm trú', function(){
 			cy.wait(delay)
