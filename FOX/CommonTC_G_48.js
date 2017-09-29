@@ -1,3 +1,5 @@
+var VERY_LONG_STRING = 'padding'.repeat(50);
+
 describe('Kiểm tra TextArea', function () {
 	describe('CommonTC_G_48 Kiểm tra dữ liệu không được vượt quá maxlength', function () {
 		describe('Tài khoản quản trị hệ thống', function () {
@@ -15,11 +17,11 @@ describe('Kiểm tra TextArea', function () {
 
 				describe('Tạo tài khoản trưởng cơ sở', function () {
 					it('Thêm...', function () {
-						cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-						cy.get('div.modal-dialog input[name=email]').type('padding'.repeat(50) + '@email.com');
-						cy.get('div.modal-dialog input[name=password]').type('padding'.repeat(50));
-						cy.get('div.modal-dialog input[name=first_name]').type('padding'.repeat(50));
-						cy.get('div.modal-dialog input[name=last_name]').type('padding'.repeat(50));
+						cy.get('a.btn > i.fa-plus').click().wait(1000);
+						cy.get('div.modal-dialog input[name=email]').type(VERY_LONG_STRING + '@email.com');
+						cy.get('div.modal-dialog input[name=password]').type(VERY_LONG_STRING);
+						cy.get('div.modal-dialog input[name=first_name]').type(VERY_LONG_STRING);
+						cy.get('div.modal-dialog input[name=last_name]').type(VERY_LONG_STRING);
 						cy.get('div.modal-dialog button[type=submit]').click();
 					});
 
@@ -49,9 +51,9 @@ describe('Kiểm tra TextArea', function () {
 
 				describe('Tạo đơn vị điều trị', function () {
 					it('Thêm...', function () {
-						cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-						cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
-						cy.get('div.modal-dialog input[name=address]').type('padding'.repeat(50));
+						cy.get('a.btn > i.fa-plus').click().wait(1000);
+						cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
+						cy.get('div.modal-dialog input[name=address]').type(VERY_LONG_STRING);
 						cy.get('div.modal-dialog button[type=submit]').click();
 					});
 
@@ -81,8 +83,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm nghề nghiệp', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -103,8 +105,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm tình trạng hôn nhân', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -125,9 +127,9 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm tình hình tài chính', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=fromfinancial]').type('padding'.repeat(50));
-							cy.get('div.modal-dialog input[name=tofinancial]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=fromfinancial]').type(VERY_LONG_STRING);
+							cy.get('div.modal-dialog input[name=tofinancial]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -151,8 +153,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm trình độ học vấn', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -173,8 +175,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm lý do', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -195,10 +197,10 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm thuốc', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
-							cy.get('div.modal-dialog input[name=composition]').type('padding'.repeat(50));
-							cy.get('div.modal-dialog input[name=unit]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
+							cy.get('div.modal-dialog input[name=composition]').type(VERY_LONG_STRING);
+							cy.get('div.modal-dialog input[name=unit]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -225,8 +227,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm nhà sản xuất (note chỗ này giao diện sai tên nhãn)', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -247,8 +249,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm Nhà phân phối', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -269,8 +271,8 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm nguồn thuốc', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
-							cy.get('div.modal-dialog input[name=name]').type('padding'.repeat(50));
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
+							cy.get('div.modal-dialog input[name=name]').type(VERY_LONG_STRING);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 

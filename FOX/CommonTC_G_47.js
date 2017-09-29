@@ -15,7 +15,7 @@ describe('Kiểm tra TextArea', function () {
 
 				describe('Tạo tài khoản trưởng cơ sở', function () {
 					it('Thêm...', function () {
-						cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+						cy.get('a.btn > i.fa-plus').click().wait(1000);
 						cy.get('div.modal-dialog button[type=submit]').click();
 					});
 
@@ -45,7 +45,7 @@ describe('Kiểm tra TextArea', function () {
 
 				describe('Tạo đơn vị điều trị', function () {
 					it('Thêm...', function () {
-						cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+						cy.get('a.btn > i.fa-plus').click().wait(1000);
 						cy.get('div.modal-dialog button[type=submit]').click();
 					});
 
@@ -75,7 +75,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm nghề nghiệp', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -96,7 +96,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm tình trạng hôn nhân', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -117,7 +117,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm tình hình tài chính', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -141,7 +141,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm trình độ học vấn', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -162,7 +162,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm lý do', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -183,7 +183,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm thuốc', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -210,7 +210,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm nhà sản xuất (note chỗ này giao diện sai tên nhãn)', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -231,7 +231,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm Nhà phân phối', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
@@ -252,7 +252,7 @@ describe('Kiểm tra TextArea', function () {
 
 					describe('Thêm nguồn thuốc', function () {
 						it('Thêm...', function () {
-							cy.get('a.ng-binding.btn i.fa-plus').click().wait(1000);
+							cy.get('a.btn > i.fa-plus').click().wait(1000);
 							cy.get('div.modal-dialog button[type=submit]').click();
 						});
 
