@@ -14,7 +14,7 @@ describe('CommonTC_G_16', function () {
       it('Dang o trang thu 2', function() {
         cy.wait(delay)
         cy.visit('/main/admin/administrators?page=2')
-        cy.url().should('eq','/main/admin/administrators?page=2')
+        cy.url().should('contain','page=2')
       })
 
       it('Click vao nut "Them moi"', function() {
@@ -23,10 +23,10 @@ describe('CommonTC_G_16', function () {
         cy.get('h3.modal-title.text-bold-header.ng-binding').should('contain', 'Tạo tài khoản trưởng cơ sở')
       })
 
-      it('Click vao nut "Close', function() {
+      it('Click vao nut "Close"', function() {
         cy.wait(delay)
         cy.get('input[type=button]').click()
-        cy.url().should('eq','/main/admin/administrators?page=1')
+        cy.url().should('contain', 'page=1')
       })
     })
   })
