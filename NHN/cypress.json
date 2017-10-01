@@ -1,0 +1,10 @@
+{
+	"baseUrl": "http://13.76.80.144",
+	"env":{
+		"URL_LOGIN": "/signin",
+		"URL_NEW_PATIENT": "/main/patients/new",
+		"URL_SAMPLE_PATIENT": "/main/patients/744/detail/executive_info",
+		"URL_REPORT": "/main/admin/summary_report",
+		"URL_SAMPLE_EXECUTIVE_INFO": "/main/patients/37/detail/executive_info"
+	}
+}
