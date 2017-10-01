@@ -14,7 +14,7 @@ describe('CommonTC_G_17', function () {
       it('Dang o trang thu 2', function() {
         cy.wait(delay)
         cy.visit('/main/admin/administrators?page=2')
-        cy.url().should('eq','/main/admin/administrators?page=2')
+        cy.url().should('contain','page=2')
       })
 
       it('Click vao nut "Edit"', function() {
@@ -26,7 +26,7 @@ describe('CommonTC_G_17', function () {
       it('Click vao nut "Save"', function() {
         cy.wait(delay)
         cy.get('button[type=submit]').click()
-        cy.url().should('eq','/main/admin/administrators?page=1')
+        cy.url().should('contain','page=1')
       })
     })
   })
