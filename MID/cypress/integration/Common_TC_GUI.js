@@ -1,11 +1,3 @@
-
-// describe('CommonTC', function(){
-//     beforeEach('Dang nhap', function(){
-//   cy.fixture('users').then((users) => {
-//     
-//   }
-//   })
-// })
 describe('CommonTC_GUI', function(){
   beforeEach('Dang nhap', function(){
     cy.fixture('users').then((user) =>{
@@ -21,13 +13,13 @@ describe('CommonTC_GUI', function(){
     })
   })
 
-  // it('CommonTC_G_86', function(){
-  //   cy.get('input[name=email]').should('have.value','');
-  //   cy.get('input[name=password]').should('have.value','');
-  //   cy.get('input[name=first_name]').should('have.value','');
-  //   cy.get('input[name=last_name]').should('have.value','');
-  //   cy.get('span.select2-chosen.ng-binding').should('have.value','');
-  // })
+   it('CommonTC_G_86', function(){
+    cy.get('input[name=email]').should('have.value','');
+    cy.get('input[name=password]').should('have.value','');
+    cy.get('input[name=first_name]').should('have.value','');
+    cy.get('input[name=last_name]').should('have.value','');
+    cy.get('span.select2-chosen.ng-binding').should('have.value','');
+  })
 
   it('CommonTC_G_87', function(){
     cy.fixture('admin_account').then((admin) =>{
