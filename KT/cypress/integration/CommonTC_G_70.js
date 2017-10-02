@@ -4,7 +4,7 @@ describe('Kiểm tra giá trị ngày tháng lớn hơn ngày hiện tại', fun
   })
 
   var currentdate = new Date();
-  var dateOfBirth = (currentdate.getDate() + 1) + '/' + (currentdate.getMonth() + 1) + '/' + currentdate.getFullYear()
+  var dateOfBirth = currentdate.getDate() + '/' + (currentdate.getMonth() + 1) + '/' + (currentdate.getFullYear() + 1)
 
   it("Đăng nhập tài khoản admin", function() {
     //Login
