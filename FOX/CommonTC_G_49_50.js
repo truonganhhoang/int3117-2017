@@ -18,7 +18,7 @@ var RANDOM_NUMBER = Math.floor(Math.random() * 20) + 10
 		
 describe('Kiểm tra TextArea', function () {
 	describe('CommonTC_G_49_50 Kiểm tra khi nhập dữ liệu là các ký tự đặc biệt, thẻ html; Kiểm tra chức năng Trim space', function () {
-		describe('Tài khoản quản trị hệ thống', function () {
+		describe('Tài khoản trưởng cơ sở', function () {
 			it('Đăng nhập...', function () {
 				cy.visit(Cypress.env('URL_LOGIN'));
 				cy.get('input[name=email]').type(Cypress.env('USER_AGENCY'));
