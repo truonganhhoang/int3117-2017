@@ -1,11 +1,11 @@
 describe('Kiem tra thong tin bat buoc',function(){
     it('login',function(){
-        cy.visit('http://13.76.80.144/signin')
+        cy.visit('/signin')
         cy.get('input[name=email]').type('doctor_10@gmail.com')
         cy.get('input[name=password]').type('Methadone@2017')
         cy.get('button[type=submit]').click()
         cy.pause()
-        cy.visit('http://13.76.80.144/main/patients/new')
+        cy.visit('/main/patients/new')
     })
     //Thong tin chi tiet
     it('Nhap ho va ten',function(){
