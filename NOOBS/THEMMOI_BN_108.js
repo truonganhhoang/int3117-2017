@@ -4,7 +4,7 @@ describe('Kiem tra la truong khong bat buoc', function () {
         it('Login ...', function () {
             cy.visit(Cypress.env("URL_LOGIN"))
                 .get('input[name=email]').type(Cypress.env("USER_AGENCY"))
-                .get('input[name=password]').type(Cypress.env("LOGIN_PASSWORD")).type('{enter}')
+                .get('input[name=password]').type(Cypress.env("PASSWORD_FOR_USER_AGENCY")).type('{enter}')
                 .wait(delay)
                 .visit(Cypress.env("URL_ADD_NEW_PATIENT"))
                 .wait(delay)
