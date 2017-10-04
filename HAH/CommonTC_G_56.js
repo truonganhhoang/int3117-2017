@@ -13,26 +13,26 @@ describe('Kiểm tra giá trị mặc định ch', function () {
 		});
 	   //
 		it('Thêm đơn thuốc ...', function () {
-		  cy.get('.btn blue-custom btn-sm ng-binding .fa fa-plus').containt("Thêm đơn thuốc").click().wait(1000);
+		  cy.contains('div.actions > a.btn', ' Thêm đơn thuốc').click();
 		});
-		it('Thêm thuốc > Chia liều ...', function () {
-		  cy.get('input.ng-vaild ng-dirty ng-vaild-parse ng-touched ng-empty [type="checkbox"]').puncheck().should('not.be.checked');
+		it('Checkbox Thêm thuốc > Chia liều', function () {
+		  cy.contains('label.mt-checkbox','Chia liều').find('input').should('not.be.checked');
 		});
-		it('Thêm thuốc > Giảm liều', function () {
-		  cy.get('input.ng-vaild ng-dirty ng-vaild-parse ng-touched ng-empty [type="checkbox"]').uncheck().should('not.be.checked');
+		it('Checkbox Thêm thuốc > Giảm liều', function () {
+		 	cy.contains('label.mt-checkbox','Giảm liều').find('input').should('not.be.checked');
 		});
 		it('Đóng...', function () {
-		  cy.get('div.modal-footer input.btn-default btn-sm input[type=button]').click().should('not.exist');
+		  cy.contains('div.modal-dialog', 'Thêm đơn thuốc').find('input.btn[value="Đóng"]').should('visible').click();
 		});
                //
-		it('Chuyển cơ sở', function (){
-		  cy.get('a.btn blue-custom btn-sm ng-binding i.fa fa-exchange').parent().contain("Chuyển cơ sở").click().wait(100);
+		it('Chuyển cơ sở...', function (){
+		  cy.contains('div.actions > a.btn', 'Chuyển cơ sở').click().wait(100);
 		});
-		it('Checkbox Chuyển tạm thời ...', function () {
-		  cy.get('label.mt-checkbox input.ng-vaild [type="checkbox"]').parent().contain("Chuyển cở sở tạm thời").uncheck().should('not.be.checked');
+		it('Checkbox Chuyển tạm thời', function () {
+		  cy.contains('label.mt-checkbox','Chuyển cơ sở tạm thời').find('input').should('not.be.checked');
 		});
 		it('Đóng...', function () {
-		  cy.get('div.modal-footer input.btn-default btn-sm input[type=button]').click().should('not.exist');
+		  cy.contains('div.modal-dialog', 'Chuyển cơ sở').find('input.btn[value="Đóng"]').should('visible').click();
 		});
 	    });	
 	

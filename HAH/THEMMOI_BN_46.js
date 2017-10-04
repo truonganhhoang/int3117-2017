@@ -7,18 +7,16 @@ describe('Kiểm tra combo-box "Tình hình tài chính"', function () {
             cy.get('button[type=submit]').click().should('not.exist');      
         });
     });
-
-    describe('Kiểm tra căn lề trái', function () {
+    describe('Test...', function(){
     it('Thêm bệnh nhân...', function () {
                 cy.get('li.nav-item > a[ui-sref="main.patients"]').click().wait(1000);
                 cy.get('a.btn[href="/main/patients/new"]').click().wait(1000);
                 cy.contains('div.portlet', 'Thông tin chi tiết').should('visible');
     });
-    it('Test', function() {
-        var ele = cy.get("label").contains("Tình hình tài chính").next();
-        ele.click();
 
-        cy.get('li[role="option"] > div > span').should('have.css', 'text-align', 'left');
-        });
+    it('Kiểm tra giá trị mặc định', function(){
+        cy.get("label").contains("Tình hình tài chính").next().find('a.select2-choice')
+            .should('have.attr', 'placeholder', '-- Vui lòng chọn --');
+    });
     });
 });
