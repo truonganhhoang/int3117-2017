@@ -1,6 +1,6 @@
 var delay = 2000;
 describe('Common_TC_G_90', function(){
-  it('Dang nhap', function(){
+  it('Đăng nhập bằng tài khoản doctor', function(){
     cy.fixture('users').then((user) =>{
       cy.visit('/signin');
       cy.get('input[name=email]').type(user.doctor.email);

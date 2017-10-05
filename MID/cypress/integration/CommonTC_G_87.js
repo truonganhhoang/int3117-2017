@@ -1,6 +1,6 @@
 var delay = 1000;
-describe('Common_TC_G_86', function(){
-  it('Dang nhap', function(){
+describe('Common_TC_G_87', function(){
+  it('Đăng nhập bằng tài khoản admin', function(){
     cy.fixture('users').then((user) =>{
       cy.visit('/signin');
       cy.get('input[name=email]').type(user.admin.email);
@@ -18,15 +18,14 @@ describe('Common_TC_G_86', function(){
   })
   
   	it('Nhập thông tin vào các trường', function(){
-  		cy.fixture('admin_account').then((admin) => {
-  		cy.get('input[name=email]').type(admin.account2.email);
-  		cy.get('input[name=password]').type(admin.account2.password);
-  		cy.get('input[name=first_name]').type(admin.account2.first_name);
-  		cy.get('input[name=last_name').type(admin.account2.last_name);
+  		cy.fixture('info').then((info) => {
+  		cy.get('input[name=email]').type(info.account2.email);
+  		cy.get('input[name=password]').type(info.account2.password);
+  		cy.get('input[name=first_name]').type(info.account2.first_name);
+  		cy.get('input[name=last_name').type(info.account2.last_name);
   		cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(5) > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a').click();
   		cy.get('li').contains('CSĐT MMT Ba Vì').click()
   		cy.get('button').contains('Lưu').click()
-
   	})
 })
 }
