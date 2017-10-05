@@ -1,8 +1,8 @@
+
 function getTodayString() {
 	var today = new Date();
 	return today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
 }
-
 var STRING_TODAY = getTodayString();
 
 describe('CommonTC_G_47 Kiểm tra dữ liệu là bắt buộc nhập', function () {

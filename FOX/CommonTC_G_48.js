@@ -1,8 +1,8 @@
+
 function getTodayString() {
 	var today = new Date();
 	return today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
 }
-
 var STRING_TODAY = getTodayString();
 var STRING_VERY_LONG = 'padding '.repeat(40);
 

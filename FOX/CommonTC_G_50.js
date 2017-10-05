@@ -1,8 +1,7 @@
 
 function getRandomString() {
-	return Math.random().toString(36).substr(2).replace(/[^a-zA-Z0-9]+/g, '');
+	return Math.random().toString(36).substr(2).replace(/[^a-zA-Z0-9]+/g, '_');
 }
-
 function getRandomSpecialString(length) {
 	var str = '';
 	var map = '!@#$%^&*()-_=+[]{};\':",.<>/?`~\\|';
@@ -10,7 +9,6 @@ function getRandomSpecialString(length) {
 		str += map.charAt(Math.floor(Math.random() * map.length));
 	return str;
 }
-
 var RANDOM_STRING = 'test_' + getRandomString();
 var RANDOM_PASSWORD = RANDOM_STRING + getRandomSpecialString(8);
 var RANDOM_HTML = '</div>' + RANDOM_PASSWORD;
