@@ -56,7 +56,7 @@ describe('CommonTC_G_48 Kiểm tra dữ liệu không được vượt quá maxl
 				cy.get('input[ng-model="council.name"]').type('Hoàng Đăng Chấn');
 				cy.get('input[ng-model="council.title"]').type('Đại tướng');
 				cy.get('input[ng-model="voucher.datee"]').type(STRING_TODAY + '{enter}');
-				cy.contains('div.portlet', 'Ý kiến Hội đồng kiểm nhập').next().find('textarea').type(STRING_VERY_LONG);
+				cy.contains('div.portlet', 'Ý kiến Hội đồng kiểm nhập').find('textarea').type(STRING_VERY_LONG);
 
 				cy.contains('div.actions > button', 'In').click().wait(1000);
 				cy.contains('div.modal-dialog', 'Biên bản kiểm nhập').should('not.visible');
