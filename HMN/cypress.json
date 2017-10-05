@@ -19,3 +19,11 @@
   }
 }
 
+// {
+//   "baseUrl": "http://13.76.80.144",
+//   "env": {
+//     "prescription": "main/patients/730/detail/prescription",
+//     "summary_report": "main/admin/summary_report",
+//     "executive_info": "main/patients/730/detail/executive_info"
+//   }
+// }
