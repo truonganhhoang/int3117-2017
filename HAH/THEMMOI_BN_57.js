@@ -1,3 +1,5 @@
+var RANDOM_NUMBER = Math.floor(Math.random() * 20) + 10
+
 describe('Kiểm tra  Textbox "Địa chỉ"', function () {
     describe('Tài khoản quản trị hệ thống', function () {
         it('Đăng nhập...', function () {
@@ -13,10 +15,10 @@ describe('Kiểm tra  Textbox "Địa chỉ"', function () {
         });
     });
 describe('Test',function() {
-    it('Kiểm tra tìm kiếm các ký tự đặc biệt', function () {
+    it('Kiểm tra TV', function () {
         
         var prefix = '[ng-submit="form.$valid && createPatient()"]'
-        cy.get(prefix + ' [name="name"]').eq(0).type('Nguyen Van K');
+        cy.get(prefix + ' [name="name"]').eq(0).type('Tran Khac Tran');
 
         cy.get(prefix + ' [name="birth_date"]').type('01/01/2012').type('{esc}');
 
@@ -30,14 +32,14 @@ describe('Test',function() {
 
         cy.get(prefix + ' [ng-click="copyHousehold()"]').click();
 
-        cy.get(prefix + ' [name="identification_number"]').type('945793759388645457');
+        cy.get(prefix + ' [name="identification_number"]').type('945793745457');
 
         cy.get(prefix + ' [name="identification_type"]').click();
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
 
         cy.get(prefix + ' [name="identification_issued_date"]').type('01/09/2017').type('{esc}');
 
-        cy.get(prefix + ' [name="identification_issued_by"]').type('HP');
+        cy.get(prefix + ' [name="identification_issued_by"]').type('HL');
 
         cy.get(prefix + ' [name="name"]').eq(1).type('Bố');
 
