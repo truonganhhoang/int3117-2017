@@ -1,0 +1,21 @@
+{
+  "baseUrl": "http://13.76.80.144",
+  "env": {
+    "USER_ADMIN": "admin_10@gmail.com",
+    "USER_AGENCY": "admin_agency_10@gmail.com",
+    "USER_DOCTOR": "dotor_10@gmail.com",
+    "USER_NURSE": "nurse_10@gmail.com",
+    "USER_STORE": "storekeeper_10@gmail.com",
+
+    "LOGIN_PASSWORD": "Methadone@2017",
+
+    "URL_LOGIN":"/signin",
+    "URL_ADMIN":"/main/admin/administrators",
+    "URL_EDIT_INFO_PATIENT_405":"/main/patients/405/edit",
+    "URL_ADD_NEW_PATIENT": "/main/patients/new",
+    "URL_EXECUTIVE_INFO": "/detail/executive_info",
+
+    "report":"/main/admin/summary_report"
+  }
+}
+

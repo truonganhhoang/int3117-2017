@@ -1,83 +1,72 @@
 describe('Tìm kiếm không phân biệt chữ hoa, chữ thường', function() {
-    var testcases = [
+    var routes = [
         {
-            url: 'main/admin/administrators',
-            name: 'Quản lý người dùng',
-            expect: 'Đoàn'
+            name: "patients",
+            column: 3
         },
         {
-            url: 'main/admin/administrators/issuing_agency',
-            name: 'Quản lý cơ sở',
-            expect: 'Phú Xuyên'
+            name: "administrators",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/employments',
-            name: 'Danh mục nghề nghiệp',
-            expect: 'Trí thức'
+            name: "issuing_agency",
+            column: 3
         },
         {
-            url: 'main/admin/administrators/maritals',
-            name: 'Danh mục hôn nhân',
-            expect: 'hôn'
+            name: "employments",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/financials',
-            name: 'Danh mục tài chính',
-            expect: 'đến'
+            name: "maritals",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/educations',
-            name: 'Danh mục trình độ học vấn',
-            expect: 'Mù chữ'
+            name: "educations",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/stop_reasons',
-            name: 'Danh mục lý do ngừng điều trị',
-            expect: 'Đã chết'
+            name: "stop_reasons",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/medicine_list',
-            name: 'Danh mục thuốc',
-            expect: 'Methadol'
+            name: "medicine_list",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/manufacturers',
-            name: 'Danh mục nhà sản xuất',
-            expect: 'Vidipha'
+            name: "manufacturers",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/providers',
-            name: 'Danh mục nhà phân phối',
-            expect: 'Codupha'
+            name: "providers",
+            column: 2
         },
         {
-            url: 'main/admin/administrators/sources',
-            name: 'Danh mục nguồn thuốc',
-            expect: 'test'
-        },
-        {
-            url: 'main/patients/720/detail/executive_info',
-            name: 'Danh sách bệnh nhân',
-            expect: 'Dung'
+            name: "sources",
+            column: 2
         }
     ];
 
     beforeEach(function() {
-        cy.visit('signin');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
-        cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-        cy.wait(1000);
+        cy.visit(Cypress.env("routes.signin"));
+        cy.get('[name="email"]').type(Cypress.env("accounts.admin.email"));
+        cy.get('[name="password"]').type(Cypress.env("accounts.admin.password"));
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_signin"));
     });
 
-    testcases.forEach(function(testcase) {
-        it(testcase.name, function() {
-            cy.visit(testcase.url);
-            cy.wait(500);
+    routes.forEach(function(route) {
+        it(route.name, function() {
+            cy.visit(Cypress.env("routes.main." + route.name));
+            cy.wait(Cypress.env("delays.after_visit"));
 
             // search
-            cy.get('[ng-model="keyword"]').type(testcase.expect.toUpperCase()).type('{enter}');
-            cy.get('tbody > tr:first-child').should('contain', testcase.expect);
+            var selector = 'tbody > tr:first-child > td:nth-child(' + route.column + ')';
+            cy.get('table').eq(0).find(selector).then(function($td) {
+                var text = $td.text().trim();
+                cy.get('[ng-model="keyword"]').type(text.toUpperCase()).type('{enter}');
+                cy.wait(Cypress.env("delays.after_search"));
+                cy.get('table').eq(0).find(selector).should('contain', text);
+            });
         });
     });
 });

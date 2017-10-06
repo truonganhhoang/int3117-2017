@@ -2,7 +2,11 @@ var uuid = require('uuid');
 
 describe('Kiểm tra chức năng Trim space', function() {
     beforeEach(function() {
-        cy.visit('signin');
+        cy.visit(Cypress.env("routes.signin"));
+        cy.get('[name="email"]').type(Cypress.env("accounts.admin.email"));
+        cy.get('[name="password"]').type(Cypress.env("accounts.admin.password"));
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_signin"));
     });
 
     var randInt = Date.now();
@@ -10,146 +14,100 @@ describe('Kiểm tra chức năng Trim space', function() {
     var space = ' ';
     var randStrNotTrim = space + randStr + space;
 
-    it('Quản lý người dùng', function () {
-        // login as admin
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
-        cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-        cy.wait(1000);
-
-        cy.visit('main/admin/administrators');
-        cy.wait(500);
+    it('administrators', function () {
+        cy.visit(Cypress.env("routes.main.administrators"));
+        cy.wait(Cypress.env("delays.after_visit"));
 
         // add
         var email = 'test_' + randInt + '@gmail.com';
         var emailNotTrim = space + email + space;
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > a').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(1) > input').type(emailNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(2) > input').type('1234abcdXYZ!@#');
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(3) > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(4) > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(5) > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a > span.select2-chosen.ng-binding').click();
+        cy.get('[ng-click="showCreateAdminModal()"]').click();
+        cy.get('[name="email"]').type(emailNotTrim);
+        cy.get('[name="password"]').type('Methadone@2017');
+        cy.get('[name="first_name"]').type(randStrNotTrim);
+        cy.get('[name="last_name"]').type(randStrNotTrim);
+        cy.get('[name="issuing_agency_id"]').click();
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-footer > button').click();
-        cy.wait(1000);
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_create"));
 
         // test
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > div > div > form > input').type(email).type('{enter}');
-        cy.wait(500);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(2)').should('contain', randStr + ' ' + randStr);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(3) > a').should('not.contain', space);
+        cy.get('[ng-model="keyword"]').type(email).type('{enter}');
+        cy.wait(Cypress.env("delays.after_search"));
+        cy.get('tbody > tr:first-child > td:nth-child(2)').should('not.contain', randStrNotTrim);
+        cy.get('tbody > tr:first-child > td:nth-child(3) > a').should('not.contain', emailNotTrim);
     });
 
-    it('Quản lý cơ sở', function() {
-        // login as admin
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
-        cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-        cy.wait(1000);
-
-        cy.visit('main/admin/administrators/issuing_agency');
-        cy.wait(500);
+    it('issuing_agency', function() {
+        cy.visit(Cypress.env("routes.main.issuing_agency"));
+        cy.wait(Cypress.env("delays.after_visit"));
 
         // add
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > a').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(1) > div:nth-child(2) > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(1) > div:nth-child(4) > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(2) > div:nth-child(2) > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a > span.select2-chosen.ng-binding').click();
-        cy.get('#ui-select-choices-row-0-0 > div > span').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(2) > div:nth-child(4) > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a > span.select2-chosen.ng-binding').click();
-        cy.get('#ui-select-choices-row-1-0 > div').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(2) > div:nth-child(6) > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a > span.select2-chosen.ng-binding').click();
-        cy.get('#ui-select-choices-row-2-0 > div').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-footer > button').click();
-        cy.wait(1000);
+        cy.get('[ng-click="showCreateIssuingAgencyModal()"]').click();
+        cy.get('[name="name"]').type(randStrNotTrim);
+        cy.get('[name="address"]').type(randStrNotTrim);
+        cy.get('[name="province_id"]').click();
+        cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
+        cy.get('[name="district_id"]').click();
+        cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
+        cy.get('[name="ward_id"]').click();
+        cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_create"));
 
         // test
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(3)').should('not.contain', space);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(7)').should('not.contain', space);
+        cy.get('tbody > tr:first-child > td:nth-child(3)').should('not.contain', space);
+        cy.get('tbody > tr:first-child > td:nth-child(7)').should('not.contain', space);
     });
 
-    it('Danh mục thuốc', function() {
-        // login as admin
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
-        cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
-        cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-        cy.wait(1000);
-
-        cy.visit('main/admin/administrators/medicine_list');
-        cy.wait(500);
+    it('medicine_list', function() {
+        cy.visit(Cypress.env("routes.main.medicine_list"));
+        cy.wait(Cypress.env("delays.after_visit"));
 
         // add
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > a').click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(1) > div.col-xs-8.form-group > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(2) > div.col-xs-8.form-group > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(3) > div.col-xs-8.form-group > input').type(10);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(4) > div.col-xs-8.form-group > input').type(1000);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(5) > div.col-xs-8.form-group > input').type(randStrNotTrim);
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body > div > div:nth-child(7) > div.col-xs-8.form-group > div.ui-select-container.select2.select2-container.ng-pristine.ng-untouched.ng-scope.ng-empty.ng-invalid.ng-invalid-required > a > span.select2-chosen.ng-binding').click();
+        cy.get('[ng-click="showCreateMedicineModal()"]').click();
+        cy.get('[name="name"]').type(randStrNotTrim);
+        cy.get('[name="composition"]').type(randStrNotTrim);
+        cy.get('[name="concentration"]').type(10);
+        cy.get('[name="packing"]').type(1000);
+        cy.get('[name="unit"]').type(randStrNotTrim);
+        cy.get('[name="medicine_type_id"]').click();
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click();
-        cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-footer > button').click();
-        cy.wait(1000);
+        cy.get('[type="submit"]').click();
+        cy.wait(Cypress.env("delays.after_create"));
 
         // test
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.row > div > div:nth-child(1) > form > input').type(randStr).type('{enter}');
-        cy.wait(500);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(2)').should('not.contain', space);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(3)').should('not.contain', space);
-        cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr:nth-child(1) > td:nth-child(6)').should('not.contain', space);
+        cy.get('[ng-model="keyword"]').type(randStr).type('{enter}');
+        cy.wait(Cypress.env("delays.after_search"));
+        cy.get('tbody > tr:first-child > td:nth-child(2)').should('not.contain', space);
+        cy.get('tbody > tr:first-child > td:nth-child(3)').should('not.contain', space);
+        cy.get('tbody > tr:first-child > td:nth-child(6)').should('not.contain', space);
     });
 
-    var testcases = [
-        {
-            url: 'main/admin/administrators/employments',
-            name: 'Danh mục nghề nghiệp'
-        },
-        {
-            url: 'main/admin/administrators/maritals',
-            name: 'Danh mục hôn nhân'
-        },
-        {
-            url: 'main/admin/administrators/educations',
-            name: 'Danh mục trình độ học vấn'
-        },
-        {
-            url: 'main/admin/administrators/stop_reasons',
-            name: 'Danh mục lý do ngừng điều trị'
-        },
-        {
-            url: 'main/admin/administrators/manufacturers',
-            name: 'Danh mục nhà sản xuất'
-        },
-        {
-            url: 'main/admin/administrators/providers',
-            name: 'Danh mục nhà phân phối'
-        },
-        {
-            url: 'main/admin/administrators/sources',
-            name: 'Danh mục nguồn thuốc'
-        }
+    var routes = [
+        "employments",
+        "maritals",
+        "educations",
+        "stop_reasons",
+        "manufacturers",
+        "providers",
+        "sources"
     ];
-
-    testcases.forEach(function(testcase) {
-        it(testcase.name, function() {
-            // login as admin
-            cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(2) > div > input').type('admin_10@gmail.com');
-            cy.get('body > div > div.login.ng-scope > div.content > form > div:nth-child(3) > div > input').type('Methadone@2017');
-            cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-            cy.wait(1000);
-
-            cy.visit(testcase.url);
-            cy.wait(500);
+    routes.forEach(function(route) {
+        it(route, function() {
+            cy.visit(Cypress.env("routes.main." + route));
+            cy.wait(Cypress.env("delays.after_visit"));
 
             // add
-            cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.inputs > a').click();
-            cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-body input').type(randStrNotTrim);
-            cy.get('body > div.modal.fade.ng-scope.ng-isolate-scope.in > div > div > form > div.modal-footer > button').click();
-            cy.wait(1000);
+            cy.get('.portlet-title > .inputs > .ng-binding').click();
+            cy.get('[name="name"]').type(randStrNotTrim);
+            cy.get('[type="submit"]').click();
+            cy.wait(Cypress.env("delays.after_create"));
 
             // test
-            cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-title > div.row > div > div:nth-child(1) > form > input').type(randStr).type('{enter}');
-            cy.wait(500);
-            cy.get('body > div > div.page-container.ng-scope > div > div.page-content-wrapper > div > div > div > div.portlet-body > div.max-width-100-pc.scrollable > table > tbody > tr > td:nth-child(2)').should('not.contain', space);
+            cy.get('[ng-model="keyword"]').type(randStr).type('{enter}');
+            cy.wait(Cypress.env("delays.after_search"));
+            cy.get('tbody > tr:first-child > td:nth-child(2)').should('not.contain', space);
         });
     });
 });

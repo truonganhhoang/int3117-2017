@@ -209,12 +209,6 @@ describe('Kiểm tra TextArea', function () {
 						it('TextArea Thành phần...', function () {
 							cy.get('div.modal-dialog input[name=composition]').should('empty');
 						});
-						it('TextArea Hàm lượng / Nồng độ...', function () {
-							cy.get('div.modal-dialog input[name=concentration]').should('empty');
-						});
-						it('TextArea Quy cách đóng gói...', function () {
-							cy.get('div.modal-dialog input[name=packing]').should('empty');
-						});
 						it('TextArea Đơn vị tính...', function () {
 							cy.get('div.modal-dialog input[name=unit]').should('empty');
 						});
