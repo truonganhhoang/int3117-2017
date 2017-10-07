@@ -1,6 +1,6 @@
 var delay = 1000;
-describe('My First Test', function(){
-    it('Đăng nhập ', function(){
+describe('Themmoi_BN_94', function(){
+    it('Dang nhap bang tai khoan doctor', function(){
         cy.fixture('users').then((user) =>{
           cy.visit('/signin');
           cy.get('input[name=email]').type(user.doctor.email);
@@ -10,16 +10,15 @@ describe('My First Test', function(){
         })
     })
     it('Chuyển đến trang thêm mới bệnh nhân', function () {
-          cy.wait(delay)
-          cy.visit('/main/patients/new')
+      cy.get('li.nav-item > a[ui-sref="main.patients"]').click().wait(1000);
+      cy.get('a.btn[href="/main/patients/new"]').click().wait(1000);
+      cy.contains('div.portlet', 'Thông tin chi tiết').should('visible');
       })
 
     it('Kiem tra so luong va sap xep cac gia tri combo-box', function(){
-      //cy.wait(delay)
-      cy.get('div.ui-select-container:nth-child(3) > a:nth-child(1)').first().click()
-
+      cy.get('div[ng-model="patient.resident_province_id"]').first().click()
       var values = [];
-      cy.get('div.ui-select-container:nth-child(3) > a:nth-child(1)').within(function(){
+      cy.get('div[ng-model="patient.resident_province_id"]').within(function(){
         
         cy.get('ul>li>div>span').each(function($span, index, $spans){// Iterate through each 'li'
           values.push($span.text())
@@ -32,9 +31,9 @@ describe('My First Test', function(){
           assert.isTrue(alphabet(values));
           console.log('ok')
         })        
-      })
     })
   })
+})
 
 var alphabet = function(a){
   var b = a.concat();
@@ -54,6 +53,5 @@ var arrayEquals = function(a, b){
   for (var i = 0; i < a.length; ++i) {
       if (a[i] !== b[i]) return false;
     }
-  
-    return true;
+  return true;
 }
