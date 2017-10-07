@@ -1,8 +1,8 @@
 describe('CommonTC_G_90', function(){
   it('Dang nhap bang tai khoan admin', function(){
     cy.visit('/signin')
-      .get('input[name=email]').type('admin_10@gmail.com')
-      .get('input[name=password]').type('Methadone@2017')
+      .get('input[name=email]').type('user.admin.email')
+      .get('input[name=password]').type('user.admin.password')
       .get('button[type=submit]').click()
   })
 
@@ -18,9 +18,3 @@ describe('CommonTC_G_90', function(){
     cy.get('div.form-group:nth-child(4) > input:nth-child(2)').type('Hov')
   })
 })
-  
-          
-          
-             
-          
-

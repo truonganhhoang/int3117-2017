@@ -1,8 +1,8 @@
 describe('My First Test', function(){
     it('Đăng nhập ', function(){
         cy.visit('/signin')
-        cy.get('input[name=email]').type('doctor_10@gmail.com')
-        cy.get('input[name=password]').type('Methadone@2017')
+        cy.get('input[name=email]').type('user.doctor.email')
+        cy.get('input[name=password]').type('user.doctor.password')
         cy.get('button[type=submit]').click()
       })
 

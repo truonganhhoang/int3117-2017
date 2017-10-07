@@ -2,8 +2,8 @@ describe('Kiểm tra combo-box "Tỉnh/Thành phố tạm trú"', function () {
     describe('Tài khoản quản trị hệ thống', function () {
         it('Đăng nhập...', function () {
             cy.visit('/signin');
-            cy.get('input[name=email]').type('doctor_10@gmail.com');
-            cy.get('input[name=password]').type('Methadone@2017');
+            cy.get('input[name=email]').type('user.doctor.email');
+            cy.get('input[name=password]').type('user.doctor.password');
             cy.get('button[type=submit]').click();      
         });
     });
@@ -15,7 +15,7 @@ describe('Kiểm tra combo-box "Tỉnh/Thành phố tạm trú"', function () {
                 cy.contains('div.portlet', 'Thông tin chi tiết').should('visible');
     });
     it('Test', function() {
-        var ele = cy.get("label").contains("Tỉnh/Thành phố tạm trú").next();
+        var ele = cy.get("label").contains("Tuser.doctor.passwordỉnh/Thành phố tạm trú").next();
         ele.click();
 
         cy.get('li[role="option"] > div > span').should('have.css', 'text-align', 'left');
