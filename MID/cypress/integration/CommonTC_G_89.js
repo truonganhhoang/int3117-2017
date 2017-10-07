@@ -1,3 +1,4 @@
+var delay = 1000;
 describe('CommonTC_G_89', function(){
   it('Dang nhap bang tai khoan admin', function(){
 		cy.fixture('users').then((user) =>{

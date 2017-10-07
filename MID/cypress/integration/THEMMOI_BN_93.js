@@ -1,3 +1,4 @@
+var delay = 1000;
 describe('My First Test', function(){
     it('Đăng nhập ', function(){
         cy.fixture('users').then((user) =>{

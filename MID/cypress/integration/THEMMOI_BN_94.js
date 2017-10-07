@@ -1,3 +1,4 @@
+var delay = 1000;
 describe('Kiểm tra combo-box "Tỉnh/Thành phố tạm trú"', function () {
     describe('Tài khoản quản trị hệ thống', function () {
         it('Đăng nhập...', function () {
@@ -18,7 +19,7 @@ describe('Kiểm tra combo-box "Tỉnh/Thành phố tạm trú"', function () {
                 cy.contains('div.portlet', 'Thông tin chi tiết').should('visible');
     });
     it('Test', function() {
-        var ele = cy.get("label").contains("Tuser.doctor.passwordỉnh/Thành phố tạm trú").next();
+        var ele = cy.get("label").contains("Tỉnh/Thành phố tạm trú").next();
         ele.click();
 
         cy.get('li[role="option"] > div > span').should('have.css', 'text-align', 'left');
