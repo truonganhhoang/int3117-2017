@@ -1,9 +1,9 @@
-describe('CommonTC_GUI', function(){
+describe('CommonTC_G_88', function(){
   it('Dang nhap', function(){
     
       cy.visit('http://13.76.80.144/signin')
-        .get('input[name=email]').type('admin_10@gmail.com')
-        .get('input[name=password]').type('Methadone@2017{enter}')
+        .get('input[name=email]').type(user.admin.email)
+        .get('input[name=password]').type(user.admin.password)
         .get('button[type=submit]').click()
     
   })
