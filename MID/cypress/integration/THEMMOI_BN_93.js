@@ -10,9 +10,8 @@ describe('Themmoi_BN_93', function(){
         })
     })
     it('Chuyển đến trang thêm mới bệnh nhân', function () {
-      cy.get('li.nav-item > a[ui-sref="main.patients"]').click().wait(1000);
-      cy.get('a.btn[href="/main/patients/new"]').click().wait(1000);
-      cy.contains('div.portlet', 'Thông tin chi tiết').should('visible');
+      cy.wait(delay)
+      cy.visit('/main/patients/new')
       })
 
     it('Kiem tra so luong va sap xep cac gia tri combo-box', function(){
