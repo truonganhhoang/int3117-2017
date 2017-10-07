@@ -1,5 +1,5 @@
 var delay = 1000;
-describe('Themmoi_BN_94', function(){
+describe('Themmoi_BN_93', function(){
     it('Dang nhap bang tai khoan doctor', function(){
         cy.fixture('users').then((user) =>{
           cy.visit('/signin');
