@@ -1,11 +1,13 @@
 describe('My First Test', function(){
     it('Đăng nhập ', function(){
-        cy.visit('/signin')
-        cy.get('input[name=email]').type('user.doctor.email')
-        cy.get('input[name=password]').type('user.doctor.password')
-        cy.get('button[type=submit]').click()
-      })
-
+        cy.fixture('users').then((user) =>{
+          cy.visit('/signin');
+          cy.get('input[name=email]').type(user.doctor.email);
+          cy.get('input[name=password]').type(user.doctor.password);
+          cy.get('button[type=submit]').click();
+          cy.wait(delay);
+        })
+    })
     it('Chuyển đến trang thêm mới bệnh nhân', function () {
           cy.wait(delay)
           cy.visit('/main/patients/new')

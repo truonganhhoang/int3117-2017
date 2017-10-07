@@ -1,9 +1,12 @@
 describe('CommonTC_G_90', function(){
   it('Dang nhap bang tai khoan admin', function(){
-    cy.visit('/signin')
-      .get('input[name=email]').type('user.admin.email')
-      .get('input[name=password]').type('user.admin.password')
-      .get('button[type=submit]').click()
+    cy.fixture('users').then((user) =>{
+      cy.visit('/signin');
+      cy.get('input[name=email]').type(user.admin.email);
+      cy.get('input[name=password]').type(user.admin.password);
+      cy.get('button[type=submit]').click();
+      cy.wait(delay);
+    })
   })
 
   it('Quan ly nguoi dung', function () {
