@@ -2,8 +2,8 @@ describe('CommonTC_GUI', function(){
   it('Dang nhap', function(){
     
       cy.visit('/signin')
-        .get('input[name=email]').type('admin_10@gmail.com')
-        .get('input[name=password]').type('Methadone@2017{enter}')
+        .get('input[name=email]').type(user.admin.email)
+        .get('input[name=password]').type(user.admin.password)
         .get('button[type=submit]').click()
     
   })
