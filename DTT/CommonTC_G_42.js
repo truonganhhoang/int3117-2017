@@ -37,7 +37,7 @@ const time = 1000
         cy.get('div.ng-binding.ng-scope').should(($loi) => {
             expect($loi).to.contain('Trường này không được quá 50 ký tự.')
         })
-        cy.get('input[type=email]').clear()
+        // cy.get('input[type=email]').clear()
       })
     })
   })
