@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const _ = require('lodash');
 
 describe("Common TC G 10: Kiem tra cach danh so cac ban ghi", function () {
     context("Trong grid: Kiem tra so thu tu cac ban ghi", function () {
