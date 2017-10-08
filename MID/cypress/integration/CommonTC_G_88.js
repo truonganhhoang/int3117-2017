@@ -1,7 +1,6 @@
 describe('CommonTC_G_88', function(){
   it('Dang nhap', function(){
-    
-      cy.visit('http://13.76.80.144/signin')
+      cy.visit('/signin')
         .get('input[name=email]').type(user.admin.email)
         .get('input[name=password]').type(user.admin.password)
         .get('button[type=submit]').click()
