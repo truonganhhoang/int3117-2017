@@ -61,7 +61,8 @@ describe(' Kiểm tra giá trị mặc định của Textbox khi tìm kiếm', f
       it(testcase.name, function() {
         cy.visit(testcase.url);
         cy.wait(500);
-        cy.get('[ng-submit="search()"]').find('input').should('not.have.value', 'US')
+        cy.get('[ng-submit="search()"]').find('input').type("#$^()%#@ {enter}")
+
       });
     });
   });
