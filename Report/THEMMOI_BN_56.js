@@ -13,8 +13,8 @@ describe('THEMMOI_BN_56', function(){
 
 			// Login Methadone     
 			cy.get('.content').within(function(){
-				cy.get('input:first').type('doctor_10@gmail.com').should('have.value', 'doctor_10@gmail.com')
-           			cy.get('input:last').type('Methadone@2017').should('have.value', 'Methadone@2017')
+				cy.get('input:first').type(Cypress.env("USER_DOCTOR")).should('have.value', 'doctor_10@gmail.com')
+           			cy.get('input:last').type(Cypress.env("PASSWORD")).should('have.value', 'Methadone@2017')
             			cy.get('.btn').click()
 			})
 
@@ -33,7 +33,8 @@ describe('THEMMOI_BN_56', function(){
 			const $node = cy.get('form .portlet-body')
 			$node.get('input[ng-model="patient.name"]').first().type('Hope Star')
 
-			$node.get('input[ng-model="patient.birthdate"]').type('27/5/1996')
+			const date = Math.floor((Math.random() * 27)+1) + '/' + Math.floor((Math.random() * 11)+1) + '/' + Math.floor((Math.random() * 16)+1980)
+			$node.get('input[ng-model="patient.birthdate"]').type(date)
 
 			$node.get('div[ng-model="patient.gender"]').click()
 				.find('li[role="option"]').first().click()

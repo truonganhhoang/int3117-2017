@@ -3,7 +3,7 @@
 describe('Common TC_F_15', function(){ 
 
 	it('.should() - assert that <url> is correct', function(){
-		cy.visit('http://13.76.80.144/signin')
+		cy.visit(Cypress.env("URL_LOGIN"))
 		cy.url().should('include', 'signin')
 	})
 
@@ -13,8 +13,8 @@ describe('Common TC_F_15', function(){
 
 			// Login Methadone
 			cy.get('.content').within(function(){
-				cy.get('input:first').type('admin_10@gmail.com').should('have.value', 'admin_10@gmail.com')
-           			cy.get('input:last').type('Methadone@2017').should('have.value', 'Methadone@2017')
+				cy.get('input:first').type(Cypress.env("USER_ADMIN")).should('have.value', 'admin_10@gmail.com')
+           			cy.get('input:last').type(Cypress.env("PASSWORD")).should('have.value', 'Methadone@2017')
             			cy.get('.btn').click()
 			})
 

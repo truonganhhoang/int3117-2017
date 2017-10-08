@@ -1,0 +1,12 @@
+{
+       "baseUrl": "http://13.76.80.144",
+       "env": {
+              "USER_ADMIN": "admin_10@gmail.com",
+              "USER_AGENCY": "admin_agency_10@gmail.com",
+              "USER_DOCTOR": "dotor_10@gmail.com",
+              "USER_NURSE": "nurse_10@gmail.com",
+              "USER_STORE": "storekeeper_10@gmail.com",
+              "PASSWORD": "Methadone@2017",
+              "URL_LOGIN": "/signin"
+      }
+}

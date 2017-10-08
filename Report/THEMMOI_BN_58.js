@@ -13,8 +13,8 @@ describe('THEMMOI_BN_58', function(){
 
 			// Login Methadone     
 			cy.get('.content').within(function(){
-				cy.get('input:first').type('doctor_10@gmail.com').should('have.value', 'doctor_10@gmail.com')
-           			cy.get('input:last').type('Methadone@2017').should('have.value', 'Methadone@2017')
+				cy.get('input:first').type(Cypress.env("USER_DOCTOR")).should('have.value', 'doctor_10@gmail.com')
+           			cy.get('input:last').type(Cypress.env("PASSWORD")).should('have.value', 'Methadone@2017')
             			cy.get('.btn').click()
 			})
 
