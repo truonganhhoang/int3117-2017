@@ -116,14 +116,9 @@ describe('Test',function() {
             it('Kiểm tra thông tin không bắt buộc', function () {
                 cy.get('button.btn > i.fa-save').click().wait(1000);
                 cy.contains('div.toast', 'Tạo mới thành công').should('exist');
-        });
-    
-    it('Test Random html', function() {
-        cy.get('input.form-control[ng-model="contact.address"]').should('not.contain', RANDOM_HTML);
-
-    });
-    it('Test Trim Space', function(){
-        cy.get('input.form-control[ng-model="contact.address"]').should('not.contain', RANDOM_HTML_WITH_SPACE);
-    });
+            });
+            it('Test Trim Space', function(){
+                 cy.get('input.form-control[ng-model="contact.address"]').should('not.contain', RANDOM_HTML_WITH_SPACE);
+            });
  });
    });
