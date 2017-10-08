@@ -1,6 +1,6 @@
 //  Kiem tra la truong khong bat buoc
 
-describe('delete_function', function(){ 
+describe('THEMMOI_BN_57', function(){ 
 	it('.should() - assert that <url> is correct', function(){
 		cy.visit('http://13.76.80.144/signin')
 		cy.url().should('include', 'signin')
@@ -86,7 +86,8 @@ describe('delete_function', function(){
 		// Kiem tra khong phai gia tri mac dinh
 		it('THEMMOI_BN_57', function(){
 			// Nhap du lieu Text box Noi gioi thieu ki tu dac biet      %^&*()
-			cy.get('form .portlet-body').find('input[ng-model="patient.referral_agency"]').type('%^&*()')
+			const string = '%^&*()'
+			cy.get('form .portlet-body').find('input[ng-model="patient.referral_agency"]').type(string)
 			// Tao benh nhan
 			cy.get('form button[type="submit"]').first().click()                                                                                                   
 
@@ -96,7 +97,7 @@ describe('delete_function', function(){
 			})
 
 			cy.get('.tabbable-custom ul').find('li').eq(1).click()
-			cy.get('.tab-content .tabbable-line').first().find('tr').eq(6).find('td').eq('1').should('contain','%^&*()')
+			cy.get('.tab-content .tabbable-line').first().find('tr').eq(6).find('td').eq('1').should('contain',string)
 			
 
 		})	

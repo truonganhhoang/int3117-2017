@@ -1,6 +1,6 @@
-//  Kiem tra la truong khong bat buoc
+//  Kiem tra nhap du lieu co dau Tieng viet
 
-describe('THEMMOI_BN_56', function(){ 
+describe('THEMMOI_BN_61', function(){ 
 	it('.should() - assert that <url> is correct', function(){
 		cy.visit('http://13.76.80.144/signin')
 		cy.url().should('include', 'signin')
@@ -31,9 +31,11 @@ describe('THEMMOI_BN_56', function(){
 
 			// Nhap cac du lieu bat buoc
 			const $node = cy.get('form .portlet-body')
-			$node.get('input[ng-model="patient.name"]').first().type('Hope Star')
+			$node.get('input[ng-model="patient.name"]').first().type('Linh Ka')
 
-			$node.get('input[ng-model="patient.birthdate"]').type('27/5/1996')
+			// Chon ngau nhien ngay sinh
+			const date = Math.floor((Math.random() * 27)+1) + '/' + Math.floor((Math.random() * 11)+1) + '/' + Math.floor((Math.random() * 16)+1980)
+			$node.get('input[ng-model="patient.birthdate"]').type(date)
 
 			$node.get('div[ng-model="patient.gender"]').click()
 				.find('li[role="option"]').first().click()
@@ -74,17 +76,18 @@ describe('THEMMOI_BN_56', function(){
 
 			$node.get('input[ng-model="patient.identification_issued_by"]').type('Hà Nội')
 
-			$node.get('input[ng-model="contact.name"]').first().type('Hoàng Thanh Hằng')
+			$node.get('input[ng-model="contact.name"]').first().type('Nguyễn Thị Hồng Hải')
 
 			$node.get('div[ng-model="contact.contact_type"]').first().click()
 				.find('li[role="option"]').eq(3).click()
 
 		})
 			
-		// Kiem tra khong phai gia tri mac dinh
-		it('THEMMOI_BN_56', function(){
-			// Khong nhap du lieu Text box Noi gioi thieu
-
+		// Kiem tra nhap gia tri Tieng viet
+		it('THEMMOI_BN_61', function(){
+			// Nhap du lieu Text box Noi gioi thieu Tieng Viet co dau
+			const string = 'Người theo hương hoa mây mù giăng lối, làn sương khói phôi phai đưa bưóc ai xa rồi.'
+			cy.get('form .portlet-body').find('input[ng-model="patient.referral_agency"]').type(string)
 			// Tao benh nhan
 			cy.get('form button[type="submit"]').first().click()                                                                                                   
 
@@ -92,6 +95,11 @@ describe('THEMMOI_BN_56', function(){
 			cy.get('#toast-container').within(function(){
 				cy.get('div[aria-label="Tạo mới thành công"]').should('contain', 'Tạo mới thành công')  
 			})
+
+			// Check  
+			cy.get('.tabbable-custom ul').find('li').eq(1).click()
+			cy.get('.tab-content .tabbable-line').first().find('tr').eq(6).find('td').eq('1').should('contain',string)
+
 		})	
 
 
