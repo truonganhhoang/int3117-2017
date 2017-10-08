@@ -1,7 +1,7 @@
 describe('THEMMOI_BN_96', function(){
   it('Dang nhap', function(){
     
-      cy.visit('http://13.76.80.144/signin')
+      cy.visit('/signin')
         .get('input[name=email]').type(user.doctor.email)
         .get('input[name=password]').type(user.doctor.password)
         .get('button[type=submit]').click()
