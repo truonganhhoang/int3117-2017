@@ -1,7 +1,6 @@
 describe('Kiểm tra màn hình ở trạng thái mặc định', function() {
     // Đăng nhập và chuyển tới trang thêm bệnh nhân
     beforeEach(function(){
-
     	cy.visit(Cypress.env('URL_LOGIN'));
     	cy.get('input[name=email]').type(Cypress.env('USER_AGENCY'));
     	cy.get('input[name=password]').type(Cypress.env('LOGIN_PASSWORD'));
