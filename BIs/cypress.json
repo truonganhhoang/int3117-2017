@@ -12,5 +12,4 @@
         "URL_LOGIN":"/signin",
         "URL_ADMIN":"/main/admin/administrators"
 	}
-
 }

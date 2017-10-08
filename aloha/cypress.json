@@ -1,4 +1,12 @@
 {
-  "numTestsKeptInMemory": 0,
-  "baseUrl": "http://13.76.80.144"
+  "baseUrl": "http://13.76.80.144",
+  "env": {
+    "USER_ADMIN": "admin_10@gmail.com",
+    "USER_AGENCY":"admin_agency_10@gmail.com",
+    "USER_DOCTOR": "doctor_10@gmail.com",
+    "USER_NURSE": "nurse_10@gmail.com",
+    "USER_STORE":"storekeeper_10@gmail.com",
+
+    "LOGIN_PASSWORD": "Methadone@2017"
+  }
 }

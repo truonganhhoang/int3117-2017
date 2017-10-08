@@ -1,15 +1,14 @@
 describe('Kiểm tra màn hình ở trạng thái mặc định', function() {
     // Đăng nhập và chuyển tới trang thêm bệnh nhân
     beforeEach(function(){
-
-    	cy.visit(Cypress.env('LOGIN_URL'));
-    	cy.get('input[name=email]').type("admin_agency_10@gmail.com");
-    	cy.get('input[name=password]').type("Methadone@2017");
+    	cy.visit(Cypress.env('URL_LOGIN'));
+    	cy.get('input[name=email]').type(Cypress.env('USER_AGENCY'));
+    	cy.get('input[name=password]').type(Cypress.env('LOGIN_PASSWORD'));
     	cy.get('button[type=submit]').click();
 
+    	cy.wait(3000);
+    	cy.visit(Cypress.env('URL_ADD_NEW_PATIENT'));
     	cy.wait(1000);
-    	cy.visit("/main/patients/new");
-    	cy.wait(500);
     })
 
     var addPatientFormSelector = 'form.ng-scope.ng-invalid-required.ng-valid-pattern.ng-pending.ng-dirty.ng-valid-parse';

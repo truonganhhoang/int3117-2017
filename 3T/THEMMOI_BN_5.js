@@ -1,7 +1,8 @@
 describe("Kiem tra thuc hien chuc nang chinh cua man hinh khi nhan Enter", function () {
 
     it('Dang nhap', function () {
-        cy.visit(Cypress.env('LOGIN_URL'));
+
+        cy.visit(Cypress.env('URL_LOGIN'));
     	cy.get('input[name=email]').type(Cypress.env('USER_AGENCY'));
     	cy.get('input[name=password]').type(Cypress.env('LOGIN_PASSWORD'));
     	cy.get('button[type=submit]').click();

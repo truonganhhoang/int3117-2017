@@ -1,4 +1,5 @@
 /**
+ * pass
  * TC Nhap du lieu Tieng Viet co dau trong Textarea
  * 
  * co textarea
@@ -10,31 +11,31 @@
  * admin_10@gmail.com
  * storekeeper_10@gmail.com
  */
-const delay = 3000 // 3second delay trang mang lag
-function getRandomInt(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
+const delay = 2000 // 3second delay trang mang lag
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 const rand = getRandomInt(1, 99)
 const rand2 = getRandomInt(1, 5)
-describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', function () {
-    describe('Login with account admin_agency_10@gmail.com', function () {
-        it('Login ...', function () {
-            cy.visit('http://52.187.8.102/signin')
-            cy.get('input[name=email]').type('admin_agency_10@gmail.com')
-            cy.get('input[name=password]').type('Methadone@2017')
-            cy.get('button[type=submit]').click()
+
+const str = `Bỗng Những cơn gió lặng mình vào màn đêm xanh thẫm ${rand}`
+
+describe(`Kiem tra textarea`, function() {
+    it('Login ...', function() {
+        cy.visit('/signin');
+        cy.fixture('users').then(users => {
+            cy.doLoginAs(users.agency);
         })
+        cy.visit('/main/patients')
     })
 
-    describe('Quan Ly Benh Nhan', function () {
-        it('Redirect ...', function () {
-            cy.wait(delay)
-            cy.visit('http://52.187.8.102/main/patients')
-        })
+    describe('Quan Ly Benh Nhan', function() {
+
         it('Click Thêm don thuoc', function() {
             cy.wait(delay)
             cy.get('.actions.ng-scope a:nth-child(1)').click()
         })
+
         it('Them thong tin thuoc', function() {
             cy.wait(delay)
             cy.get('div[name=medicine_list_id]').click()
@@ -43,7 +44,7 @@ describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', function (
             cy.get('input[name=dosage]').type(`${100 - rand}`)
             cy.get('input[name=duration]').type(`${rand2}`)
 
-            cy.get('textarea[name=description]').type(`Chữ Tiếng Việt ${rand}`)
+            cy.get('textarea[name=description]').type(str)
         })
         it('Submit', function() {
             cy.get('.modal-footer button[type=submit]').first().click()
@@ -57,28 +58,23 @@ describe('Kiem tra textarea voi tai khoan admin_agency_10@gmail.com', function (
             cy.wait(delay)
             cy.get('.table-bordered tbody > tr td:nth-child(8) a').first().click()
         })
-        it('Có font-family', function() {
+        it('Hiển thị giống chuỗi ban đầu', function() {
             cy.wait(delay)
-            cy.get('pre').and('have.css', 'font-family')
+            expect(Cypress.$('pre').text()).to.equal(str);
         })
     })
 })
 
-describe('Kiem tra textarea voi tai khoan doctor_10@gmail.com', function () {
-    describe('Login with account doctor_10@gmail.com', function () {
-        it('Login ...', function () {
-            cy.visit('http://52.187.8.102/signin')
-            cy.get('input[name=email]').type('doctor_10@gmail.com')
-            cy.get('input[name=password]').type('Methadone@2017')
-            cy.get('button[type=submit]').click()
+describe('Kiem tra textarea', function () {
+    it('Login ...', function() {
+        cy.visit('/signin');
+        cy.fixture('users').then(users => {
+            cy.doLoginAs(users.doctor);
         })
+        cy.visit('/main/patients')
     })
-    
+
     describe('Quan Ly Benh Nhan', function () {
-        it('Redirect ...', function () {
-            cy.wait(delay)
-            cy.visit('http://52.187.8.102/main/patients')
-        })
         it('Click Thêm don thuoc', function() {
             cy.wait(delay)
             cy.get('.actions.ng-scope a:nth-child(1)').click()
@@ -91,7 +87,7 @@ describe('Kiem tra textarea voi tai khoan doctor_10@gmail.com', function () {
             cy.get('input[name=dosage]').type(`${100 - rand}`)
             cy.get('input[name=duration]').type(`${rand2}`)
 
-            cy.get('textarea[name=description]').type(`Chữ Tiếng Việt ${rand}`)
+            cy.get('textarea[name=description]').type(str)
         })
         it('Submit', function() {
             cy.get('.modal-footer button[type=submit]').first().click()
@@ -99,9 +95,15 @@ describe('Kiem tra textarea voi tai khoan doctor_10@gmail.com', function () {
     })
 
     describe('Kiểm tra phần hiển thị của text trên view', function() {
-        it('Có font-family', function() {
+        it('Click hien view', function() {
             cy.wait(delay)
-            cy.get('.mt-content.border-grey-steel div:nth-child(2) > p:nth-child(1)').and('have.css', 'font-family')
+            cy.get('.nav.nav-tabs li:nth-child(3)').click()
+            cy.wait(delay)
+            cy.get('.table-bordered tbody > tr td:nth-child(8) a').first().click()
+        })
+        it('Hiển thị giống chuỗi ban đầu', function() {
+            cy.wait(delay)
+            expect(Cypress.$('pre').text()).to.equal(str);
         })
     })
 })
