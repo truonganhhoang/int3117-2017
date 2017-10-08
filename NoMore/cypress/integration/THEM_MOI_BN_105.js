@@ -2,77 +2,45 @@ var delay = 3000;
 describe('TC_GUI', function() {
     context('Them moi banh nhan', function(){
         beforeEach(function(){
+            // login url
+            cy.visit(Cypress.env("URL_LOGIN"))
+
+            // read file users.json and login as doctor
+            cy.fixture('users').then(users => {
+                cy.login(users.doctor);
+              })
+            // visit add new patient link
             cy
-            .visit(Cypress.env("USER_LOGIN"))
-            .get('input[name=email]').type(Cypress.env("USER_DOCTOR"))
-            .get('input[name=password]').type(Cypress.env("LOGIN_PASSWORD"))
-            .type('{enter}')
-            .wait(delay)
             .visit(Cypress.env("URL_ADD_NEW_PATIENT"))
             .wait(delay)
+            // .pause()
         })
+        
     
         it('THEMMOI_BN_105 --> Kiem tra thong tin bat buoc',function(){
 
             cy.fixture('sample_data').then(patient => {
-                cy.get('input[ng-model="patient.name"]').first().type(patient.name)
-                
-                cy.get('input[ng-model="patient.birthdate"]').type(patient.birth_date)
-                cy.pause()
-
-                cy.get('input[ng-model="patient.admission_date"]')
+               
+                // cy.get('input[ng-model="patient.admission_date"]')
                 // .type(patient.admission_date)
-                
-                
-                cy.get('div[ng-model="patient.gender"]')
-                .click()
-                .find('li[role="option"]').contains(patient.gender).first().click();
-
-                cy.get('div[ng-model="patient.province_id"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains(patient.province_id).first().click();
-
-                cy.get('div[ng-model="patient.district_id"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains(patient.district_id).first().click();
-
-                cy.get('div[ng-model="patient.ward_id"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains(patient.ward_id).first().click();
-
-                cy.get('div[ng-model="patient.resident_province_id"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains(patient.resident_province_id).first().click();
-
-                cy.get('div[ng-model="patient.resident_district_id"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains(patient.resident_district_id).first().click();
-
-                cy.get('div[ng-model="patient.identification_type"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains(patient.identification_type).first().click();
-
-                cy.get('input[ng-model="patient.identification_number"]').first().type(patient.identification_number)
-                cy.get('input[ng-model="patient.identification_issued_date"]').first().type(patient.identification_issued_date)
-                cy.get('input[ng-model="patient.identification_issued_by"]').first().type(patient.identification_issued_by)
-                
-                      // nguoi than
-                cy.get('input[ng-model="contact.name"]').first().type(patient.contacts[0].name)
-                cy.get('div[ng-model="contact.contact_type"]')
-                .first()
-                .click()
-                .find('li[role="option"]').contains( patient.contacts[0].contact_type).first().click();
-            //   cy.doSelect2('div[ng-model="contact.contact_type"]', patient.contacts[0].contact_type)
-
+                // nhập thông tin dạng text
+                var doTypeList = ["name","birthdate","identification_number","identification_issued_date","identification_issued_by"]
+                doTypeList.forEach(input=>{
+                    cy.doType("input[ng-model='patient."+input+"']",patient[input])
+                })
+                //  nhập thông tin dạng select
+                var doSelect2List = ['gender','province_id','district_id','ward_id',
+                                    'resident_province_id','resident_district_id','identification_type']
+                doSelect2List.forEach(input=>{
+                    cy.doSelect2("div[ng-model='patient."+input+"']",patient[input])
+                })
+                // nhập một số thông tin còn lại
+                cy.doType('input[ng-model="contact.name"]',patient.contacts[0].name)
+                cy.doSelect2('div[ng-model="contact.contact_type"]', patient.contacts[0].contact_type)
+                //  submit
                 cy.get('button[type="submit"]').first().click()
                 .wait(delay)
-
+                //  kiểm tra thông báo lỗi trên màn hình
                 cy.get('div[ng-message="required"').should('contain','Trường này không được để trống.')
         })
     })

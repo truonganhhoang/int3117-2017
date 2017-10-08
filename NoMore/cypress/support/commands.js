@@ -10,7 +10,6 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
 //
 //
 // -- This is a child command --
@@ -23,3 +22,19 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+    Cypress.Commands.add("login", (user) => {
+        cy.get("input[name='email']").type(user.email)
+        .get("input[name='password']").type(user.password + '{enter}')
+
+        cy.url().should('not.include', '/signin')
+    });
+
+    Cypress.Commands.add("doSelect2", function(selector, value) {
+        cy.get(selector).first().click()
+        .find('li[role="option"]').contains(value).first().click()
+    })
+
+    Cypress.Commands.add("doType", function(selector, value) {
+        cy.get(selector).first().type(value)
+    })
