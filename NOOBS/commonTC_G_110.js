@@ -1,7 +1,7 @@
 let delay = 3000; // 3 seconds delay
 let Utils = require('./Utils');
 
-describe('Upload file anh sai duong dan', function () {
+describe('Upload file co dinh dang gia', function () {
     describe('Module Quan ly benh nhan', function () {
         describe('Them moi benh nhan', function () {
             it('Dang nhap voi tai khoan '+ Cypress.env("USER_AGENCY"), function () {
@@ -13,8 +13,8 @@ describe('Upload file anh sai duong dan', function () {
             it('Nhap cac thong tin day du va hop le', function () {
                 Utils.enterRightInfoToEditPatientInfo(true);
             })
-            it('Sua duong dan cua file anh vua upload', function () {
-                editAvatarDirectory('sdfklsjlf');
+            it('Upload file co dinh dang gia', function () {
+                editAvatarDirectory('./test_image.desktop');
             })
             it ('Click Save', function () {
                 cy.get('button[type=submit]').first().click();
@@ -23,7 +23,7 @@ describe('Upload file anh sai duong dan', function () {
                 cy.get('div[ng-switch]')
                     .find('.toast-message')
                     // .should('contain', "Cập nhật thông tin thành công");
-                    .should('contain', "Tạo mới thành công");
+                    .should('contain', "Lỗi file không đúng định dạng");
             })
         })
         describe('Sua thong tin benh nhan', function () {
@@ -36,8 +36,8 @@ describe('Upload file anh sai duong dan', function () {
             it('Nhap cac thong tin day du va hop le\'', function () {
                 Utils.enterRightInfoToEditPatientInfo(false);
             })
-            it('Sua duong dan cua file anh vua upload', function () {
-                editAvatarDirectory('sdfklsjlf');
+            it('Upload file co dinh dang gia', function () {
+                editAvatarDirectory('./test_image.desktop');
             })
             it ('Click Save', function () {
                 cy.get('button[type=submit]').first().click();
@@ -46,7 +46,7 @@ describe('Upload file anh sai duong dan', function () {
                 cy.get('div[ng-switch]')
                     .find('.toast-message')
                     // .should('contain', "Cập nhật thông tin thành công");
-                    .should('contain', "Tạo mới thành công");
+                        .should('contain', "Lỗi file không đúng định dạng");
             })
         })
     })
