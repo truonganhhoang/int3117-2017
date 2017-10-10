@@ -1,7 +1,7 @@
 {
   "name": "ABC",
   "admission_date": "07/06/2017",
-  "birth_date": "07/11/2000",
+  "birthdate": "07/11/2000",
   "gender": "Nữ",
   "province_id": "Hà Nội",
   "district_id": "Nam Từ Liêm",

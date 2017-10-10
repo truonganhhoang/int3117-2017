@@ -6,7 +6,7 @@ describe('Nhập dữ liệu là số có chữ số 0 đầu tiên', function()
         cy.get('[name="email"]').type(Cypress.env("accounts.admin.email"));
         cy.get('[name="password"]').type(Cypress.env("accounts.admin.password"));
         cy.get('[type="submit"]').click();
-        cy.wait(Cypress.env("delays.after_sigin"));
+        cy.wait(Cypress.env("delays.after_signin"));
     });
 
     var randInt = Date.now() % 100000000;
