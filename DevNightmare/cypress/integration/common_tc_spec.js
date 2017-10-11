@@ -1,65 +1,129 @@
-describe('Common TC_GUI', function() {
-  context('Validate du lieu truong so', function() {
-  
-    const typeToDosage = function(dosage) {
-      return cy.get('input[ng-model="new_prescription.dosage"]').type(dosage + '{enter}')
+/**
+ * Created by locdt on 07/10/2017.
+ */
+const admin = require("../support/role/admin.json");
+const doctor = require("../support/role/doctor.json");
+const nurse = require("../support/role/nurse.json");
+const storekeeper = require("../support/role/storekeeper.json")
+
+const users = [];
+users.push(admin);
+users.push(doctor);
+users.push(nurse);
+users.push(storekeeper);
+
+describe('Common TC_GUI', function () {
+	console.log("describle");
+	console.log (users);
+	
+	let isValid = function(variable) {
+		return (variable != null && variable != undefined && variable != ""
+		|| (typeof variable === "number" && variable != NaN))
+	};
+	
+	function assert(casename) {
+		context(casename, function() {
+			users.forEach(user => {
+				user.urls.forEach(url => {
+					if (url.form == "" || url.form == undefined)
+						return;
+					
+					let form = url.form;
+					
+					form.inputs.forEach(input => {
+						it(url.path + " | " + input.selector, function() {
+							cy.visit("/signin");
+							cy.doLoginAs(user);
+							
+							cy.visit(url.path);
+							if (form.modal != undefined && form.modal != "")
+								cy.get('a[ng-click="' + form.modal + '"]').first().click();
+							
+							// Điền trước các input cần thiết
+							cy.prepareFormData(form, input);
+							
+							let assertion = input.testcase[casename];
+							let inputValue;
+							
+							console.log(assertion);
+							if (!isValid(assertion.value)) {
+								if (isValid(assertion.depend)) {
+									cy.get(assertion.depend).then($depend => {
+										let inputValue = parseInt($depend.text());
+										let modify = assertion.modify;
+										inputValue += modify == undefined ? 0 : modify;
+										cy.typeNumber(input.selector, inputValue);
+									});
+								}
+								else {
+									let min = null, max = null;
+									
+									if (typeof assertion.min === "number")
+										min = assertion.min;
+									else {
+										cy.get(assertion.min.depend).then($depend => {
+											if (min == null) {
+												min = parseInt($depend.text());
+												let modify = assertion.min.modify;
+												min += modify == undefined ? 0 : modify;
+											}
+										});
+										console.log("min: " + min);
+									}
+									
+									if (typeof assertion.max === "number")
+										max = assertion.max;
+									else {
+										cy.get(assertion.max.depend).then($depend => {
+											if (max == null) {
+												console.log($depend.text());
+												max = parseInt($depend.text());
+												let modify = assertion.max.modify;
+												max += modify == undefined ? 0 : modify;
+												return max;
+											}
+										}).then(max => {
+											cy.doRandInt(min, max)
+												.then(value => cy.typeNumber(input.selector, 2));
+										})
+									}
+								}
+							}
+							else cy.typeNumber(input.selector, assertion.value);
+							
+							cy.assert(assertion);
+						});
+					});
+				});
+			});
+		});
     }
+	
+	assert('Common_TC_G_28');
+	assert('Common_TC_G_29');
+	assert('Common_TC_G_30');
+	assert('Common_TC_G_31');
+	assert('Common_TC_G_32');
 
-    const dosageMustBeFocused = function() {
-      cy.focused().should('have.attr', 'name', 'dosage')
-    }
-
-    const CREATE_PRESCRIPTION_SUCCESS = 'Tạo đơn thuốc thành công'  
-
-    beforeEach(function() {
-      cy.visit("/signin")
     
-      cy.fixture('users').then(users => {
-        cy.doLoginAs(users.doctor)
-      })
-
-      // mo modal them don thuoc
-      cy.visit('/main/patients')
-      cy.get('a[ng-click="showCreatePrescriptionModal()"]')
-        .first().click()
-      
-      // chon don thuoc
-      cy.doSelect2('div[name="medicine_list_id"]', 'Methadose')
-    
-      // dien thoi luong
-      cy.get('input[ng-model="new_prescription.duration"]').type('90')
-    })
-
-    // dien qua lieu luong cho phep
-    it('Common_TC_G_28', function() {
-      typeToDosage(1001).parent()
-        .should('contain', 'Vui lòng nhập giá trị nhỏ hơn hoặc bằng 1000.')
-      dosageMustBeFocused();
-    })
-
-    // dien nho hon lieu luong cho phep
-    it('Common_TC_G_29', function() {
-      typeToDosage(0)
-      cy.get('body').should('contain', 'Liều lượng phải lớn hơn 0.')
-      dosageMustBeFocused()
-    })
-
-    // dien lieu luong nho nhat cho phep
-    it('Common_TC_G_30', function() {
-      typeToDosage(1)
-      cy.get('body').should('contain', CREATE_PRESCRIPTION_SUCCESS)
-    })
-
-    // dien lieu luong nam trong khoang cho phep
-    it('Common_TC_G_31', function() {
-      cy.doRandInt(2, 999).then(value => typeToDosage(value))
-      cy.get('body').should('contain', CREATE_PRESCRIPTION_SUCCESS)
-    })
-
-    // dien lieu luong lon nhat cho phep
-    it('Common_TC_G_32', function() {
-      typeToDosage(1000)
-      cy.get('body').should('contain', CREATE_PRESCRIPTION_SUCCESS)
-    })
-  })
-})
+    // // dien nho hon lieu luong cho phep
+    // it('Common_TC_G_29', function() {
+		// assert('Common_TC_G_29');
+    //     // dosageMustBeFocused()
+    // });
+    //
+    // // dien lieu luong nho nhat cho phep
+    // it('Common_TC_G_30', function() {
+		// assert('Common_TC_G_30');
+    // });
+    //
+    // // dien lieu luong lon nhat cho phep
+    // it('Common_TC_G_32', function() {
+		// assert('Common_TC_G_32');
+    // });
+    //
+    // // dien lieu luong nam trong khoang cho phep
+    // it('Common_TC_G_31', function() {
+    //
+    // });
+});
