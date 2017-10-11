@@ -1,0 +1,149 @@
+{
+  "email": "storekeeper_10@gmail.com",
+  "password": "Methadone@2017",
+  "urls": [
+    {"path": "/main/medicine", "form": ""},
+    {"path": "/main/check_received_stock_report", "form": ""},
+    {"path": "/main/medicine_allocations_report", "form": ""},
+    {"path": "/main/report_today", "form": ""},
+    {"path": "/main/situation_report", "form": ""},
+    {"path": "/main/import_export_medicine", "form": ""},
+    {"path": "/main/card_store", "form": ""},
+    {"path": "/main/situation_report", "form": ""},
+    {"path": "/main/situation_use", "form": ""},
+    {
+      "path": "/main/delivery_vouchers/143/medicines",
+      "form": {
+        "modal": "showCreateVoucherModal()",
+        "action": [
+          {
+            "type": "input",
+            "selector": "input[ng-model='new_voucher.sender']",
+            "value": "Nguyễn A"
+          },
+          {
+            "type": "input",
+            "selector": "input[ng-model='new_voucher.receiver']",
+            "value": "Nguyễn B"
+          },
+          {
+            "type": "input",
+            "selector": "input[ng-model='new_voucher.datee']",
+            "value": "07/10/2017"
+          },
+          {"type": "select", "selector": "div[ng-model='medicine']", "value": "Buprenorphine"}
+        ],
+        "inputs": [
+          {
+            "selector": "input[ng-model='medicine.number']",
+            "testcase": {
+              // Điền quá cho phép
+              "Common_TC_G_28": {
+                "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']",
+                "modify": 1,
+                "assert": "contain",
+                "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
+              },
+              // Điền nhỏ hơn cho phép
+              "Common_TC_G_29": {
+                "value": 0,
+                "assert": "contain",
+                "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
+              },
+              // Điền nhỏ nhất cho phép
+              "Common_TC_G_30": {
+                "value": 1,
+                "assert": "contain",
+                "data": "Tạo mới thành công"
+              },
+              // Điền trong khoảng cho phép
+              "Common_TC_G_31": {
+                "min": 1,
+                "max": {
+                  "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']"
+                },
+                "assert": "contain",
+                "data": "Tạo mới thành công"
+              },
+              // Điền lớn nhất cho phép
+              "Common_TC_G_32": {
+                "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']",
+                "assert": "contain",
+                "data": "Tạo mới thành công"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "/main/delivery_vouchers/143/medicines",
+      "form": {
+        "modal": "showEditVoucherModal()",
+        "inputs": [
+          {
+            "selector": "input[ng-model='medicine.number_order']",
+            "testcase": {
+              // Điền quá cho phép
+              "Common_TC_G_28": {
+                "depend": "td[ng-bind-html='medicine.remaining_number']",
+                "modify": 1,
+                "assert": "contain",
+                "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
+              },
+              // Điền nhỏ hơn cho phép
+              "Common_TC_G_29": {
+                "value": 0,
+                "assert": "contain",
+                "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
+              },
+              // Điền nhỏ nhất cho phép
+              "Common_TC_G_30": {
+                "value": 1,
+                "assert": "contain",
+                "data": "Tạo mới thành công"
+              },
+              // Điền trong khoảng cho phép
+              "Common_TC_G_31": {
+                "min": 1,
+                "max": {
+                  "depend": "td[ng-bind-html='medicine.remaining_number']"
+                },
+                "assert": "contain",
+                "data": "Tạo mới thành công"
+              },
+              // Điền lớn nhất cho phép
+              "Common_TC_G_32": {
+                "depend": "td[ng-bind-html='medicine.remaining_number']",
+                "assert": "contain",
+                "data": "Tạo mới thành công"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "/main/received_vouchers/136/medicines",
+      "form": {
+        "action": [
+          {"type": "input", "selector": "input[ng-model='date']", "value": "10/07/2017"},
+          {"type": "input", "selector": "input[ng-model='council.name']", "value": "Nguyễn A"},
+          {"type": "input", "selector": "input[ng-model='council.title']", "value": "Nguyễn B"}
+        ],
+        "inputs": []
+      }
+    },
+    {
+      "path": "/main/received_end_day_vouchers/136/medicines",
+      "form": {
+        "action": [
+          {"type": "input", "selector": "input[ng-model='date']", "value": "10/07/2017"},
+          {"type": "input", "selector": "input[ng-model='council.name']", "value": "Nguyễn A"},
+          {"type": "input", "selector": "input[ng-model='council.title']", "value": "Nguyễn B"}
+        ],
+        "inputs": []
+      }
+    }
+  ]
+}

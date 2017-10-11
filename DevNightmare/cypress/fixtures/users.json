@@ -77,6 +77,8 @@
   "guest": {
     "email": null,
     "password": null,
-    "urls": ["/common_test"]
+    "urls": [
+      "/common_test"
+    ]
   }
 }

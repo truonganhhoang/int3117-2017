@@ -1,3 +1,65 @@
 {
-	"baseUrl": "http://13.76.80.144"
+  "baseUrl": "http://13.76.80.144",
+  "env": {
+    "users": [
+      {"role": "doctor", "email": "doctor_10@gmail.com", "password": "Methadone@2017"},
+      {"role": "nurse", "email": "nurse_10@gmail.com", "password": "Methadone@2017"},
+      {"role": "admin", "email": "nurse_10@gmail.com", "password": "Methadone@2017"},
+      {"role": "nurse", "email": "nurse_10@gmail.com", "password": "Methadone@2017"}
+    ],
+    "roleUrls": {
+      "doctor": [
+        {
+          "path": "/main/patients/857/detail/executive_info",
+          "form": {
+            "modal": "showCreatePrescriptionModal()",
+            "action": [
+              {"type": "select", "selector": "div[name='medicine_list_id']", "value": "Methadose"}
+            ],
+            "inputs": [
+              {
+                "selector": "input[ng-model='new_prescription.dosage']",
+                "action": [
+                  {"type": "input", "selector": "input[ng-model='new_prescription.duration']", "value": "90"}
+                ]
+              },
+              {
+                "selector": "input[ng-model='new_prescription.duration']",
+                "action": [
+                  {"type": "input", "selector": "input[ng-model='new_prescription.dosage']", "value": "95"}
+                ]
+              },
+              {
+                "selector": "input[ng-model='new_prescription.dosage_morning']",
+                "action": [
+                  {"type": "input", "selector": "input[ng-model='new_prescription.dosage']", "value": "100"},
+                  {"type": "input", "selector": "input[ng-model='new_prescription.duration']", "value": "95"}
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "path": "/main/patients/360/detail/info",
+          "form": ""
+        },
+        {
+          "path": "/main/patients/360/detail/prescription",
+          "form": ""
+        },
+        {
+          "path": "/main/patients/360/detail/change_agency_info",
+          "form": ""
+        },
+        {
+          "path": "/main/patients/new",
+          "form": ""
+        },
+        {
+          "path": "/main/patients/360/edit",
+          "form": ""
+        }
+      ]
+    }
+  }
 }
