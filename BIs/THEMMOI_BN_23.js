@@ -10,8 +10,9 @@ describe('Kiem thu nhom BIs', function() {
 			cy.wait(3000)
       cy.visit('/main/patients/new')
      	cy.wait(3000)
-     	cy.get('.select2-chosen.ng-binding.ng-hide')
-     	.first().should('have.text','-- Vui lòng chọn --')
+      cy.get("label").contains("Dân tộc").next().find('span.ng-binding.ng-scope')
+      .should('have.text', '-- Vui lòng chọn --')
+      
     })
   })
 })
