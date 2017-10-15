@@ -9,40 +9,12 @@ describe("kiểm tra combo-box nghề nghiệp", function(){
 	
 	
 		it("kiểm tra giá trị mặc định: Vui lòng chọn", function(){
+			cy.url().should('include', '/main/dashboard1')
 			cy.wait(time)
+			cy.visit('/main/patients/857/detail/executive_info')
 			cy.visit("/main/patients/new")
         		cy.get("label").contains("Nghề nghiệp").next().find('a.select2-choice').should('have.attr', 'placeholder', '-- Vui lòng chọn --')	
 		})
 	
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
+		
