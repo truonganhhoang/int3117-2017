@@ -1,4 +1,42 @@
 const time = 2000
+
+var x='', y='', z='';
+function generateRandomAlphaNum(len) {
+	var rdmString = "";
+		for( ; rdmString.length < len; rdmString  += Math.random().toString(36).substr(2));
+		return  rdmString.substr(0, len); 
+}
+
+var a = "@";
+var b = ".";
+var t = Math.floor(Math.random() * (3)) + 0;
+if( t == 1){
+	z += generateRandomAlphaNum(1);
+	y += Math.random().toString(36).substr(2, 5);
+	z += Math.random().toString(36).substr(2, 5);
+}
+else{
+	z += Math.random().toString(36).substr(2, 5);
+	var t1 = Math.floor(Math.random() * (4)) + 0;
+
+	if(t1 == 0){
+		y += Math.random().toString(36).substr(2, 5);
+	}else if(t1 == 1){
+		a = '';
+		y += Math.random().toString(36).substr(2, 5);
+		x += Math.random().toString(36).substr(2, 5);
+	}else if(t1 == 2){
+		x += Math.random().toString(36).substr(2, 5);
+	}else{
+		b = '';
+		y += Math.random().toString(36).substr(2, 5);
+		x += Math.random().toString(36).substr(2, 5);
+	}
+}
+
+
+var E = x + a + y + b + z;
+
 describe("kiem tra email sai ding dang", function(){
 	describe("Dang nhap", function(){
 		it("dang nhap voi tai khoan admin", function(){
@@ -18,7 +56,7 @@ describe("kiem tra email sai ding dang", function(){
 
 		it('Nhap email sai dinh dang', function() {
 		    cy.wait(time)
-		    cy.get('input[type=email]').type('abcabc@gmailcom')
+		    cy.get('input[type=email]').type(E)
 		    cy.get('input[name=password]').type('123456a!')
 		    cy.get('input[name=first_name]').type('Nguyen')
 		    cy.get('input[name=last_name]').type('Tuan')
@@ -32,23 +70,23 @@ describe("kiem tra email sai ding dang", function(){
         	cy.get('input[type=email]').clear()
 		    
       	})
-		it('Nhap email sai dinh dang', function() {
-		    cy.wait(time)
-		    cy.get('input[type=email]').type('abcabcgmail.com')			
-			cy.get('div.ng-binding.ng-scope').should(($loi) => {
-            	expect($loi).to.contain('Email không đúng định dạng.')
-			})
-        	cy.get('input[type=email]').clear()		    
-      	})
-
-		it('Nhap email sai dinh dang', function() {
-		    cy.wait(time)
-		    cy.get('input[type=email]').type('abcabc@gmail.')		    
-			cy.get('div.ng-binding.ng-scope').should(($loi) => {
-            	expect($loi).to.contain('Email không đúng định dạng.')
-			})
-
-      	})
 	})
 })
-			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
