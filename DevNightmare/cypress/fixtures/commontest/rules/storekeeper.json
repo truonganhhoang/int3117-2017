@@ -37,26 +37,21 @@
           {
             "selector": "input[ng-model='medicine.number']",
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']",
                 "modify": 1,
                 "assert": "contain",
                 "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
               },
-              // Điền nhỏ hơn cho phép
-              "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1,
                 "assert": "contain",
                 "data": "Tạo mới thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1,
                 "max": {
@@ -65,7 +60,6 @@
                 "assert": "contain",
                 "data": "Tạo mới thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']",
                 "assert": "contain",
@@ -84,26 +78,22 @@
           {
             "selector": "input[ng-model='medicine.number_order']",
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "depend": "td[ng-bind-html='medicine.remaining_number']",
                 "modify": 1,
                 "assert": "contain",
                 "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1,
                 "assert": "contain",
                 "data": "Tạo mới thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1,
                 "max": {
@@ -112,7 +102,6 @@
                 "assert": "contain",
                 "data": "Tạo mới thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "depend": "td[ng-bind-html='medicine.remaining_number']",
                 "assert": "contain",

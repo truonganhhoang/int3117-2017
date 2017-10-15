@@ -16,23 +16,18 @@
               {"type": "input", "selector": "input[ng-model='new_prescription.duration']", "value": "90"}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 1001, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng 1000."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": -1, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 0, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 0, "max": 1000, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 1000, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               }
@@ -44,23 +39,18 @@
               {"type": "input", "selector": "input[ng-model='new_prescription.dosage']", "value": "95"}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 1001, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng 1000."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": -1, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 0, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 0, "max": 1000, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 1000, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               }
@@ -74,23 +64,18 @@
               {"type": "check", "selector": "input[ng-change='changed(new_prescription.type)']", "checked": true}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 1000, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn 1000 và lớn hơn 0."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn 1000 và lớn hơn 0."
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1, "max": 999, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 999, "assert": "contain", "data": "Tạo đơn thuốc thành công"
               }
