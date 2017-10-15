@@ -23,7 +23,4 @@ ca kiểm thử mới vào các tệp rules.
 ## Yêu cầu về các tệp Rules
 - Có cấu trúc thiết kế *"đủ trừu tượng"* để phù hợp với nhiều loại tiêu chí kiểm tra (assert) của tất cả các ca kiểm thử
 
-## Cách thực hiện
-1.
-2.
-3.
+## Thiết kế các tệp Rules
