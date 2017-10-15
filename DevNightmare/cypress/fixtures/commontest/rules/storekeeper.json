@@ -43,6 +43,7 @@
                 "assert": "contain",
                 "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
               },
+              "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
@@ -66,6 +67,7 @@
                 "data": "Tạo mới thành công"
               }
             }
+          }
         ]
       }
     },
