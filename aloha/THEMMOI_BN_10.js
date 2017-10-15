@@ -3,7 +3,7 @@ describe('THEMMOI_BN_10', function () {
   describe('Kiểm tra nhập quá maxlength', function () {
     describe('Dang nhap', function() {
       it('Dang nhap bang tai khoan admin_agency', function () {
-        cy.visit('/signin')
+        cy.visit(Cypress.env('LOGIN_URL'))
         cy.get('input[name=email]').type(Cypress.env('USER_AGENCY'))
         cy.get('input[name=password]').type(Cypress.env('LOGIN_PASSWORD'))
         cy.get('button[type=submit]').click()
