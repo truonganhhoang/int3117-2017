@@ -23,4 +23,68 @@ ca kiểm thử mới vào các tệp rules.
 ## Yêu cầu về các tệp Rules
 - Có cấu trúc thiết kế *"đủ trừu tượng"* để phù hợp với nhiều loại tiêu chí kiểm tra (assert) của tất cả các ca kiểm thử
 
-## Thiết kế các tệp Rules
+## Thiết kế tệp Rules
+Dưới đây là một ví dụ được định nghĩa cho ca kiểm thử cho trường số lượng thuốc trong form thêm phiếu xuất kho.
+
+```
+{
+  "path": "/main/delivery_vouchers/143/medicines",
+  "form": {
+    "modal": "showCreateVoucherModal()",
+    "action": [
+      {
+        "type": "input",
+        "selector": "input[ng-model='new_voucher.sender']",
+        "value": "Nguyễn A"
+      },
+      {
+        "type": "input",
+        "selector": "input[ng-model='new_voucher.receiver']",
+        "value": "Nguyễn B"
+      },
+      {
+        "type": "input",
+        "selector": "input[ng-model='new_voucher.datee']",
+        "value": "07/10/2017"
+      },
+      {"type": "select", "selector": "div[ng-model='medicine']", "value": "Buprenorphine"}
+    ],
+    "inputs": [
+      {
+        "selector": "input[ng-model='medicine.number']",
+        "testcase": {
+          "Common_TC_G_28": {
+            "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']",
+            "modify": 1,
+            "assert": "contain",
+            "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
+          },
+          "Common_TC_G_29": {
+            "value": 0,
+            "assert": "contain",
+            "data": "Vui lòng nhập giá trị nhỏ hơn hoặc bằng"
+          },
+          "Common_TC_G_30": {
+            "value": 1,
+            "assert": "contain",
+            "data": "Tạo mới thành công"
+          },
+          "Common_TC_G_31": {
+            "min": 1,
+            "max": {
+              "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']"
+            },
+            "assert": "contain",
+            "data": "Tạo mới thành công"
+          },
+          "Common_TC_G_32": {
+            "depend": "td[ng-bind-html='medicine.remaining_number - medicine.booking']",
+            "assert": "contain",
+            "data": "Tạo mới thành công"
+          }
+        }
+      }
+    ]
+  }
+}
+```
