@@ -100,13 +100,13 @@ Mỗi một người dùng sẽ có 1 tập các `urls` để test. Với mỗi 
 * `path`: Đường dẫn đến trang cần test.
 * `form`: Chứa thông tin về form của input cần test (để thành `""` nếu không chứa input nào)
 
-###Cấu trúc của Form
+### Cấu trúc của Form
 Mỗi một `form` sẽ gồm các thông tin sau:
 * `modal`: (*optional*) Tên hàm gọi modal để hiện form. Nếu có thì code sẽ gọi mở modal trước rồi mới thực hiện kiểm thử.
 * `action`: (*optional*) Danh sách các đối tượng **action**, chứa thông tin về các hành động sẽ thực hiện trên trang web trước khi thực hiện kiểm thử.
 * `inputs`: (*required*) Danh sách các đối tượng **input**, định nghĩa về thông tin các đối tượng kiểm thử cùng với các testcase cần thực hiện.
 
-#####action
+#### action
 Đối tượng chứa thông tin về hành động sẽ thực hiện trên trang web.
 Cấu trúc:
 * `type`: (*required*) Kiểu xử lí. Hiện tại có 3 giá trị:
@@ -120,14 +120,14 @@ Cấu trúc:
     * `"select"`: Giá trị để code tìm kiếm trong các thẻ **\<option>**, nếu không tồn tại thì tự động chọn option đầu tiên.
 (Nếu `value` không được khai báo thì với kiểu`"input"` sẽ nhập random 1 đoạn string độ dài từ 5-20 kí tự, còn `"select"` sẽ chọn giá trị đầu tiên).
 
-#####input
+#### input
 Chứa thông tin của input cần test và các testcase.
 Cấu trúc:
 * `selector`: (*required*) tên của input cần test (tương tự JQuery).
 * `action`: (*optional*) Danh sách các đối tượng **action**, chứa thông tin về các hành động sẽ chỉ thực hiện cho input hiện tại.
 * `testcase`: (*required*) Thông tin về các testcase.
 
-#####testcase
+#### testcase
 Đối tượng chưa danh sách định nghĩa các testcase:
 ```
 "tên testcase 1": {
