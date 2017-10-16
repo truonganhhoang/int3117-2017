@@ -22,23 +22,18 @@
               {"type": "input", "selector": "input[ng-model='minute']", "value": "30"}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 24, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn 24."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": -1, "assert": "exist", "selector": "#pdf"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 0, "assert": "exist", "selector": "#pdf"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 0, "max": 23, "assert": "exist", "selector": "#pdf"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 23, "assert": "exist", "selector": "#pdf"
               }
@@ -50,23 +45,18 @@
               {"type": "input", "selector": "input[ng-model='hour']", "value": "10"}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 60, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn 60."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": -1, "assert": "exist", "selector": "#pdf"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 0, "assert": "exist", "selector": "#pdf"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 0, "max": 59, "assert": "exist", "selector": "#pdf"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 59, "assert": "exist", "selector": "#pdf"
               }
@@ -90,23 +80,18 @@
               {"type": "input", "selector": "input[ng-model='minute']", "value": "30"}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 24, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn 24."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": -1, "assert": "exist", "selector": "#pdf"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 0, "assert": "exist", "selector": "#pdf"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 0, "max": 23, "assert": "exist", "selector": "#pdf"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 23, "assert": "exist", "selector": "#pdf"
               }
@@ -118,23 +103,18 @@
               {"type": "input", "selector": "input[ng-model='hour']", "value": "10"}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 60, "assert": "contain", "data": "Vui lòng nhập giá trị nhỏ hơn 60."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": -1, "assert": "exist", "selector": "#pdf"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 0, "assert": "exist", "selector": "#pdf"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 0, "max": 59, "assert": "exist", "selector": "#pdf"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 59, "assert": "exist", "selector": "#pdf"
               }
@@ -143,37 +123,5 @@
         ]
       }
     }
-
-    /* không lấy được thông tin thuốc, không thể test */
-    /*{
-      "path": "/main/delivery_sub_vouchers",
-      "form": {
-        "modal": "showCreateSubVoucherModal()",
-        "action": [],
-        "inputs": [
-          {
-            "selector": "input[ng-model='sub_medicine.number']",
-            "action": []
-          }
-        ]
-      }
-    },
-    {
-      "path": "/main/received_sub_vouchers",
-      "form": {
-        "modal": "showCreatePrescriptionModal()",
-        "action": [],
-        "inputs": [
-          {
-            "selector": "input[ng-model='hour']",
-            "action": []
-          },
-          {
-            "selector": "input[ng-model='minute']",
-            "action": []
-          }
-        ]
-      }
-    }*/
   ]
 }

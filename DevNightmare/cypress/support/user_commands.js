@@ -21,8 +21,6 @@ Cypress.Commands.add('doActions', function(actions) {
 						});
 					else
 						cy.get(action.selector).type(action.value);
-					
-					
 					break;
 				case "check":
 					cy.mtCheckbox(action.selector, action.checked);

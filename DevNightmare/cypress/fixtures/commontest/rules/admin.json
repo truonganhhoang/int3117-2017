@@ -1,6 +1,3 @@
-/**
- * Created by locdt on 07/10/2017.
- */
 {
   "email": "admin_10@gmail.com",
   "password": "Methadone@2017",
@@ -27,23 +24,18 @@
               {"type": "input", "selector": "input[ng-model='financial.tofinancial']", "value": 5678}
             ],
             "testcase": {
-              // Điền quá cho phép
               "Common_TC_G_28": {
                 "value": 6000, "assert": "contain", "data": "Giá trị 'Đến' phải lớn hơn giá trị 'Từ'."
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0, "assert": "contain", "data": "Giá trị phải lớn hơn 1000"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "min": 1000, "max": 5678, "assert": "not.exist", "selector": "form[ng-submit=\"createForm.$valid && createFinancial()\""
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "value": 1000, "assert": "not.exist", "selector": "form[ng-submit=\"createForm.$valid && createFinancial()\""
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 5678, "assert": "not.exist", "selector": "form[ng-submit=\"createForm.$valid && createFinancial()\""
               }
@@ -93,7 +85,6 @@
           {"type": "input", "selector": "input[ng-model='medicine_list.name']"},
           {"type": "input", "selector": "input[ng-model='medicine_list.composition']"},
           {"type": "input", "selector": "input[ng-model='medicine_list.unit']", "value": "ml"},
-//          {"type": "select", "selector": "div[ng-model='medicine_list.manufacturer']", "value": "Danapha"},
           {"type": "select", "selector": "div[ng-model='medicine_list.medicine_type_id']", "value": "Buprenorphine"}
         ],
         "inputs": [
@@ -103,32 +94,27 @@
               {"type": "input", "selector": "input[ng-model='medicine_list.packing']", "value": "1000"}
             ],
             "testcase": {
-              // Điền lớn hơn cho phép
               "Common_TC_G_28": {
                 "value": 999999999,
                 "assert": "contain",
                 "data": "Tạo danh mục thành công"
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "lớn hơn"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1,
                 "assert": "contain",
                 "data": "Tạo danh mục thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1,
                 "max": 999999999,
                 "assert": "contain",
                 "data": "Tạo danh mục thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 999999999,
                 "assert": "contain",
@@ -142,32 +128,27 @@
               {"type": "input", "selector": "input[ng-model='medicine_list.concentration']", "value": "80"}
             ],
             "testcase": {
-              // Điền lớn hơn cho phép
               "Common_TC_G_28": {
                 "value": 999999999,
                 "assert": "contain",
                 "data": "Tạo danh mục thành công"
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "lớn hơn"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1,
                 "assert": "contain",
                 "data": "Tạo danh mục thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1,
                 "max": 999999999,
                 "assert": "contain",
                 "data": "Tạo danh mục thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 999999999,
                 "assert": "contain",
@@ -186,32 +167,27 @@
           {
             "selector": "input[ng-model='medicine_list.concentration']",
             "testcase": {
-              // Điền lớn hơn cho phép
               "Common_TC_G_28": {
                 "value": 999999999,
                 "assert": "contain",
                 "data": "Bạn vừa sửa thông tin trường thành công"
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "lớn hơn"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1,
                 "assert": "contain",
                 "data": "Bạn vừa sửa thông tin trường thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1,
                 "max": 999999999,
                 "assert": "contain",
                 "data": "Bạn vừa sửa thông tin trường thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 999999999,
                 "assert": "contain",
@@ -222,32 +198,27 @@
           {
             "selector": "input[ng-model='medicine_list.packing']",
             "testcase": {
-              // Điền lớn hơn cho phép
               "Common_TC_G_28": {
                 "value": 999999999,
                 "assert": "contain",
                 "data": "Bạn vừa sửa thông tin trường thành công"
               },
-              // Điền nhỏ hơn cho phép
               "Common_TC_G_29": {
                 "value": 0,
                 "assert": "contain",
                 "data": "lớn hơn"
               },
-              // Điền nhỏ nhất cho phép
               "Common_TC_G_30": {
                 "value": 1,
                 "assert": "contain",
                 "data": "Bạn vừa sửa thông tin trường thành công"
               },
-              // Điền trong khoảng cho phép
               "Common_TC_G_31": {
                 "min": 1,
                 "max": 999999999,
                 "assert": "contain",
                 "data": "Bạn vừa sửa thông tin trường thành công"
               },
-              // Điền lớn nhất cho phép
               "Common_TC_G_32": {
                 "value": 999999999,
                 "assert": "contain",

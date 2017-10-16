@@ -1,10 +1,10 @@
 /**
  * Created by locdt on 07/10/2017.
  */
-const admin = require("../support/role/admin.json");
-const doctor = require("../support/role/doctor.json");
-const nurse = require("../support/role/nurse.json");
-const storekeeper = require("../support/role/storekeeper.json")
+const admin = require("../fixtures/commontest/rules/admin.json");
+const doctor = require("../fixtures/commontest/rules/doctor.json");
+const nurse = require("../fixtures/commontest/rules/nurse.json");
+const storekeeper = require("../fixtures/commontest/rules/storekeeper.json");
 
 const users = [];
 users.push(admin);
@@ -13,16 +13,13 @@ users.push(nurse);
 users.push(storekeeper);
 
 describe('Common TC_GUI', function () {
-	console.log("describle");
-	console.log (users);
-	
 	let isValid = function(variable) {
 		return (variable != null && variable != undefined && variable != ""
 		|| (typeof variable === "number" && variable != NaN))
 	};
 	
-	function assert(casename) {
-		context(casename, function() {
+	function assert(caseName) {
+		context(caseName, function() {
 			users.forEach(user => {
 				user.urls.forEach(url => {
 					if (url.form == "" || url.form == undefined)
@@ -42,7 +39,7 @@ describe('Common TC_GUI', function () {
 							// Điền trước các input cần thiết
 							cy.prepareFormData(form, input);
 							
-							let assertion = input.testcase[casename];
+							let assertion = input.testcase[caseName];
 							let inputValue;
 							
 							console.log(assertion);
@@ -90,7 +87,6 @@ describe('Common TC_GUI', function () {
 								}
 							}
 							else cy.typeNumber(input.selector, assertion.value);
-							
 							cy.assert(assertion);
 						});
 					});
