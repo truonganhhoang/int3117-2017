@@ -3,7 +3,7 @@ describe('CommonTC_G_16', function () {
   describe('Kiem tra vi tri trang sau khi thuc hien 1 thao tac tren trang du lieu', function () {
     describe('Dang nhap', function() {
       it('Dang nhap bang tai khoan admin', function () {
-        cy.visit('/signin')
+        cy.visit(Cypress.env('LOGIN_URL'))
         cy.get('input[name=email]').type('admin_10@gmail.com')
         cy.get('input[name=password]').type('Methadone@2017')
         cy.get('button[type=submit]').click()
