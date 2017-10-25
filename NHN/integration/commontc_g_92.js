@@ -1,59 +1,94 @@
-
-describe('GUI Testing: Check spelling for buttons' , function() {
-	var testcases = ['Danh mục nghề nghiệp', 'Danh mục hôn nhân', 'Danh mục tài chính', 
-					 'Danh mục trình độ học vấn', 'Danh mục lý do ngừng điều trị', 'Danh mục thuốc', 
-					 'Danh mục nhà sản xuất', 'Danh mục nhà phân phối', 'Danh mục nguồn thuốc', 'n l'];
-
+describe('Button spelling & alignment', function() {
+	
 	it('Login button', function() {
-		cy.visit(Cypress.env('URL_LOGIN'))
+		cy.visit(Cypress.env('URL_LOGIN'));
 
-		cy.get('.content button').should('contain', 'Đăng nhập')
+		var label = Cypress.$('.blue-custom').text();
+		cy.exec('curl http://vspell.com/Spell/SpellCheck --data htmlString=' + encodeURI(label)).its('stdout').should('contain', '"SuggestionCount":0');
 
-		cy.get('input[name=email]').type('admin_10@gmail.com')
-		cy.get('input[name=password]').type('Methadone@2017{enter}')
+		cy.get('.ng-binding').should('have.css', 'text-align', 'center');
+
+		cy.get('input[name=email]').type('admin_10@gmail.com');
+		cy.get('input[name=password]').type('Methadone@2017{enter}');
 
 	})
 
-	it('Sidebar', function() {
-		cy.get('.sidebar-toggler').click()
+	it('Buttons for Admin', function() {
+		checkScreen(0);
+	})
 
-		cy.get('.icon-home + span').should('contain', 'Trang chủ')
+	it('Buttons for Agency admin', function() {
+		checkScreen(1);
+	})
 
-		cy.get('.fa-user-md + span').should('contain', 'Quản lý người dùng')
-		cy.get('.fa-sitemap + span').should('contain', 'Quản lý cơ sở')
-		cy.get('.icon-folder + span').should('contain', 'Quản lý danh mục')
-		cy.get('.icon-users + span').should('contain', 'Quản lý bệnh nhân')
-		cy.get('.icon-book-open + span').should('contain', 'Báo cáo tổng hợp')
+	it('Buttons for Doctor', function() {
+		checkScreen(2);
+	})
 
-		cy.get('.icon-folder + span').click()
-		cy.get('ul.sub-menu > li').each(function($el, index, $list){ 
-			  if (index < 9) {
-			  	cy.wrap($el).should('contain', testcases[index])
-			  }	  
+	it('Buttons for Nurse', function() {
+		checkScreen(3)
+	})
+
+	it('Buttons for Storekeeper', function() {
+		checkScreen(4)
+	})
+
+	it('Buttons in common test', function() {
+		cy.visit(Cypress.env('URL_LOGIN'));
+		cy.get('input[name=email]').type('admin_10@gmail.com');
+		cy.get('input[name=password]').type('Methadone@2017{enter}');
+
+		cy.wait(1234);
+		cy.visit(Cypress.env('URL_COMMON_TEST'));
+
+		if (Cypress.$('.blue-custom').length != 0) {
+			cy.get('.blue-custom').each(function($el, index, $list) {
+				var label = ($el).text();
+				isCorrectSpelling(label);
+
+				cy.wrap($el).should('have.css', 'text-align', 'center');
 			})
+		}
 	})
 
-	it('Buttons', function() {
-		cy.clearCookies()
-
-		cy.visit(Cypress.env('URL_LOGIN'))
-
-		cy.get('input[name=email]').type('admin_10@gmail.com')
-		cy.get('input[name=password]').type('Methadone@2017{enter}')
-		cy.get('.sidebar-toggler').click()
-
-		cy.get('.fa-user-md + span').click()
-		cy.wait(1234)
-		cy.get('.blue-custom').should('contain', 'Thêm')
-
-		cy.get('.fa-sitemap + span').click()
-		cy.wait(1234)
-		cy.get('.blue-custom').should('contain', 'Thêm')
-
-		cy.visit(Cypress.env('URL_SAMPLE_PATIENT'))
-		cy.get('.blue-custom').should('contain', 'Nâng cao')
-
-		cy.visit(Cypress.env('URL_REPORT'))
-		cy.get('.blue-custom').should('contain', 'Tạo báo cáo')
-	})
 })
+
+function checkScreen(screenIndex) {
+	cy.clearCookies();
+	cy.visit(Cypress.env('URL_LOGIN'));
+
+	cy.get('input[name=email]').type(Cypress.env('list_screen')[screenIndex].email);
+	cy.get('input[name=password]').type('Methadone@2017{enter}');
+
+	cy.wait(1234);
+
+	var availableScreens = Cypress.env('list_screen')[screenIndex].availableScreens;
+	for (var j = 0; j < availableScreens.length; ++j) {
+		cy.visit(Cypress.env('URL_LOGIN') + availableScreens[j]);
+		cy.wait(1234);
+
+		if (Cypress.$('.blue-custom').length != 0) {
+			cy.get('.blue-custom').each(function($el, index, $list) {
+				var label = ($el).text();
+				isCorrectSpelling(label);
+
+				cy.wrap($el).should('have.css', 'text-align', 'center');
+			})
+		}
+		
+	}
+}
+
+function httpGet(theUrl, data)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send('htmlString=' + data);
+
+    return xmlHttp.responseText;
+}
+
+function isCorrectSpelling(stringToCheck) {
+	cy.exec('curl http://vspell.com/Spell/SpellCheck --data htmlString=' + encodeURI(stringToCheck)).its('stdout').should('contain', '"SuggestionCount":0');
+}
+
