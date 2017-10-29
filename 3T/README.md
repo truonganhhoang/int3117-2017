@@ -1,8 +1,8 @@
 # Kiểm duyệt mã
-1.Chủ tịch: Nguyễn Đức Thuần
-2.Tác giả: 3T, MID
-3.Người đọc: Phan Thị Hà Trang, Bùi Thị Dung
-4.Người Phản Biện: Nguyễn Bá Tú, Uông Thị Vân
+1. Chủ tịch: Nguyễn Đức Thuần
+2. Tác giả: 3T, MID
+3. Người đọc: Phan Thị Hà Trang, Bùi Thị Dung
+4. Người Phản Biện: Nguyễn Bá Tú, Uông Thị Vân
 5. Thư Ký: Nguyễn Thị Thanh Huyền
 
 # Biên bản cuộc họp
