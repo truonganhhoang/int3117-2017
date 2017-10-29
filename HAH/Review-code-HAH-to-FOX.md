@@ -35,7 +35,7 @@
 	- Hoàn thành: 100%
 
 # Thêm mới bệnh nhân
-## Combox-"Nghề Nghiệp"
+## Kiểm tra combo-box "Nghề Nghiệp"
 1.Kiểm tra giá trị mặc định
 	- Số lượng testcase: 1
 	- Tự động: 100%
