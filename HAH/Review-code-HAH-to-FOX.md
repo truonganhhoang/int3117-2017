@@ -7,7 +7,7 @@
 	- Bùi Châu Anh (Thư kí)
 	- Trần Thị Thu Hường (Kiểm tra)
 3. Kịch bản kiểm thử nhóm FOX trên cypress
-# Common___TC_GUI
+# Common_TC_GUI
 ## Text Area
 1. Kiểm tra giá trị mặc định
 	- Số lượng testcase: 1
