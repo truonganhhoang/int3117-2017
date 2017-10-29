@@ -9,7 +9,7 @@
 	- Mai Thanh Minh (Kiểm tra)
 3. Các kịch bản kiểm thử của nhóm HAH đã viết trên công cụ Cypress
 # Kết quả
-## Common___TC_GUI
+## Common_TC_GUI
 ### Kiểm tra checkbox
 1. Kiểm tra giá trị mặc định của check box
 	- Số testcase: 1
