@@ -27,7 +27,8 @@
 	- Reviewer Nhật nêu nguyên nhân :
  		Chưa tìm ra giải pháp để viết testcase hiệu quả nhất
 	- Chủ tịch và mọi người bàn và đưa ra giải pháp cuối cùng là :
- 		Áp dụng kỹ thuật phân vùng tương đương , nhận thấy có một số vùng lỗi thể hiện là như nhau do đó chỉ cần test một số 	trường hợp đại diện bao gồm :
+ 		Áp dụng kỹ thuật phân vùng tương đương , nhận thấy có một số vùng lỗi thể hiện là như nhau do đó chỉ cần 
+		test một số trường hợp đại diện bao gồm :
 		•	Câu toàn chữ không dấu abc
 		•	Câu chứa chữ có dấu : ê đê
 		•	Câu chứa chữ không dấu nhưng có thanh : hàng
