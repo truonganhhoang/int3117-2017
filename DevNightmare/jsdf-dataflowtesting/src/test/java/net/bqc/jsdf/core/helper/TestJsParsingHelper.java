@@ -1,4 +1,4 @@
-package net.bqc.jsdf.helper;
+package net.bqc.jsdf.core.helper;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

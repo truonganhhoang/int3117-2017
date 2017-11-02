@@ -1,4 +1,4 @@
-package net.bqc.jsdf.helper;
+package net.bqc.jsdf.core.helper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

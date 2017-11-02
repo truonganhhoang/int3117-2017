@@ -1,4 +1,4 @@
-package net.bqc.jsdf.helper;
+package net.bqc.jsdf.core.helper;
 
 import org.mozilla.javascript.CompilerEnvirons;
 import org.mozilla.javascript.Parser;

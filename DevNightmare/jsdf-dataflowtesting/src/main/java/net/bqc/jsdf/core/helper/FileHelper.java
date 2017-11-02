@@ -1,4 +1,4 @@
-package net.bqc.jsdf.helper;
+package net.bqc.jsdf.core.helper;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
