@@ -54,7 +54,7 @@ describe(`Kiem tra textarea`, function() {
     describe('Kiểm tra phần hiển thị của text trên view', function() {
         it('Click hien view', function() {
             cy.wait(delay)
-            cy.get('.nav.nav-tabs li:nth-child(3)').click()
+            cy.get('.nav.navbar-tabs li:nth-child(3)').click()
             cy.wait(delay)
             cy.get('.table-bordered tbody > tr td:nth-child(8) a').first().click()
         })
@@ -97,7 +97,7 @@ describe('Kiem tra textarea', function () {
     describe('Kiểm tra phần hiển thị của text trên view', function() {
         it('Click hien view', function() {
             cy.wait(delay)
-            cy.get('.nav.nav-tabs li:nth-child(3)').click()
+            cy.get('.nav.navbar-tabs li:nth-child(3)').click()
             cy.wait(delay)
             cy.get('.table-bordered tbody > tr td:nth-child(8) a').first().click()
         })
