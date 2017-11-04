@@ -11,10 +11,10 @@ public class TestCDFGenerator {
 
     @Test
     public void testWorking() throws IOException {
-        AstRoot astRoot = JsParsingHelper.getInstance().parse("src/test/resources/check_leap_year.js");
+        AstRoot astRoot = JsParsingHelper.getInstance().parse("src/test/resources/test.js");
         astRoot.visit(astNode -> {
             if (astNode instanceof FunctionNode) {
-                CDFGenerator cdfGenerator = new CDFGenerator(astNode);
+                CDFGenerator cdfGenerator = new CDFGenerator((FunctionNode) astNode);
             }
             return true;
         });

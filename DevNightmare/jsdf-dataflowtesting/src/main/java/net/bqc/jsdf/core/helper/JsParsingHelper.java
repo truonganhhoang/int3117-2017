@@ -15,9 +15,7 @@ public class JsParsingHelper {
 
     private JsParsingHelper() {
         compilerEnvirons = new CompilerEnvirons();
-        compilerEnvirons.setRecordingComments(true);
-        compilerEnvirons.setRecordingLocalJsDocComments(true);
-        compilerEnvirons.setStrictMode(true);
+        compilerEnvirons.setGeneratingSource(true);
     }
 
     public AstRoot parse(String filePath) throws IOException {
