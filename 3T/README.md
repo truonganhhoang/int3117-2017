@@ -1,12 +1,9 @@
-# Kiểm duyệt mã
-1. Chủ tịch: Nguyễn Đức Thuần
-2. Tác giả: 3T, MID
-3. Người đọc: Phan Thị Hà Trang, Bùi Thị Dung
-4. Người Phản Biện: Nguyễn Bá Tú, Uông Thị Vân
-5. Thư Ký: Nguyễn Thị Thanh Huyền
 
-# Biên bản cuộc họp
-# Review code kiểm thử nhóm: MID
+#Bài tập tìm hiểu công cụ kiểm thử của nhóm 3T
+Công cụ tìm hiểu: [sitespeed.io](http://sitespeed.io)
+Youtube link: [https://youtu.be/4Ef34h-GlyQ](https://youtu.be/4Ef34h-GlyQ)
+
+#Bài tập kiểm duyệt mã
 ### Nhóm thực hiện: 3T
 ## Các lỗi chung của tất cả các file kiểm thử
 * Thừa các khoảng trắng không cần thiết, căn đầu dòng không đúng.
