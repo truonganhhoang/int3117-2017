@@ -1,9 +1,9 @@
 
-#Bài tập tìm hiểu công cụ kiểm thử của nhóm 3T
+# Bài tập tìm hiểu công cụ kiểm thử của nhóm 3T
 Công cụ tìm hiểu: [sitespeed.io](http://sitespeed.io)
 Youtube link: [https://youtu.be/4Ef34h-GlyQ](https://youtu.be/4Ef34h-GlyQ)
 
-#Bài tập kiểm duyệt mã
+# Bài tập kiểm duyệt mã
 ### Nhóm thực hiện: 3T
 ## Các lỗi chung của tất cả các file kiểm thử
 * Thừa các khoảng trắng không cần thiết, căn đầu dòng không đúng.
