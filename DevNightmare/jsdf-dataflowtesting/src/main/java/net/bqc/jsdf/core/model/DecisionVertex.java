@@ -7,4 +7,8 @@ public class DecisionVertex extends Vertex {
     public DecisionVertex(AstNode astNode) {
         super(astNode);
     }
+
+    public DecisionVertex(AstNode astNode, Type type) {
+        super(astNode, type);
+    }
 }

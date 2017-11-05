@@ -1,23 +1,34 @@
 package net.bqc.jsdf.core.model;
 
+import net.bqc.jsdf.core.helper.IdGenerator;
 import org.mozilla.javascript.ast.AstNode;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Vertex {
 
     public enum Type {
-        IF_STATEMENT, ENTRY, EXIT
+        IF_STATEMENT, ENTRY, EXIT, VARIABLE_DECLARATION, EXPRESSION_STATEMENT, RETURN_STATEMENT
     }
 
+    protected final int id = IdGenerator.generateVertexId();
     protected AstNode astNode;
     protected Vertex parent;
     protected Type type;
+    protected List<Vertex> targets = new ArrayList<>();
 
     public Vertex() {
-
     }
 
     public Vertex(AstNode astNode) {
         this.astNode = astNode;
+    }
+
+    public Vertex(AstNode astNode, Type type) {
+        this.astNode = astNode;
+        this.type = type;
     }
 
     public AstNode getAstNode() {
@@ -42,5 +53,28 @@ public class Vertex {
 
     public void setParent(Vertex parent) {
         this.parent = parent;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void addTarget(Vertex vertex) {
+        targets.add(vertex);
+    }
+
+    public List<Vertex> getTargets() {
+        return targets;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Vertex)) return false;
+        return ((Vertex) obj).id == this.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
