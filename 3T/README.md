@@ -1,7 +1,7 @@
 
 # Bài tập tìm hiểu công cụ kiểm thử của nhóm 3T
-Công cụ tìm hiểu: [sitespeed.io](http://sitespeed.io)
-Youtube link: [https://youtu.be/4Ef34h-GlyQ](https://youtu.be/4Ef34h-GlyQ)
+* Công cụ tìm hiểu: [sitespeed.io](http://sitespeed.io)
+* Youtube link: [https://youtu.be/4Ef34h-GlyQ](https://youtu.be/4Ef34h-GlyQ)
 
 # Bài tập kiểm duyệt mã
 ### Nhóm thực hiện: 3T
