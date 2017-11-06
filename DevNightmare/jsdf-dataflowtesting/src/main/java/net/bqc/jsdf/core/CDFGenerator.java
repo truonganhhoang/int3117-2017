@@ -72,6 +72,7 @@ public class CDFGenerator {
          **********************************************/
         else if (vertex.getType() == Vertex.Type.IF_STATEMENT) {
             List<Vertex> targets = vertex.getTargets();
+            Vertex successorVertex = targets.get(targets.size() - 1);
 
             if (targets.size() >= 3) { // then-part and else-part and next statement
                 // link if-statement to else-part
@@ -80,11 +81,9 @@ public class CDFGenerator {
                 cfg.addEdge(vertex, elseVertex, elseEdge);
 
                 // link else-part to successor
-                Vertex successorVertex = targets.get(2);
                 createEdges(elseVertex, successorVertex);
             }
             else if (targets.size() >= 1) {
-                Vertex successorVertex = targets.get(targets.size() - 1);
                 Edge.Type edgeType = targets.size() == 2 ? Edge.Type.NEGATIVE : Edge.Type.POSITIVE;
                 // link if-statement to successor
                 Edge ifToSuccessorEdge = new Edge(edgeType);
@@ -99,8 +98,6 @@ public class CDFGenerator {
             }
 
             if (targets.size() >= 2) { // then-part and next statement
-                Vertex successorVertex = targets.get(targets.size() - 1);
-
                 // link if-statement to then-part
                 Vertex thenVertex = targets.get(0);
                 Edge thenEdge = new Edge();
