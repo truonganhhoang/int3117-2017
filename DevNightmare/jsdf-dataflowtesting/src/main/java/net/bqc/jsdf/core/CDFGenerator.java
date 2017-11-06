@@ -21,7 +21,7 @@ public class CDFGenerator {
     private DirectedGraph<Vertex, Edge> cfg =
             new DefaultDirectedGraph<>(Edge.class);
 
-    private Stack<Vertex> vertexStack = new Stack<>();
+    private Vertex exitVertex = new ExitVertex();
 
     public CDFGenerator(FunctionNode functionNode) {
         generate(functionNode);
@@ -31,6 +31,7 @@ public class CDFGenerator {
         // create entry vertex
         Vertex entryVertex = new EntryVertex();
         cfg.addVertex(entryVertex);
+        cfg.addVertex(exitVertex);
 
         functionNode.getBody().visit(new CdfNodeVisitor(entryVertex));
 
@@ -39,7 +40,7 @@ public class CDFGenerator {
 //        JGraphUtils.printFlow(entryVertex);
 
 //        traversal(functionNode.getBody());
-//        JGraphUtils.printGraph(cfg);
+        JGraphUtils.printGraph(cfg);
     }
 
     private void buildCfg(Vertex entryVertex) {
@@ -52,6 +53,13 @@ public class CDFGenerator {
             if (vertex.getTargets().size() > 0) {
                 Edge edge = new Edge();
                 cfg.addEdge(vertex, vertex.getTargets().get(0), edge);
+
+                // next vertex
+                createEdges(vertex.getTargets().get(0), linkVertex);
+            }
+            else {
+                Edge edge = new Edge();
+                cfg.addEdge(vertex, exitVertex, edge);
             }
         }
         /**********************************************
@@ -61,18 +69,30 @@ public class CDFGenerator {
             if (vertex.getTargets().size() > 0) {
                 Edge edge = new Edge();
                 cfg.addEdge(vertex, vertex.getTargets().get(0), edge);
+
+                // next vertex
+                createEdges(vertex.getTargets().get(0), linkVertex);
             }
-            else if (linkVertex != null) {
+            else {
+                Vertex successor = linkVertex != null ? linkVertex : exitVertex;
                 Edge edge = new Edge();
-                cfg.addEdge(vertex, linkVertex, edge);
+                cfg.addEdge(vertex, successor, edge);
             }
+        }
+        /**********************************************
+         * RETURN STATEMENT
+         **********************************************/
+        else if (vertex.getType() == Vertex.Type.RETURN_STATEMENT) {
+            // link return-statement to exit vertex
+            Edge edge = new Edge();
+            cfg.addEdge(vertex, exitVertex, edge);
         }
         /**********************************************
          * IF-STATEMENT
          **********************************************/
         else if (vertex.getType() == Vertex.Type.IF_STATEMENT) {
             List<Vertex> targets = vertex.getTargets();
-            Vertex successorVertex = targets.get(targets.size() - 1);
+            Vertex successorVertex = targets.size() > 0 ? targets.get(targets.size() - 1) : null;
 
             if (targets.size() >= 3) { // then-part and else-part and next statement
                 // link if-statement to else-part
@@ -91,10 +111,9 @@ public class CDFGenerator {
             }
             else if (targets.size() == 0) {
                 // link if-statement to parent successor
-                if (linkVertex != null) {
-                    Edge edge = new Edge();
-                    cfg.addEdge(vertex, linkVertex, edge);
-                }
+                successorVertex = linkVertex != null ? linkVertex : exitVertex;
+                Edge edge = new Edge();
+                cfg.addEdge(vertex, successorVertex, edge);
             }
 
             if (targets.size() >= 2) { // then-part and next statement
@@ -106,6 +125,9 @@ public class CDFGenerator {
                 // link then-part to successor
                 createEdges(thenVertex, successorVertex);
             }
+
+            // next vertex
+            createEdges(successorVertex, linkVertex);
         }
     }
 
