@@ -73,23 +73,39 @@ public class CDFGenerator {
         else if (vertex.getType() == Vertex.Type.IF_STATEMENT) {
             List<Vertex> targets = vertex.getTargets();
 
-            if (targets.size() == 3) { // then-part and else-part and next statement
+            if (targets.size() >= 3) { // then-part and else-part and next statement
+                // link if-statement to else-part
                 Vertex elseVertex = targets.get(1);
                 Edge elseEdge = new Edge(Edge.Type.NEGATIVE);
                 cfg.addEdge(vertex, elseVertex, elseEdge);
 
-                Vertex nextVertex = targets.get(2);
-                // TODO: link else-vertex with next-vertex
+                // link else-part to successor
+                Vertex successorVertex = targets.get(2);
+                Edge elseToSuccessorEdge = new Edge();
+                cfg.addEdge(elseVertex, successorVertex, elseToSuccessorEdge);
+            }
+            else if (targets.size() >= 1) {
+                Vertex successorVertex = targets.get(targets.size() - 1);
+                // link if-statement to successor
+                Edge ifToSuccessorEdge = new Edge();
+                cfg.addEdge(vertex, successorVertex, ifToSuccessorEdge);
+            }
+            else if (targets.size() == 0) {
+                // TODO: link if-statement to parent successor
             }
 
             if (targets.size() >= 2) { // then-part and next statement
+                Vertex successorVertex = targets.get(targets.size() - 1);
+
+                // link if-statement to then-part
                 Vertex thenVertex = targets.get(0);
                 Edge thenEdge = new Edge();
                 cfg.addEdge(vertex, thenVertex, thenEdge);
-            }
 
-            Vertex nextVertex = (targets.size() == 2) ? targets.get(1) : (targets.size() == 1 ? targets.get(0) : linkVertex);
-            // TODO: link if-vertex with next-vertex
+                // link then-part to successor
+                Edge ifToSuccessorEdge = new Edge();
+                cfg.addEdge(vertex, successorVertex, ifToSuccessorEdge);
+            }
         }
     }
 

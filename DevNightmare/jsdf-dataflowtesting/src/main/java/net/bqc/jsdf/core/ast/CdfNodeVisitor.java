@@ -5,9 +5,12 @@ import net.bqc.jsdf.core.model.StatementVertex;
 import net.bqc.jsdf.core.model.Vertex;
 import org.mozilla.javascript.ast.*;
 
+import java.util.Stack;
+
 public class CdfNodeVisitor implements NodeVisitor {
 
     private Vertex currentVertex;
+    private Stack<Vertex> parentStack = new Stack<>();
 
     public CdfNodeVisitor(Vertex entryVertex) {
         this.currentVertex = entryVertex;
@@ -33,6 +36,7 @@ public class CdfNodeVisitor implements NodeVisitor {
 
     private boolean visitReturnStatement(ReturnStatement node) {
         StatementVertex statementVertex = new StatementVertex(node, Vertex.Type.RETURN_STATEMENT);
+        statementVertex.setParent(parentStack.size() > 0 ? parentStack.peek() : null);
         linkVertices(this.currentVertex, statementVertex);
         this.currentVertex = statementVertex;
         return true;
@@ -40,6 +44,9 @@ public class CdfNodeVisitor implements NodeVisitor {
 
     private boolean visitIfStatement(IfStatement node) {
         DecisionVertex ifStatement = new DecisionVertex(node, Vertex.Type.IF_STATEMENT);
+        ifStatement.setParent(parentStack.size() > 0 ? parentStack.peek() : null);
+        // push if-statement to parent stack
+        parentStack.push(ifStatement);
 
         node.getThenPart().visit(new CdfNodeVisitor(ifStatement));
 
@@ -48,6 +55,8 @@ public class CdfNodeVisitor implements NodeVisitor {
             elsePart.visit(new CdfNodeVisitor(ifStatement));
         }
 
+        // pop if-statement from parent stack after being visited
+        parentStack.pop();
         linkVertices(this.currentVertex, ifStatement);
         this.currentVertex = ifStatement;
 
@@ -56,6 +65,7 @@ public class CdfNodeVisitor implements NodeVisitor {
 
     private boolean visitVariableDeclaration(VariableDeclaration node) {
         StatementVertex statementVertex = new StatementVertex(node, Vertex.Type.VARIABLE_DECLARATION);
+        statementVertex.setParent(parentStack.size() > 0 ? parentStack.peek() : null);
         linkVertices(this.currentVertex, statementVertex);
         this.currentVertex = statementVertex;
         return true;
@@ -63,6 +73,7 @@ public class CdfNodeVisitor implements NodeVisitor {
 
     private boolean visitExpressionStatement(ExpressionStatement node) {
         StatementVertex statementVertex = new StatementVertex(node, Vertex.Type.EXPRESSION_STATEMENT);
+        statementVertex.setParent(parentStack.size() > 0 ? parentStack.peek() : null);
         linkVertices(this.currentVertex, statementVertex);
         this.currentVertex = statementVertex;
         return true;
