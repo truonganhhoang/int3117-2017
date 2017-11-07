@@ -14,5 +14,6 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 ## Video giới thiệu công cụ kiểm thử các nhóm tìm hiểu
 - Tên nhóm: youtube link.
 
-- QA: Link giới thiệu: https://www.youtube.com/watch?v=LVhG-2WONcc&feature=em-upload_owner
-      Link demo: https://www.youtube.com/watch?v=qKH0qVudREU&feature=youtu.be
+- QA: Công cụ Mailosaur
+Link giới thiệu: https://www.youtube.com/watch?v=3WEaEo0d5-o&feature=em-upload_owner
+Link demo: https://www.youtube.com/watch?v=aTtepM60FGQ
