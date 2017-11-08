@@ -7,12 +7,12 @@ import org.mozilla.javascript.ast.*;
 
 import java.util.Stack;
 
-public class CdfNodeVisitor implements NodeVisitor {
+public class CDFNodeVisitor implements NodeVisitor {
 
     private Vertex currentVertex;
     private Stack<Vertex> parentStack = new Stack<>();
 
-    public CdfNodeVisitor(Vertex entryVertex) {
+    public CDFNodeVisitor(Vertex entryVertex) {
         this.currentVertex = entryVertex;
     }
 
@@ -48,11 +48,11 @@ public class CdfNodeVisitor implements NodeVisitor {
         // push if-statement to parent stack
         parentStack.push(ifStatement);
 
-        node.getThenPart().visit(new CdfNodeVisitor(ifStatement));
+        node.getThenPart().visit(new CDFNodeVisitor(ifStatement));
 
         AstNode elsePart = node.getElsePart();
         if (elsePart != null) {
-            elsePart.visit(new CdfNodeVisitor(ifStatement));
+            elsePart.visit(new CDFNodeVisitor(ifStatement));
         }
 
         // pop if-statement from parent stack after being visited

@@ -1,16 +1,15 @@
 package net.bqc.jsdf.core;
 
-import net.bqc.jsdf.core.ast.CdfNodeVisitor;
+import net.bqc.jsdf.core.ast.CDFNodeVisitor;
 import net.bqc.jsdf.core.helper.JGraphUtils;
 import net.bqc.jsdf.core.model.*;
 import org.jgrapht.DirectedGraph;
+import org.jgrapht.GraphPath;
+import org.jgrapht.alg.shortestpath.AllDirectedPaths;
 import org.jgrapht.graph.DefaultDirectedGraph;
-import org.mozilla.javascript.Node;
 import org.mozilla.javascript.ast.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * Input: FunctionNode indicate for a function
@@ -21,6 +20,7 @@ public class CDFGenerator {
     private DirectedGraph<Vertex, Edge> cfg =
             new DefaultDirectedGraph<>(Edge.class);
 
+    private Vertex entryVertex = new EntryVertex();
     private Vertex exitVertex = new ExitVertex();
 
     public CDFGenerator(FunctionNode functionNode) {
@@ -29,18 +29,16 @@ public class CDFGenerator {
 
     private void generate(FunctionNode functionNode) {
         // create entry vertex
-        Vertex entryVertex = new EntryVertex();
         cfg.addVertex(entryVertex);
         cfg.addVertex(exitVertex);
 
-        functionNode.getBody().visit(new CdfNodeVisitor(entryVertex));
+        functionNode.getBody().visit(new CDFNodeVisitor(entryVertex));
 
         buildCfg(entryVertex);
 
 //        JGraphUtils.printFlow(entryVertex);
-
 //        traversal(functionNode.getBody());
-        JGraphUtils.printGraph(cfg);
+//        JGraphUtils.printGraph(cfg);
     }
 
     private void buildCfg(Vertex entryVertex) {
@@ -136,6 +134,19 @@ public class CDFGenerator {
             cfg.addVertex(vertex);
             vertex.getTargets().forEach(nextVertex -> createVertices(nextVertex));
         }
+    }
+
+    public DirectedGraph<Vertex, Edge> getGraph() {
+        return cfg;
+    }
+
+    /**
+     * Generate all paths from Entry vertex to Exit vertex
+     */
+    public List<GraphPath> getGraphPaths() {
+        AllDirectedPaths directedPaths = new AllDirectedPaths(cfg);
+        List<GraphPath> graphPaths = directedPaths.getAllPaths(entryVertex, exitVertex, true, null);
+        return graphPaths;
     }
 }
 

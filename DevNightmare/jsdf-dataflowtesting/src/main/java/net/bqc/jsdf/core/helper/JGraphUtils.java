@@ -3,6 +3,9 @@ package net.bqc.jsdf.core.helper;
 import net.bqc.jsdf.core.model.Edge;
 import net.bqc.jsdf.core.model.Vertex;
 import org.jgrapht.Graph;
+import org.jgrapht.GraphPath;
+
+import java.util.List;
 
 public class JGraphUtils {
 
@@ -21,6 +24,17 @@ public class JGraphUtils {
 
     public static String getVertexLabel(Vertex vertex) {
         return vertex.getAstNode() == null ? vertex.getType().toString() : vertex.getAstNode().toSource().trim();
+    }
+
+    public static void printPaths(List<GraphPath> graphPaths) {
+        graphPaths.forEach(path -> {
+            System.out.println("Path: " + path);
+            path.getVertexList().forEach(o -> {
+                Vertex vertex = (Vertex) o;
+                System.out.println(vertex.getId() + ": " + getVertexLabel(vertex));
+            });
+            System.out.println("-----------------------");
+        });
     }
 
     public static void printFlow(Vertex vertex) {
