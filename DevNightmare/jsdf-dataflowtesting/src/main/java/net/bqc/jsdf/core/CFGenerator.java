@@ -1,6 +1,6 @@
 package net.bqc.jsdf.core;
 
-import net.bqc.jsdf.core.ast.CDFNodeVisitor;
+import net.bqc.jsdf.core.ast.CFNodeVisitor;
 import net.bqc.jsdf.core.helper.JGraphUtils;
 import net.bqc.jsdf.core.model.*;
 import org.jgrapht.DirectedGraph;
@@ -12,10 +12,11 @@ import org.mozilla.javascript.ast.*;
 import java.util.List;
 
 /**
+ * Data flow generator
  * Input: FunctionNode indicate for a function
  * Output: A full control flow graph of the function
  */
-public class CDFGenerator {
+public class CFGenerator {
 
     private DirectedGraph<Vertex, Edge> cfg =
             new DefaultDirectedGraph<>(Edge.class);
@@ -23,7 +24,7 @@ public class CDFGenerator {
     private Vertex entryVertex = new EntryVertex();
     private Vertex exitVertex = new ExitVertex();
 
-    public CDFGenerator(FunctionNode functionNode) {
+    public CFGenerator(FunctionNode functionNode) {
         generate(functionNode);
     }
 
@@ -32,7 +33,7 @@ public class CDFGenerator {
         cfg.addVertex(entryVertex);
         cfg.addVertex(exitVertex);
 
-        functionNode.getBody().visit(new CDFNodeVisitor(entryVertex));
+        functionNode.getBody().visit(new CFNodeVisitor(entryVertex));
 
         buildCfg(entryVertex);
 

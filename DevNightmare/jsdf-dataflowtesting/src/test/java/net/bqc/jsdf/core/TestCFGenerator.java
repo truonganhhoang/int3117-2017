@@ -7,7 +7,7 @@ import org.mozilla.javascript.ast.FunctionNode;
 
 import java.io.IOException;
 
-public class TestCDFGenerator {
+public class TestCFGenerator {
 
     @Test
     public void testWorking() throws IOException {
@@ -17,7 +17,7 @@ public class TestCDFGenerator {
                 System.out.println("\n================================");
                 System.out.println("Function: " + ((FunctionNode) astNode).getFunctionName().toSource());
                 System.out.println("================================");
-                CDFGenerator cdfGenerator = new CDFGenerator((FunctionNode) astNode);
+                CFGenerator CFGenerator = new CFGenerator((FunctionNode) astNode);
                 System.out.println("================================");
             }
             return true;
