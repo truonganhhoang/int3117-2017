@@ -23,3 +23,7 @@ cho mã nguồn chứa các câu lệnh đơn, câu lệnh if-else và while. C�
 ```
 net.bqc.jsdf.core.TestCFGenerator
 ```
+
+## Đóng góp
+Phần mềm tốt dù tốt đến đâu cũng không thể không có bug. Nếu bạn phát hiện vấn đề nào trong mã nguồn hoặc muốn đóng góp
+những đoạn mã nguồn tốt hơn, đừng ngần ngại tạo các Issue hoặc Pull request. Chúng tôi sẽ rất vui khi nhận được chúng!
