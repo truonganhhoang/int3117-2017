@@ -13,7 +13,9 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 
 ## Video giới thiệu công cụ kiểm thử các nhóm tìm hiểu
 - Tên nhóm: youtube link.
-
+- 3T: Công cụ Sitespeed.io
+  Link giới thiệu va demo: https://youtu.be/4Ef34h-GlyQ
+  
 - DOA: Cong cu Mailosaur
   Link gioi thieu va demo cua nhom: https://youtu.be/syIVQ3yc5qg
 
