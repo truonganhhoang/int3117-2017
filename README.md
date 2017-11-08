@@ -14,6 +14,12 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 ## Video giới thiệu công cụ kiểm thử các nhóm tìm hiểu
 - Tên nhóm: youtube link.
 
+- DOA: Cong cu Mailosaur
+  Link gioi thieu va demo cua nhom: https://youtu.be/syIVQ3yc5qg
+
 - QA: Link giới thiệu: https://www.youtube.com/watch?v=LVhG-2WONcc&feature=em-upload_owner
       Link demo: https://www.youtube.com/watch?v=qKH0qVudREU&feature=youtu.be
 - BIs:  https://www.youtube.com/watch?v=SoCJPUdXKqo&feature=youtu.be
+
+- AHT: Công cụ BlazeMeter
+  Link giới thiệu va demo: https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be
