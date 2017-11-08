@@ -38,7 +38,7 @@ public class CDFGenerator {
 
 //        JGraphUtils.printFlow(entryVertex);
 //        traversal(functionNode.getBody());
-//        JGraphUtils.printGraph(cfg);
+        JGraphUtils.printGraph(cfg);
     }
 
     private void buildCfg(Vertex entryVertex) {
@@ -122,6 +122,33 @@ public class CDFGenerator {
 
                 // link then-part to successor
                 createEdges(thenVertex, successorVertex);
+            }
+
+            // next vertex
+            createEdges(successorVertex, linkVertex);
+        }
+        /**********************************************
+         * WHILE LOOP
+         **********************************************/
+        else if (vertex.getType() == Vertex.Type.WHILE_LOOP) {
+            List<Vertex> targets = vertex.getTargets();
+            Vertex successorVertex = targets.size() > 0 ? targets.get(targets.size() - 1) : null;
+
+            if (targets.size() >= 2) {
+                // link while body-part with successor
+                Vertex whileBody = targets.get(0);
+                createEdges(whileBody, successorVertex);
+            }
+
+            if (targets.size() >= 1) {
+                Edge.Type edgeType = targets.size() == 2 ? Edge.Type.NEGATIVE : Edge.Type.POSITIVE;
+                // link while-statement with successor
+                cfg.addEdge(vertex, successorVertex, new Edge(edgeType));
+            }
+            else if (targets.size() == 0) {
+                // link while-statement to parent successor or exit vertex
+                successorVertex = linkVertex != null ? linkVertex : exitVertex;
+                cfg.addEdge(vertex, successorVertex, new Edge());
             }
 
             // next vertex

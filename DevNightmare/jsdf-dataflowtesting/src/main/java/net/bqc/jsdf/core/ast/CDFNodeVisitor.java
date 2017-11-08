@@ -30,8 +30,26 @@ public class CDFNodeVisitor implements NodeVisitor {
         else if (node instanceof IfStatement) {
             return visitIfStatement((IfStatement) node);
         }
+        else if (node instanceof WhileLoop) {
+            return visitWhileLoop((WhileLoop) node);
+        }
         
         return true;
+    }
+
+    private boolean visitWhileLoop(WhileLoop node) {
+        DecisionVertex whileLoop = new DecisionVertex(node, Vertex.Type.WHILE_LOOP);
+        whileLoop.setParent(parentStack.size() > 0 ? parentStack.peek() : null);
+        // push while-loop to parent stack
+        parentStack.push(whileLoop);
+
+        node.getBody().visit(new CDFNodeVisitor(whileLoop));
+
+        // pop while-loop from parent stack
+        parentStack.pop();
+        linkVertices(this.currentVertex, whileLoop);
+        this.currentVertex = whileLoop;
+        return false;
     }
 
     private boolean visitReturnStatement(ReturnStatement node) {
@@ -59,7 +77,6 @@ public class CDFNodeVisitor implements NodeVisitor {
         parentStack.pop();
         linkVertices(this.currentVertex, ifStatement);
         this.currentVertex = ifStatement;
-
         return false;
     }
 

@@ -14,7 +14,11 @@ public class TestCDFGenerator {
         AstRoot astRoot = JsParsingHelper.getInstance().parse("src/test/resources/test.js");
         astRoot.visit(astNode -> {
             if (astNode instanceof FunctionNode) {
+                System.out.println("\n================================");
+                System.out.println("Function: " + ((FunctionNode) astNode).getFunctionName().toSource());
+                System.out.println("================================");
                 CDFGenerator cdfGenerator = new CDFGenerator((FunctionNode) astNode);
+                System.out.println("================================");
             }
             return true;
         });

@@ -10,7 +10,8 @@ import java.util.Objects;
 public class Vertex {
 
     public enum Type {
-        IF_STATEMENT, ENTRY, EXIT, VARIABLE_DECLARATION, EXPRESSION_STATEMENT, RETURN_STATEMENT
+        IF_STATEMENT, ENTRY, EXIT, VARIABLE_DECLARATION, EXPRESSION_STATEMENT, RETURN_STATEMENT,
+        WHILE_LOOP
     }
 
     protected final int id = IdGenerator.generateVertexId();
