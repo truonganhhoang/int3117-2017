@@ -5,8 +5,6 @@ import net.bqc.jsdf.core.model.Edge;
 import net.bqc.jsdf.core.model.Vertex;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.GraphPath;
-import org.jgrapht.alg.shortestpath.AllDirectedPaths;
-import org.jgrapht.graph.DefaultDirectedGraph;
 
 import java.util.List;
 
@@ -18,7 +16,6 @@ public class DFGenerator {
     public DFGenerator(DirectedGraph<Vertex, Edge> cfg, List<GraphPath> graphPaths) {
         this.cfg = cfg;
         this.graphPaths = graphPaths;
-
         JGraphUtils.printPaths(graphPaths);
     }
 }

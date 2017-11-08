@@ -141,7 +141,8 @@ public class CDFGenerator {
     }
 
     /**
-     * Generate all paths from Entry vertex to Exit vertex
+     * Generate all possible paths which start from Entry vertex to Exit vertex
+     * @return list of paths
      */
     public List<GraphPath> getGraphPaths() {
         AllDirectedPaths directedPaths = new AllDirectedPaths(cfg);
