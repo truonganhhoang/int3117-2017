@@ -23,3 +23,5 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 
 - AHT: Công cụ BlazeMeter
   Link giới thiệu va demo: https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be
+
+- QTM: Công cụ TestAnywhere [Link giới thiệu va demo](https://www.youtube.com/watch?v=nt3lGzHARis).
