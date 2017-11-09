@@ -2,10 +2,10 @@
 ## Môn: Kiểm thử và đảm bảo chất lượng phần mềm
 
 ### I. Thành phần tham dự
-Chủ tịch: Đào Thị Mơ
-Người đọc: Phạm Thị Thu Hường, Vũ Thị Thùy
-Người phản biện: Nguyễn Thị Tú Anh, Hà Thị Hiện
-Thư ký: Nguyễn Thị Huệ
+* Chủ tịch: Đào Thị Mơ
+* Người đọc: Phạm Thị Thu Hường, Vũ Thị Thùy
+* Người phản biện: Nguyễn Thị Tú Anh, Hà Thị Hiện
+* Thư ký: Nguyễn Thị Huệ
 
 ### II. Nội dung cuộc họp
 	2 nhóm M2H và AHT review code chéo, các lỗi tìm được như sau:
@@ -28,5 +28,7 @@ Thư ký: Nguyễn Thị Huệ
 
 
 
-Chủ tịch cuộc họp				Thư ký cuộc họp
-    Đào Thị Mơ					  Nguyễn Thị Huệ
+### Tìm hiểu công cụ HIVE CI
+
+#### Link giới thiệu: [YouTube](https://www.youtube.com/watch?v=IFkX4O7Pm5I&feature=youtu.be)
+#### Link WebSite Document: [Hive Ci](http://bbc.github.io/hive-ci/)
