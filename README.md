@@ -1,0 +1,1 @@
+NOOBS: Link giới thiệu: https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo: https://youtu.be/PexQzkrYQZ4
