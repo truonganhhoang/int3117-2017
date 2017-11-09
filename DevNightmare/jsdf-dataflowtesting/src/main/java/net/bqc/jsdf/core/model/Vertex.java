@@ -14,6 +14,10 @@ public class Vertex {
         WHILE_LOOP
     }
 
+    public enum DFType {
+
+    }
+
     protected final int id = IdGenerator.generateVertexId();
     protected AstNode astNode;
     protected Vertex parent;

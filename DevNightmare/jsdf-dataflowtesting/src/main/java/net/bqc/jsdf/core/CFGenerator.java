@@ -136,9 +136,12 @@ public class CFGenerator {
             Vertex successorVertex = targets.size() > 0 ? targets.get(targets.size() - 1) : null;
 
             if (targets.size() >= 2) {
-                // link while body-part with successor
                 Vertex whileBody = targets.get(0);
-                createEdges(whileBody, successorVertex);
+                // link while-statement with while body-part
+                cfg.addEdge(vertex, whileBody, new Edge());
+
+                // link while body-part with while-statement
+                createEdges(whileBody, vertex);
             }
 
             if (targets.size() >= 1) {
