@@ -13,7 +13,9 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 
 ## Video giới thiệu công cụ kiểm thử các nhóm tìm hiểu
 - Tên nhóm: youtube link.
-
+- 3T: Công cụ Sitespeed.io
+  Link giới thiệu va demo: https://youtu.be/4Ef34h-GlyQ
+  
 - DOA: Cong cu Mailosaur
   Link gioi thieu va demo cua nhom: https://youtu.be/syIVQ3yc5qg
 
@@ -25,3 +27,7 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
   Link giới thiệu va demo: https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be
 
 - QTM: Công cụ TestAnywhere [Link giới thiệu va demo](https://www.youtube.com/watch?v=nt3lGzHARis).
+
+- TriH: Công cụ Cross Browser Testing 
+  Link giới thiệu va demo: https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be
+
