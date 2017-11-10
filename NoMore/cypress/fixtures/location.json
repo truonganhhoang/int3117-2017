@@ -1,0 +1,28 @@
+{
+  "provinces": [
+    {
+      "name": "Hà Nội",
+      "districts": [
+        {
+          "name": "Ba Đình",
+          "wards": [
+            "Cống Vị",
+            "Điện Biên",
+            "Đội Cấn",
+            "Giảng Võ",
+            "Kim Mã",
+            "Liễu Giai",
+            "Ngọc Hà",
+            "Ngọc Khánh",
+            "Nguyễn Trung Trực",
+            "Phúc Xá",
+            "Quán Thánh",
+            "Thành Công",
+            "Trúc Bạch",
+            "Vĩnh Phúc"
+          ]
+        }
+      ]
+    }
+  ]
+}
