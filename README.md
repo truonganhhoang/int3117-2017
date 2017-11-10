@@ -31,3 +31,5 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 - TriH: Công cụ Cross Browser Testing 
   Link giới thiệu va demo: https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be
 
+- nrop: Công cụ Selenium
+  Link giới thiệu và demo: https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be
