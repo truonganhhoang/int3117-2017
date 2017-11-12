@@ -31,3 +31,4 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 - TriH: Công cụ Cross Browser Testing 
   Link giới thiệu va demo: https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be
 
+- NOOBS: Công cụ Applitools. Link giới thiệu: https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo: https://youtu.be/PexQzkrYQZ4
