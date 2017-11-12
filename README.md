@@ -15,7 +15,7 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 - Tên nhóm: youtube link.
 - 3T: Công cụ Sitespeed.io
   Link giới thiệu va demo: https://youtu.be/4Ef34h-GlyQ
-  
+
 - DOA: Cong cu Mailosaur
   Link gioi thieu va demo cua nhom: https://youtu.be/syIVQ3yc5qg
 
@@ -28,8 +28,10 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 
 - QTM: Công cụ TestAnywhere [Link giới thiệu va demo](https://www.youtube.com/watch?v=nt3lGzHARis).
 
-- TriH: Công cụ Cross Browser Testing 
+- TriH: Công cụ Cross Browser Testing
   Link giới thiệu va demo: https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be
+
+- KT: Công cụ Jasmine [Link giới thiệu va demo](https://www.youtube.com/watch?v=_Wo7kJ2FtYw)
 
 - Report: Công cụ browsershots
 Link giới thiệu và hướng dẫn : https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s 
@@ -38,3 +40,4 @@ Link giới thiệu và hướng dẫn : https://www.youtube.com/watch?v=8cZq1FZ
   Link giới thiệu và demo: https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be
 
 - NOOBS: Công cụ Applitools. Link giới thiệu: https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo: https://youtu.be/PexQzkrYQZ4
+
