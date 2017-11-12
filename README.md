@@ -32,3 +32,12 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
   Link giới thiệu va demo: https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be
 
 - KT: Công cụ Jasmine [Link giới thiệu va demo](https://www.youtube.com/watch?v=_Wo7kJ2FtYw)
+
+- Report: Công cụ browsershots
+Link giới thiệu và hướng dẫn : https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s 
+
+- nrop: Công cụ Selenium
+  Link giới thiệu và demo: https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be
+
+- NOOBS: Công cụ Applitools. Link giới thiệu: https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo: https://youtu.be/PexQzkrYQZ4
+
