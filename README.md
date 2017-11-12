@@ -33,3 +33,6 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 
 - nrop: Công cụ Selenium
   Link giới thiệu và demo: https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be
+
+- NOOBS: Công cụ Applitools. Link giới thiệu: https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo: https://youtu.be/PexQzkrYQZ4
+
