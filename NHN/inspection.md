@@ -1,4 +1,4 @@
-Biên bảnn inspection
+﻿Biên bảnn inspection
 Nhóm NHN và BIs
 ===
 ## Thành viên
@@ -44,7 +44,8 @@ Nhóm BIs
 2.CommonTC_G_21
    Không có vấn đề, đã test được tất cả các màn hình.
 3.CommonTC_G_22
-   Không có vấn đề, đã test được tất cả các màn hình.
+   Vấn đề: Test case không rõ ràng, yêu cầu không đúng với hệ thống
+   Quyết định: Yêu cầu sửa testcase và update hệ thống
 4.CommonTC_G_23
    Vấn đề: Giá trị maxlength là 255 không phải là 10. Không hiện thị thông báo cho người dùng khi nhập quá maxlength.
    Quyết định: Yêu cầu sửa biên bản kiểm thử, thêm phần hiện thị thông báo cho người dùng khi nhập quá maxlength.
