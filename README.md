@@ -41,5 +41,5 @@ Link giới thiệu và hướng dẫn : https://www.youtube.com/watch?v=8cZq1FZ
 
 - NOOBS: Công cụ Applitools. Link giới thiệu: https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo: https://youtu.be/PexQzkrYQZ4
 
-- DTT: Sauce Labs: https://www.youtube.com/watch?v=bZhg7bHVPxk
+- DTT: Công cụ SauceLabs: https://www.youtube.com/watch?v=bZhg7bHVPxk
 
