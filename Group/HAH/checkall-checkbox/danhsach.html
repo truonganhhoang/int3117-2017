@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link rel="StyleSheet" type="text/css" href="css/table.css">
+</head><body>
+		<h2>Danh sách sinh viên</h2>
+		<table>
+			<tr class="TableHead">
+				<td>
+					<input type="checkbox" name="chkall" id="chkall" onclick="javascript:selectAll();">
+				</td>
+				<td>Họ tên</td>
+				<td>Ngày sinh</td>
+				<td>Giới tính</td>
+			</tr>
+			<tr class="UnselectedRow" onclick="javascript:rowClick(this);">
+				<td>
+					<input type="checkbox" name="chk" id="chk1" onclick="javascript:chkClick(this);">
+				</td>
+				<td>Hoàng Văn Ga</td>
+				<td>22/10/1992</td>
+				<td>Nam</td>
+			</tr>
+			<tr class="UnselectedRow" onclick="javascript:rowClick(this);">
+				<td>
+					<input type="checkbox" name="chk" id="chk2" onclick="javascript:chkClick(this);">
+				</td>
+				<td>Ngô Đình Nhu</td>
+				<td>22/10/1992</td>
+				<td>Nam</td>
+			</tr>
+			<tr class="UnselectedRow" onclick="javascript:rowClick(this);">
+				<td>
+					<input type="checkbox" name="chk" id="chk3" onclick="javascript:chkClick(this);">
+				</td>
+				<td>Trần Tố Linh</td>
+				<td>12/6/1992</td>
+				<td>Nữ</td>
+			</tr>
+			<tr class="UnselectedRow" onclick="javascript:rowClick(this);">
+				<td>
+					<input type="checkbox" name="chk" id="chk4" onclick="javascript:chkClick(this);">
+				</td>
+				<td>Trịnh Mạnh</td>
+				<td>13/4/1993</td>
+				<td>Nam</td>
+			</tr>
+		</table>
+	<script type="text/javascript" src="js/table.js"></script>
+</body></html>
+
