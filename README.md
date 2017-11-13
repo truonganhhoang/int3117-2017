@@ -19,8 +19,10 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 - DOA: Cong cu Mailosaur
   Link gioi thieu va demo cua nhom: https://youtu.be/syIVQ3yc5qg
 
-- QA: Link giới thiệu: https://www.youtube.com/watch?v=LVhG-2WONcc&feature=em-upload_owner
-      Link demo: https://www.youtube.com/watch?v=qKH0qVudREU&feature=youtu.be
+- QA: 
+  Link giới thiệu: https://www.youtube.com/watch?v=3WEaEo0d5-o&feature=em-upload_owner
+  Link demo: https://www.youtube.com/watch?v=aTtepM60FGQ
+
 - BIs:  https://www.youtube.com/watch?v=SoCJPUdXKqo&feature=youtu.be
 
 - AHT: Công cụ BlazeMeter
