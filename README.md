@@ -19,9 +19,11 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 - DOA: Cong cu Mailosaur
   Link gioi thieu va demo cua nhom: https://youtu.be/syIVQ3yc5qg
 
-- QA: Link giới thiệu: https://www.youtube.com/watch?v=LVhG-2WONcc&feature=em-upload_owner
-      Link demo: https://www.youtube.com/watch?v=qKH0qVudREU&feature=youtu.be
-- BIs: Công cụ Loader.io: https://www.youtube.com/watch?v=SoCJPUdXKqo&feature=youtu.be
+- QA: 
+  Link giới thiệu: https://www.youtube.com/watch?v=3WEaEo0d5-o&feature=em-upload_owner
+  Link demo: https://www.youtube.com/watch?v=aTtepM60FGQ
+
+- BIs:  https://www.youtube.com/watch?v=SoCJPUdXKqo&feature=youtu.be
 
 - AHT: Công cụ BlazeMeter
   Link giới thiệu va demo: https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be
@@ -43,3 +45,4 @@ Link giới thiệu và hướng dẫn : https://www.youtube.com/watch?v=8cZq1FZ
 
 - DTT: Công cụ SauceLabs: https://www.youtube.com/watch?v=bZhg7bHVPxk
 
+- GGWP: Link giới thiệu về netcraft: https://youtu.be/6ys5qWL30Cw
