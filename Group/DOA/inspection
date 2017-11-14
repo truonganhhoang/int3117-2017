@@ -1,0 +1,123 @@
+	
+	1. Chủ tịch : Đào Thị Minh Nguyệt
+	2. Tác giả : Phùng Thị Lương, Phạm Huy Mạnh
+	3. Reader : Đỗ Trà My,  Phạm Huy Mạnh
+	4. Review : Phùng Thị Lương, Vũ Thị Hương Ly
+	5. Thư ký : Nguyễn Thị Ngàn
+
+	Nhóm DOA : Inspection code của nhóm KT
+	Nhóm KT : Inspection code của nhóm DOA
+
+	Công việc của từng thành viên
+
+1. Chủ tịch - làm việc với tác giả để lên kế hoạch thanh tra, gửi tài liệu, chạy cuộc họp, theo sát với tác giả về việc tiếp tục thanh tra 
+(thường là trưởng nhóm hoặc quản lý dự án)
+
+2. Tác giả - cung cấp tài liệu thanh tra cho người kiểm duyệt, giải thích các tài liệu khi cần thiết, trả lời các câu hỏi, chịu trách nhiệm về việc làm lại dựa trên các ý kiến thanh tra.
+
+Nhóm DOA
+- Test suite 1: Validate dữ liệu trường Số điện thoại
+	THEMMOI_BN_28: Kiểm tra khi dữ liệu  là các ký tự chữ.
+	THEMMOI_BN_29: Nhập dữ liệu  là số có chữ số 0 đầu tiên
+	THEMMOI_BN_30: Kiểm tra chức năng Trim space
+	THEMMOI_BN_31: Kiểm tra định dạng số điện thoại
+	THEMMOI_BN_32: Kiểm tra thông tin không bắt buộc
+
+- Test suite 2: Common test case
+	CommonTC_G_33	Kiểm tra khi dữ liệu  là các ký tự chữ.
+	CommonTC_G_34	Kiểm tra khi nhập dữ liệu là số thập phân (tùy từng chức năng có cho phép hoặc không)
+	CommonTC_G_35	Nhập Dữ liệu  là số âm(tùy từng chức năng có cho phép hoặc không)
+	CommonTC_G_36	Kiểm tra số chữ số trước và sau dấu phẩy vượt quá maxlength (tùy từng chức năng cho phép bao nhiêu)
+	CommonTC_G_37	Kiểm tra chức năng làm tròn( tùy từng chức năng quy định như nào)
+
+Nhóm KT
+- Test suite 1: Textbox "Thôn/Ấp thường trú"
+	THEMMOI_BN_77	Kiểm tra giá trị mặc định
+	THEMMOI_BN_78	Kiểm tra là trường không bắt buộc
+	THEMMOI_BN_79	Kiểm tra tìm kiếm các ký tự đặc biệt
+	THEMMOI_BN_80	Kiểm tra nhập quá maxlength (? ký tự)
+	THEMMOI_BN_81	Kiểm tra khi nhập dữ liệu là các thẻ html
+	THEMMOI_BN_82	Kiểm tra chức năng Trim space
+	THEMMOI_BN_83	Kiểm tra thực hiện thành công khi dữ liệu là chữ tiếng Việt có dấu
+
+- Test suite 2: Common test case
+	CommonTC_G_70	Kiểm tra khi giá trị ngày tháng lớn hơn ngày hiện tại
+	CommonTC_G_71	Kiểm tra khi giá trị ngày tháng là ngày hiện tại
+	CommonTC_G_72	Kiểm tra khi giá trị ngày tháng nhỏ hơn ngày hiện tại
+	CommonTC_G_73	Băt lỗi khi trường Từ ngày lớn hơn trường Đến ngày
+	CommonTC_G_74	Kiểm tra trường Từ ngày bằng trường Đến ngày
+	CommonTC_G_75	Kiểm tra trường Từ ngày nhỏ hơn trường Đến ngày
+
+		
+
+3. Reader - rà soát mã và dừng lại cho ý kiến về đoạn đó
+
+Tổng quan : 
+  Nhóm DOA
+--> Góp ý chung:
++ Khoảng trắng, comment và xuống dòng nên chỉnh lại cho chuẩn convention code
+
+
+- Test suite 1: Validate dữ liệu trường Số điện thoại
+	THEMMOI_BN_28: Kiểm tra khi dữ liệu  là các ký tự chữ.
+		+ Test thành công 100%
+	THEMMOI_BN_29: Nhập dữ liệu  là số có chữ số 0 đầu tiên
+		+ Test thành công 100%
+	THEMMOI_BN_30: Kiểm tra chức năng Trim space
+		+ Test thành công 100%
+	THEMMOI_BN_31: Kiểm tra định dạng số điện thoại
+		+ Test thành công 100%
+	THEMMOI_BN_32: Kiểm tra thông tin không bắt buộc
+		+ Test thành công 100%
+
+- Test suite 2: Common test case
+	CommonTC_G_33	Kiểm tra khi dữ liệu  là các ký tự chữ.
+		+ Lỗi phát sinh: 
+			-cy.get("a[href$='/main/patients']").click() --> trường hợp 1 và 5 lỗi do tìm thấy 3 links
+			-cy.get('a[href$="/main/patients/858/edit" ]') --> get ID user không tồn tại. KHông nên get theo ID 				 cứng.
+			-cy.contains("Không đúng định dạng.") --> trong TH cuối : contains("SĐT không đúng định dạng.")
+	CommonTC_G_34	Kiểm tra khi nhập dữ liệu là số thập phân (tùy từng chức năng có cho phép hoặc không)
+		+ Lỗi phát sinh: 
+			-Dòng 21,40,55,74 thừa ";", dòng 76 thiếu "})" khiến file test bị lỗi
+	CommonTC_G_35	Nhập Dữ liệu  là số âm(tùy từng chức năng có cho phép hoặc không)
+		+ Lỗi tương tự 33
+	CommonTC_G_36	Kiểm tra số chữ số trước và sau dấu phẩy vượt quá maxlength (tùy từng chức năng cho phép bao nhiêu)
+		+ Test thành công 100%
+	CommonTC_G_37	Kiểm tra chức năng làm tròn( tùy từng chức năng quy định như nào)
+
+  Nhóm KT
+	- Các test common chưa duyệt tất cả các url có chứa trường ngày tháng 
+	- Test CommonTC_G_72 chưa đúng yêu cầu.
+
+4. Review - chuyên gia kỹ thuật cho tài liệu đang được thanh tra, Cung cấp ý kiến và câu hỏi
+  Nhóm DOA
+	- Cần comment đầy đủ cho từng test.
+	- Bổ sung cho test ở CommonTC_G_35
+	- Fix lỗi phát sinh
+
+  Nhóm KT
+	- Bổ sung để duyệt tất cả các url
+	- Fix lại test đúng yêu cầu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
