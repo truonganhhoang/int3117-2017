@@ -29,4 +29,4 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |DTT   | Công cụ SauceLabs| https://www.youtube.com/watch?v=bZhg7bHVPxk|
 |GGWP  | Link giới thiệu về netcraft| https://youtu.be/6ys5qWL30Cw|
 |Nhóm M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
-
+|Nhóm BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
