@@ -30,3 +30,4 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |GGWP  | Link giới thiệu về netcraft| https://youtu.be/6ys5qWL30Cw|
 |M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
 |BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
+|HMN| Katalon studio |  https://www.youtube.com/watch?v=r85_ajq3MLU&feature=youtu.be|
