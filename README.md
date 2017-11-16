@@ -22,11 +22,11 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |AHT   | https://www.blazemeter.com/ |https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be |
 |QTM   | TestAnywhere | https://www.youtube.com/watch?v=nt3lGzHARis|
 |TriH  | Cross Browser Testing| https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be|
-|KT    | Jasmine [Link giới thiệu va demo](https://www.youtube.com/watch?v=_Wo7kJ2FtYw)|
+|KT    | Jasmine | https://www.youtube.com/watch?v=_Wo7kJ2FtYw|
 |Report| browsershots| https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s |
 |nrop  | Công cụ Selenium| https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be|
 |NOOBS | Công cụ Applitools. Link giới thiệu| https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo| https://youtu.be/PexQzkrYQZ4|
 |DTT   | Công cụ SauceLabs| https://www.youtube.com/watch?v=bZhg7bHVPxk|
 |GGWP  | Link giới thiệu về netcraft| https://youtu.be/6ys5qWL30Cw|
-|Nhóm M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
-|Nhóm BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
+|M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
+|BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
