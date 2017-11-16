@@ -25,7 +25,7 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |KT    | Jasmine | https://www.youtube.com/watch?v=_Wo7kJ2FtYw|
 |Report| browsershots| https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s |
 |nrop  | Công cụ Selenium| https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be|
-|NOOBS | Công cụ Applitools. Link giới thiệu| https://www.youtube.com/watch?v=oWqUbvQfKn4. Link demo| https://youtu.be/PexQzkrYQZ4|
+|NOOBS | Công cụ Applitools| https://www.youtube.com/watch?v=oWqUbvQfKn4, https://youtu.be/PexQzkrYQZ4|
 |DTT   | Công cụ SauceLabs| https://www.youtube.com/watch?v=bZhg7bHVPxk|
 |GGWP  | Link giới thiệu về netcraft| https://youtu.be/6ys5qWL30Cw|
 |M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
