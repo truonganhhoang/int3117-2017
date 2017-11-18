@@ -1,0 +1,23 @@
+{
+  "admin": {
+    "email": "admin_10@gmail.com",
+    "password": "Methadone@2017",
+    "url": "/main/admin/administrators"
+  },
+  "agency": {
+    "email": "admin_agency_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "doctor": {
+    "email": "doctor_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "nurse": {
+    "email": "nurse_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "storekeeper": {
+    "email": "storekeeper_10@gmail.com",
+    "password": "Methadone@2017"
+  }
+}
