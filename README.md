@@ -31,3 +31,4 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
 |BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
 |HMN| Katalon studio |  https://www.youtube.com/watch?v=r85_ajq3MLU&feature=youtu.be|
+|NoMore| https://hackertarget.com/ |  https://www.youtube.com/watch?v=Qq5mtB2KUSc&feature=youtu.be|
