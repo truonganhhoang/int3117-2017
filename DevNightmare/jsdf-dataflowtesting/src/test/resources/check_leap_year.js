@@ -22,11 +22,3 @@ function max2(a, b, c) {
     else
         return c;
 }
-
-function f() {
-    if (true) {
-        var a = 2;
-        console.log(a);
-    }
-    console.log(a);
-}

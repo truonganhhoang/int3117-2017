@@ -22,6 +22,19 @@ public class JGraphUtils {
         }
     }
 
+
+    public static void printGraphWithVertexType(Graph<Vertex, Edge> g) {
+        g.vertexSet().forEach(vertex -> {
+            System.out.println(
+                    vertex.getId() + ": " + getVertexLabel(vertex) + "\n===>" +
+                    "\ndefs: " + vertex.getDefs() +
+                    "\np-uses: " + vertex.getP_uses() +
+                    "\nc-uses: " + vertex.getC_uses()
+            );
+            System.out.println("-----------------------");
+        });
+    }
+
     public static String getVertexLabel(Vertex vertex) {
         return vertex.getAstNode() == null ? vertex.getType().toString() : vertex.getAstNode().toSource().trim();
     }

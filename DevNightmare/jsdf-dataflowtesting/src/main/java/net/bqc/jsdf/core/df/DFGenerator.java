@@ -1,10 +1,7 @@
 package net.bqc.jsdf.core.df;
 
 import net.bqc.jsdf.core.helper.JGraphUtils;
-import net.bqc.jsdf.core.model.DecisionVertex;
-import net.bqc.jsdf.core.model.Edge;
-import net.bqc.jsdf.core.model.Variable;
-import net.bqc.jsdf.core.model.Vertex;
+import net.bqc.jsdf.core.model.*;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.GraphPath;
 import org.mozilla.javascript.ast.*;
@@ -24,8 +21,8 @@ public class DFGenerator {
         variableMap = new HashMap<>();
         generateVertexType();
 
-        System.out.println(variableMap.keySet());
-
+//        System.out.println(variableMap.keySet());
+        JGraphUtils.printGraphWithVertexType(cfg);
 //        JGraphUtils.printPaths(graphPaths);
     }
 
@@ -51,17 +48,51 @@ public class DFGenerator {
                         addPUses(getVariableNamesInside(condition), vertex);
                     }
                 }
+                else if (vertex instanceof StatementVertex) {
+                    if (vertexAstNode instanceof VariableDeclaration) {
+                        VariableDeclaration variableDeclaration = (VariableDeclaration) vertexAstNode;
+                        List<VariableInitializer> variableInitializers = variableDeclaration.getVariables();
+                        variableInitializers.forEach(initializer -> {
+                            addDefs(getVariableNamesInside(initializer.getTarget()), vertex);
+                            addCUses(getVariableNamesInside(initializer.getInitializer()), vertex);
+                        });
+                    }
+                    else if (vertexAstNode instanceof ExpressionStatement) {
+                        ExpressionStatement expressionStatement = (ExpressionStatement) vertexAstNode;
+                        AstNode expression = expressionStatement.getExpression();
+                        if (expression instanceof Assignment) {
+                            Assignment assignment = (Assignment) expression;
+                            addDefs(getVariableNamesInside(assignment.getLeft()), vertex);
+                            addCUses(getVariableNamesInside(assignment.getRight()), vertex);
+                        }
+                    }
+                    else if (vertexAstNode instanceof ReturnStatement) {
+                        ReturnStatement returnStatement = (ReturnStatement) vertexAstNode;
+                        addCUses(getVariableNamesInside(returnStatement.getReturnValue()), vertex);
+                    }
+                }
             }
         });
     }
 
     private void addPUses(Set<String> variableNames, Vertex vertex) {
+        variableNames.forEach(name -> vertex.addP_uses(getVariableByName(name)));
+    }
+
+    private void addCUses(Set<String> variableNames, Vertex vertex) {
         variableNames.forEach(name -> vertex.addC_uses(getVariableByName(name)));
+    }
+
+    private void addDefs(Set<String> variableNames, Vertex vertex) {
+        variableNames.forEach(name -> vertex.addDefs(getVariableByName(name)));
     }
 
     private Variable getVariableByName(String name) {
         Variable variable = variableMap.get(name);
-        if (variable == null) variableMap.put(name, new Variable(name));
+        if (variable == null) {
+            variable = new Variable(name);
+            variableMap.put(name, variable);
+        }
         return variable;
     }
 
