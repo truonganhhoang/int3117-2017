@@ -3,9 +3,7 @@ package net.bqc.jsdf.core.model;
 import net.bqc.jsdf.core.helper.IdGenerator;
 import org.mozilla.javascript.ast.AstNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Vertex {
 
@@ -23,6 +21,10 @@ public class Vertex {
     protected Vertex parent;
     protected Type type;
     protected List<Vertex> targets = new ArrayList<>();
+
+    protected Set<Variable> p_uses = new HashSet<>();
+    protected Set<Variable> c_uses = new HashSet<>();
+    protected Set<Variable> defs = new HashSet<>();
 
     public Vertex() {
     }
@@ -81,5 +83,29 @@ public class Vertex {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public Set<Variable> getP_uses() {
+        return p_uses;
+    }
+
+    public Set<Variable> getC_uses() {
+        return c_uses;
+    }
+
+    public Set<Variable> getDefs() {
+        return defs;
+    }
+
+    public void addP_uses(Variable variable) {
+        this.p_uses.add(variable);
+    }
+
+    public void addC_uses(Variable variable) {
+        this.c_uses.add(variable);
+    }
+
+    public void addDefs(Variable variable) {
+        this.defs.add(variable);
     }
 }

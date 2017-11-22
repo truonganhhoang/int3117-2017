@@ -10,22 +10,21 @@ import org.jgrapht.GraphPath;
 import org.mozilla.javascript.ast.*;
 
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class DFGenerator {
 
     private DirectedGraph<Vertex, Edge> cfg;
     private List<GraphPath> graphPaths;
-    private Set<Variable> variableSet;
+    private Map<String, Variable> variableMap;
 
     public DFGenerator(DirectedGraph<Vertex, Edge> cfg, List<GraphPath> graphPaths) {
         this.cfg = cfg;
         this.graphPaths = graphPaths;
-        variableSet = new HashSet<>();
+        variableMap = new HashMap<>();
         generateVertexType();
+
+        System.out.println(variableMap.keySet());
 
 //        JGraphUtils.printPaths(graphPaths);
     }
@@ -37,24 +36,34 @@ public class DFGenerator {
             if (vertexAstNode != null) {
                 // p-use
                 if (vertex instanceof DecisionVertex) {
+                    AstNode condition = null;
                     if (vertexAstNode instanceof IfStatement) {
                         IfStatement ifStatement = (IfStatement) vertexAstNode;
-                        AstNode condition = ifStatement.getCondition();
-                        System.out.println("Condition: " + condition.toSource());
-                        System.out.println(getVariableNamesInside(condition));
+                        condition = ifStatement.getCondition();
+                        addPUses(getVariableNamesInside(condition), vertex);
                     }
                     else if (vertexAstNode instanceof WhileLoop) {
                         WhileLoop whileLoop = (WhileLoop) vertexAstNode;
-                        AstNode condition = whileLoop.getCondition();
-                        System.out.println("Condition: " + condition.toSource());
-                        System.out.println(getVariableNamesInside(condition));
+                        condition = whileLoop.getCondition();
+                    }
+
+                    if (condition != null) {
+                        addPUses(getVariableNamesInside(condition), vertex);
                     }
                 }
             }
         });
     }
 
+    private void addPUses(Set<String> variableNames, Vertex vertex) {
+        variableNames.forEach(name -> vertex.addC_uses(getVariableByName(name)));
+    }
 
+    private Variable getVariableByName(String name) {
+        Variable variable = variableMap.get(name);
+        if (variable == null) variableMap.put(name, new Variable(name));
+        return variable;
+    }
 
     private Set<String> getVariableNamesInside(AstNode astNode) {
         NameVisitor nameVisitor = new NameVisitor();
@@ -63,7 +72,6 @@ public class DFGenerator {
     }
 
     private class NameVisitor implements NodeVisitor {
-
         private Set<String> variableNames = new HashSet<>();
 
         @Override
