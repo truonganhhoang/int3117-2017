@@ -1,15 +1,15 @@
-function max(a, b, c) {
-    var max = a;
-
-    if (b > max)
-        max = b;
-
-    if (c > max)
-        max = c;
-
-    return max;
-}
-
+// function max(a, b, c) {
+//     var max = a;
+//
+//     if (b > max)
+//         max = b;
+//
+//     if (c + b > max)
+//         max = c;
+//
+//     return max;
+// }
+//
 function max2(a, b, c) {
     if (a > b) {
         if (a > c)
@@ -21,4 +21,12 @@ function max2(a, b, c) {
         return b;
     else
         return c;
+}
+
+function f() {
+    if (true) {
+        var a = 2;
+        console.log(a);
+    }
+    console.log(a);
 }
