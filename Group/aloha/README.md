@@ -1,1 +1,1 @@
-Link youtube gioi thieu tool ScanMyServer: https://youtu.be/DEHtzlLhKPY
+Link youtube công cụ kiểm thử ScanMyServer: https://www.youtube.com/watch?v=DEHtzlLhKPY&feature=youtu.be
