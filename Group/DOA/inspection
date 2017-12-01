@@ -85,6 +85,8 @@ Tổng quan :
 		+ Test thành công 100%
 	CommonTC_G_37	Kiểm tra chức năng làm tròn( tùy từng chức năng quy định như nào)
 
+	=> Nhom DOA da hoan thanh viec chinh sua nhung loi tren
+
   Nhóm KT
 	- Các test common chưa duyệt tất cả các url có chứa trường ngày tháng 
 	- Test CommonTC_G_72 chưa đúng yêu cầu.
@@ -94,6 +96,7 @@ Tổng quan :
 	- Cần comment đầy đủ cho từng test.
 	- Bổ sung cho test ở CommonTC_G_35
 	- Fix lỗi phát sinh
+	- CommonTC_G_33 la do edit theo id nen khi xoa di no moi bao loi nhu vay con neu dung id co thi no van ok
 
   Nhóm KT
 	- Bổ sung để duyệt tất cả các url
