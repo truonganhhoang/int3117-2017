@@ -5,7 +5,7 @@ describe('Common TC_GUI', function() {
        	.visit('signin')
 
     })
-     it('Nhap du lieu la so am (Sua thong tin benh nhan)', function(){
+    it('Nhap du lieu la so am (Sua thong tin benh nhan)', function(){
       cy
         .get("input[name='email']").type(Cypress.env('USER_DOCTOR'))
         .get("input[name='password']").type(Cypress.env('LOGIN_PASSWORD'))
@@ -24,7 +24,7 @@ describe('Common TC_GUI', function() {
 	      .focused().should('have.attr', 'name', 'mobile_phone')
     })
 
-     it('Nhap du lieu la so am (Them moi don thuoc)',function(){
+    it('Nhap du lieu la so am (Them moi don thuoc)',function(){
       cy
         .get("input[name='email']").type(Cypress.env('USER_DOCTOR'))
         .get("input[name='password']").type(Cypress.env('LOGIN_PASSWORD'))
