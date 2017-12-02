@@ -1,4 +1,4 @@
-package solver.main;
+package ducanhnguyen.solver.main;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -1,4 +1,4 @@
-package solver.standardStrategy.SMTLIB;
+package ducanhnguyen.solver.standardStrategy.SMTLIB;
 
 import java.util.ArrayList;
 

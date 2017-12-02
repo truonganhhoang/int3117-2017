@@ -1,4 +1,4 @@
-package solver.solutionStandardStrategy;
+package ducanhnguyen.solver.solutionStandardStrategy;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;

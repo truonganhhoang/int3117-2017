@@ -1,4 +1,4 @@
-package solver.solverStrategy.z3;
+package ducanhnguyen.solver.solverStrategy.z3;
 
 import java.io.BufferedReader;
 import java.io.IOException;

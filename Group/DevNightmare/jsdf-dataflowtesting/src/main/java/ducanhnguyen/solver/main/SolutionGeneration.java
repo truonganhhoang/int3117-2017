@@ -1,12 +1,12 @@
-package solver.main;
+package ducanhnguyen.solver.main;
 
 import java.util.ArrayList;
 
-import solver.solutionStandardStrategy.IStandardStrategy;
-import solver.solutionStandardStrategy.Z3StandardStrategy;
-import solver.solverStrategy.ISolver;
-import solver.solverStrategy.z3.Z3Configuration;
-import solver.solverStrategy.z3.Z3Solver;
+import ducanhnguyen.solver.solverStrategy.ISolver;
+import ducanhnguyen.solver.solutionStandardStrategy.IStandardStrategy;
+import ducanhnguyen.solver.solutionStandardStrategy.Z3StandardStrategy;
+import ducanhnguyen.solver.solverStrategy.z3.Z3Configuration;
+import ducanhnguyen.solver.solverStrategy.z3.Z3Solver;
 
 public class SolutionGeneration {
 

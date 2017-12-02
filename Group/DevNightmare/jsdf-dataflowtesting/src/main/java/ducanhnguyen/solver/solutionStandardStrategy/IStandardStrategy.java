@@ -1,4 +1,4 @@
-package solver.solutionStandardStrategy;
+package ducanhnguyen.solver.solutionStandardStrategy;
 
 /**
  * This interface is used to normalize the solution which is output of

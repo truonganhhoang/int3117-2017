@@ -1,4 +1,4 @@
-package solver.solverStrategy;
+package ducanhnguyen.solver.solverStrategy;
 
 /**
  * This interface is used to solve the normalized expression

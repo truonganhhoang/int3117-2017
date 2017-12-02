@@ -1,10 +1,11 @@
-package solver.solverStrategy.z3;
+package ducanhnguyen.solver.solverStrategy.z3;
 
 import java.util.ArrayList;
-import solver.main.Utils1;
-import solver.solverStrategy.ISolver;
-import solver.standardStrategy.SMTLIB.CreateSufficientSmtLib;
-import solver.time.Timer;
+
+import ducanhnguyen.solver.main.Utils1;
+import ducanhnguyen.solver.solverStrategy.ISolver;
+import ducanhnguyen.solver.standardStrategy.SMTLIB.CreateSufficientSmtLib;
+import ducanhnguyen.solver.time.Timer;
 
 public class Z3Solver extends Z3Configuration implements ISolver {
 

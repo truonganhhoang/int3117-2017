@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package solver.solverStrategy.z3;
+package ducanhnguyen.solver.solverStrategy.z3;
 
 /**
  *

@@ -1,9 +1,8 @@
-package solver.solverStrategy.random;
+package ducanhnguyen.solver.standardStrategy.SMTLIB;
 
 class Bien {
 	private String name;
 	private int type;
-	private String value;
 
 	@Override
 	public boolean equals(Object b) {
@@ -11,21 +10,6 @@ class Bien {
 		if (tmp.name.equals(name) && tmp.type == type)
 			return true;
 		return false;
-	}
-
-	protected void generateNewValue(int canDuoi, int canTren) {
-		switch (type) {
-		case DOUBLE:
-		case DOUBLE_ARRAY_ONE_DIMENSION:
-		case DOUBLE_ARRAY_TWO_DIMENSION:
-			value = GenerateRandomNumber.SinhRandomSoThuc(canDuoi, canTren) + "";
-			break;
-		case INT:
-		case INT_ARRAY_ONE_DIMENSION:
-		case INT_ARRAY_TWO_DIMENSION:
-			value = GenerateRandomNumber.SinhRandomSoNguyen(canDuoi, canTren) + "";
-			break;
-		}
 	}
 
 	protected Bien(String name, int type) {
@@ -41,13 +25,9 @@ class Bien {
 		return type;
 	}
 
-	protected String getValue() {
-		return value;
-	}
-
 	@Override
 	public String toString() {
-		return name + "=" + value;
+		return name + "," + type;
 	}
 
 	protected static final int DOUBLE = 0;
