@@ -1,22 +1,0 @@
-{
-  "name": "Nguyen Van A",
-  "birth_date": "14/07/1990",
-  "gender": "Nam",
-  "admission_date": "25/05/2017",
-  "province_id": "Hà Nội",
-  "district_id": "Chương Mỹ",
-  "ward_id": "Đại Yên",
-  "resident_province_id": "Hà Nội",
-  "resident_district_id": "Chương Mỹ",
-  "resident_ward_id": "Đại Yên",
-  "identification_type": "CMND",
-  "identification_number": "123456789",
-  "identification_issued_date": "01/01/2010",
-  "identification_issued_by": "CA Hà Nội",
-  "contacts": [
-    {
-      "name": "Tran Thi B",
-      "contact_type": "Vợ/Chồng"
-    }
-  ]
-}
