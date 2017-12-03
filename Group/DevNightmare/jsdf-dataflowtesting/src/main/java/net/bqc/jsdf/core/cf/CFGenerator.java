@@ -1,4 +1,4 @@
-package net.bqc.jsdf.core;
+package net.bqc.jsdf.core.cf;
 
 import net.bqc.jsdf.core.ast.CFNodeVisitor;
 import net.bqc.jsdf.core.helper.JGraphUtils;
@@ -31,6 +31,7 @@ public class CFGenerator {
     private void generate(FunctionNode functionNode) {
         // create entry vertex
         cfg.addVertex(entryVertex);
+        entryVertex.setAstNode(functionNode);
         cfg.addVertex(exitVertex);
 
         functionNode.getBody().visit(new CFNodeVisitor(entryVertex));
@@ -39,7 +40,7 @@ public class CFGenerator {
 
 //        JGraphUtils.printFlow(entryVertex);
 //        traversal(functionNode.getBody());
-        JGraphUtils.printGraph(cfg);
+//        JGraphUtils.printGraph(cfg);
     }
 
     private void buildCfg(Vertex entryVertex) {
