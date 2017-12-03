@@ -17,7 +17,7 @@ Nhóm được giao viết các testcase kiểm thử : "Kiểm tra text - email
 * Nguyễn Thị Phương Duyên: 3 testcase - CommonTC_G_43,44 và THEMMOI_BN_33.
 * Đều thực hiện đủ các testcase, mức độ hoàn thành và tự động là 100%, đã test hoàn chỉnh tất cả các tài khoản - links cần thiết.
 ### 3. Tìm hiểu công cụ SauceLabs:
-* ([Link video hướng dẫn](https://www.youtube.com/watch?v=bZhg7bHVPxk))
+* [Link video hướng dẫn](https://www.youtube.com/watch?v=bZhg7bHVPxk)
 * Các thành viên chia đều nhau học và dịch tài liệu liên quan tới công cụ, làm slide liên quan tới phần mình được chia.
 * Trần Thị Thơ phụ trách làm video.
 ### 4. Khóa học ISTQB:
