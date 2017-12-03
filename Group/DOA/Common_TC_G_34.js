@@ -86,7 +86,6 @@ describe('Common TC_GUI', function() {
         cy.get("input[name='mobile_phone']").type("10.9495")
         cy.get("input[name='admission_date']").type("20/08/2017")
 
-
         cy.get("[ng-submit='form.$valid && createPatient()'] [ng-model='patient.province_id']").click()
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click()
 
@@ -104,7 +103,6 @@ describe('Common TC_GUI', function() {
 
         cy.get("[ng-submit='form.$valid && createPatient()'] [name='resident_district_id']").click()
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click()
-
 
         cy.get("[ng-submit='form.$valid && createPatient()'] [name='resident_ward_id']").click()
         cy.get('.select2-result-label.ui-select-choices-row-inner').eq(0).click()
