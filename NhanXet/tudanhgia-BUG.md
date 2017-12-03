@@ -19,7 +19,7 @@
 ### 2. Bài tập ISTQB
 -	Đạt được chứng chỉ của ISTQB hoàn thành khóa học trực tuyến kiểm thử phần mềm mức cơ bản.
 
-### 3. Bài tập kiểm thử Cypress [Link ca kiểm thử](https://docs.google.com/spreadsheets/d/11RIgqDllbbqXd2xu8N1NyJkfWAnSRIqAox3P2OZD4DQ/edit#gid=726209424)
+### 3. Bài tập kiểm thử Cypress ([Link ca kiểm thử](https://docs.google.com/spreadsheets/d/11RIgqDllbbqXd2xu8N1NyJkfWAnSRIqAox3P2OZD4DQ/edit#gid=726209424))
 Tổng cộng: 15 ca kiểm thử (54 kịch bản kiểm thử)
 - Nguyễn Văn Nhật viết các ca kiểm thử: CommonTC_G_24, 25 (21 kịch bản)
 - Nguyễn Thị Lan viết các ca kiểm thử: CommonTC_G_27, 38; THEMMOI_BN_14, 15, 16, 17, 18 (17)
@@ -33,6 +33,6 @@ Tổng cộng: 15 ca kiểm thử (54 kịch bản kiểm thử)
 **Tồn tại**
 -	Chưa xử lý trường hợp dữ liệu trên máy chủ bị xoá mất hoặc không có dữ liệu để test
 
-### 4. Bài tập tìm hiểu công cụ Assertible [Video hướng dẫn sử dụng](https://www.youtube.com/watch?v=jDlbkc9ZFbk)
+### 4. Bài tập tìm hiểu công cụ Assertible ([Video hướng dẫn sử dụng](https://www.youtube.com/watch?v=jDlbkc9ZFbk))
 - Cả nhóm cùng tìm hiểu công cụ kiểm thử Assertible.
 - Nhật phụ trách làm video hướng dẫn.
