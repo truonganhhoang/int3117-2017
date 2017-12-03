@@ -21,7 +21,7 @@ public class DFGenerator {
         variableMap = new HashMap<>();
 
         generateEntryVertexType();
-//        generateVertexType();
+        generateVertexType();
 
 //        System.out.println(variableMap.keySet());
 //        JGraphUtils.printGraphWithVertexType(cfg);
@@ -137,5 +137,9 @@ public class DFGenerator {
         public Set<String> getVariableNames() {
             return variableNames;
         }
+    }
+
+    public List<GraphPath> getGraphPaths() {
+        return graphPaths;
     }
 }

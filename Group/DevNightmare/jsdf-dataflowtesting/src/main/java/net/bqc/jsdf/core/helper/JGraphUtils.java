@@ -36,17 +36,22 @@ public class JGraphUtils {
     }
 
     public static String getVertexLabel(Vertex vertex) {
-        return vertex.getAstNode() == null ? vertex.getType().toString() : vertex.getAstNode().toSource().trim();
+        return vertex.getAstNode() == null || vertex.getType() == Vertex.Type.ENTRY
+                ? vertex.getType().toString() : vertex.getAstNode().toSource().trim();
     }
 
     public static void printPaths(List<GraphPath> graphPaths) {
         graphPaths.forEach(path -> {
             System.out.println("Path: " + path);
-            path.getVertexList().forEach(o -> {
-                Vertex vertex = (Vertex) o;
-                System.out.println(vertex.getId() + ": " + getVertexLabel(vertex));
-            });
+            printPath(path);
             System.out.println("-----------------------");
+        });
+    }
+
+    public static void printPath(GraphPath graphPath) {
+        graphPath.getVertexList().forEach(o -> {
+            Vertex vertex = (Vertex) o;
+            System.out.println(vertex.getId() + ": " + getVertexLabel(vertex));
         });
     }
 

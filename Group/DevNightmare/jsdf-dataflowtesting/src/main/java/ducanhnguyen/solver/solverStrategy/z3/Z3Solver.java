@@ -24,7 +24,7 @@ public class Z3Solver extends Z3Configuration implements ISolver {
     public void solve() {
         try {
             String formula = new CreateSufficientSmtLib(testcase, equationList).getOutput();
-            System.out.println(formula);
+//            System.out.println(formula);
             Utils1.writeToFile(Smt_Lib_path_file + smtFileName, formula);
 
             Timer timer = new Timer();
