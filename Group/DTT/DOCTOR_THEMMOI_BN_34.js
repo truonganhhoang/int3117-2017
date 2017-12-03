@@ -2,18 +2,21 @@ const delay = 1000
 
 describe('Kiểm tra combo box sắp sếp theo alphabet', function(){
       describe('Đăng nhập ', function() {
-            it('Đăng nhập với tài khoản bác sĩ và chuyển đến trang thêm mới bệnh nhân', function(){
+            it('Đăng nhập với tài khoản bác sĩ', function(){
                   cy.visit('/signin')
                   cy.get('input[name=email]').type('doctor_10@gmail.com')
                   cy.get('input[name=password]').type('Methadone@2017')
                   cy.get('button[type=submit]').click()
                   cy.url().should('include', '/main/doctor/dashboard')
-                  cy.wait(delay)
-                  cy.visit('/main/patients/new')
             })
       })
 
       describe('Thêm mới bệnh nhân ', function(){
+            it('Chuyển đến trang thêm mới bệnh nhân', function () {
+                  cy.wait(delay)
+                  cy.visit('/main/patients/new')
+            })
+
             it("Kiểm tra giá trị của combo-boxđuợc sắp xếp alphabet", function(){
               cy.wait(delay)
               cy.get('div[ng-model="patient.jobs"]').first().click()
