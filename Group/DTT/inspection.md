@@ -11,7 +11,7 @@
 	- Review: chuyên gia kỹ thuật cho tài liệu đang được thanh tra, Cung cấp ý kiến và câu hỏi.
 
 ** Kết quả đánh giá: 
-* CommonTC_GUI - Kiểm tra text - email:
+### 1. CommonTC_GUI - Kiểm tra text - email:
 	CommonTC_G_40: Kiểm tra khi trường email là bắt buộc nhập
 	CommonTC_G_41: Kiểm tra khi trường email là duy nhất
 	CommonTC_G_42: Nhập vượt quá độ dài cho phép của trường dữ liệu trong CSDL 
@@ -25,7 +25,7 @@
 	+ Vẫn còn mắc lỗi chuẩn convention, nên điều chỉnh lại.
 	+ Testcase CommonTC_G_43 chưa hoàn thành 100%.
 
-* Thêm mới bệnh nhân - Kiểm tra combo - box "Nghề nghiệp":
+### 2. Thêm mới bệnh nhân - Kiểm tra combo - box "Nghề nghiệp":
 	THEMMOI_BN_33: Kiểm tra giá trị mặc định
 	THEMMOI_BN_34: Kiểm tra số lượng và sắp xếp các giá trị trong combo
 	THEMMOI_BN_35: Kiểm tra căn lề
