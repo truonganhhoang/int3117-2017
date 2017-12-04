@@ -22,6 +22,7 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |AHT   | https://www.blazemeter.com/ |https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be |
 |QTM   | TestAnywhere | https://www.youtube.com/watch?v=nt3lGzHARis|
 |TriH  | Cross Browser Testing| https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be|
+|FOX   | Browsershots | https://www.youtube.com/watch?v=HfYTWA2oy50 |
 |KT    | Jasmine | https://www.youtube.com/watch?v=_Wo7kJ2FtYw|
 |Report| browsershots| https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s |
 |nrop  | Công cụ Selenium| https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be|
