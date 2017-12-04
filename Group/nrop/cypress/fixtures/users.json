@@ -1,0 +1,27 @@
+{
+  "admin": {
+    "role": "Quản trị hệ thống",
+    "email": "admin_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "admin_agency": {
+    "role": "Trưởng cơ sở",
+    "email": "admin_agency_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "doctor": {
+    "role": "Bác sĩ",
+    "email": "doctor_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "nurse": {
+    "role": "Cấp phát thuốc",
+    "email": "nurse_10@gmail.com",
+    "password": "Methadone@2017"
+  },
+  "storekeeper": {
+    "role": "Quản lý kho",
+    "email": "storekeeper_10@gmail.com",
+    "password": "Methadone@2017"
+  }
+}

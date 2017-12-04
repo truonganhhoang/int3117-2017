@@ -1,0 +1,101 @@
+{
+  "baseUrl": "http://13.76.80.144",
+  "numTestsKeptInMemory": 50,
+  "env" : {
+    "LOGIN_URL": "/signin",
+    "users":[
+      {
+        "role": "Quản trị hệ thống",
+        "user": {
+          "email": "admin_10@gmail.com",
+          "password": "Methadone@2017"
+        },
+        "urls": [
+          "/main/admin/administrators",
+          "/main/admin/administrators/issuing_agency",
+          "/main/admin/administrators/employments",
+          "/main/admin/administrators/maritals",
+          "/main/admin/administrators/financials",
+          "/main/admin/administrators/educations",
+          "/main/admin/administrators/stop_reasons",
+          "/main/admin/administrators/medicine_list",
+          "/main/admin/administrators/manufacturers",
+          "/main/admin/administrators/providers",
+          "/main/admin/administrators/sources",
+          "/main/patients/719/detail/executive_info",
+          "/main/admin/summary_report"
+        ]
+      },
+      {
+        "role": "Trường cơ sở",
+        "user": {
+          "email": "admin_agency_10@gmail.com",
+          "password": "Methadone@2017"
+        },
+        "urls": [
+          "/main/admin_agency/users",
+          "/main/patients/360/detail/executive_info",
+          "/main/patients/360/detail/info",
+          "/main/patients/360/detail/prescription",
+          "/main/patients/360/detail/change_agency_info",
+          "/main/patients/new",
+          "/main/patients/360/edit"
+        ]
+      },
+      {
+        "role": "Bác sĩ",
+        "user": {
+          "email": "doctor_10@gmail.com",
+          "password": "Methadone@2017"
+        },
+        "urls": [
+          "/main/patients/360/detail/executive_info",
+          "/main/patients/360/detail/info",
+          "/main/patients/360/detail/prescription",
+          "/main/patients/360/detail/change_agency_info",
+          "/main/patients/new",
+          "/main/patients/360/edit"
+        ]
+      },
+      {
+        "role": "Cấp phát thuốc",
+        "user": {
+          "email": "nurse_10@gmail.com",
+          "password": "Methadone@2017"
+        },
+        "urls": [
+          "/main/nurses/patients/359/medicine_allocation",
+          "/main/history_falled",
+          "/main/give_up_report",
+          "/main/lost_report",
+          "/main/redundancy_report",
+          "/main/redundancy_lost_report",
+          "/main/sub_medicines",
+          "/main/delivery_sub_vouchers",
+          "/main/received_sub_vouchers"
+        ]
+      },
+      {
+        "role": "Quản lý kho",
+        "user": {
+          "email": "storekeeper_10@gmail.com",
+          "password": "Methadone@2017"
+        },
+        "urls": [
+          "/main/medicine",
+          "/main/delivery_vouchers/26/medicines",
+          "/main/received_vouchers/25/medicines",
+          "/main/received_end_day_vouchers/28/medicines",
+          "/main/check_received_stock_report",
+          "/main/medicine_allocations_report",
+          "/main/report_today",
+          "/main/situation_report",
+          "/main/import_export_medicine",
+          "/main/card_store",
+          "/main/situation_use"
+        ]
+      }
+    ]
+  }
+}
+
