@@ -1,5 +1,6 @@
 package net.bqc.jsdf.core;
 
+import net.bqc.jsdf.core.cf.CFGenerator;
 import net.bqc.jsdf.core.helper.JsParsingHelper;
 import org.junit.Test;
 import org.mozilla.javascript.ast.AstRoot;
