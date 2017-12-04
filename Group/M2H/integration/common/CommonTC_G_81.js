@@ -1,11 +1,18 @@
 describe('Kiểm tra khi ngày tháng bằng ngày tháng hiện tại', function() {
 	beforeEach(function() {
-		cy.visit('signin');
-		cy.get('body > div > div.login.ng-scope > div.content > form > button').click();
-        cy.wait(500);
+		// đăng nhập với tài khoản admin
+		beforeEach(function() {
+	        cy.visit("signin")
+	        cy.get('input[name=email]').type('admin_10@gmail.com')
+	        cy.get('input[name=password]').type('Methadone@2017{enter}')
+	        cy.wait(3000)
+	        cy.visit("main/patients/new")
+		});
 	});
+	// lấy ngày tháng hiện tại
 	var currentDate = new Date();
-	var dateToType = (currentdate.getDate()) + '/' + (currentdate.getMonth()) + '/' + currentdate.getFullYear()
+
+	// đi đến trang quản lý bệnh nhân
 	it('Đến trang quản lý bệnh nhân', function() {
 
 		cy.contains('Quản lý bệnh nhân').click();
@@ -16,8 +23,8 @@ describe('Kiểm tra khi ngày tháng bằng ngày tháng hiện tại', functio
     	cy.get('button.btn blue-custom btn-sm ng-binding').click();
     	cy.wait(500);
 
-    	//chon muc ngay sinh va nhap dateToType
-    	cy.get('input[name=birthdate_to]').type(dateToType).blur();
+    	//Chọn mục ngày sinh và nhậps dateToType
+    	cy.get('input[name=birthdate_to]').type(currentDate).blur();
     	cy.get('div').should('contain', 'Ngày tháng được nhập không được phép bằng ngày hiện tại!')
 
 	})
