@@ -41,7 +41,11 @@ Các ca kiểm thử có thể thực hiện tự động đều được thực
 * Cả nhóm cùng thực hiện tìm hiểu và chạy thử công cụ Sitespeed.io
 * Nguyễn Đức Thuần phụ trách làm video sản phẩm.
 
-#### 4. Bài tập kiểm thử hộp trắng
+#### 4. Bài tập review mã nguồn
+Nhóm 3T đã thực hiện việc review mã nguồn của nhóm MID, đã đưa ra các khuyết điểm trong mã nguồn cypress của nhóm MID và đã góp ý về cách sửa lỗi.
+Chi tiết: [Bài tập review mã nguồn](https://github.com/truonganhhoang/int3117-2017/blob/master/Group/3T/README.md) 
+
+#### 5. Bài tập kiểm thử hộp trắng
 Mã nguồn công cụ của nhóm thực hiện: [GitHub](https://github.com/batu4404/js-data-flow-testing) 
 Giới thiệu qua về công cụ và quá trình thực hiện  (chi tiết xem tại README.md tại link GitHub của công cụ)
 - Công cụ được viết bởi ngôn ngữ Java, sau khi nhận đầu vào là mã nguồn file javascript, chúng tôi sử dụng một thư viện của Java đó là [Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) để phân tích mã nguồn JS thành AST.
@@ -55,5 +59,5 @@ Giới thiệu qua về công cụ và quá trình thực hiện  (chi tiết xe
 | Phan Thị Hà Trang                 	| - Viết giao diện của ứng dụng, thực hiện slides và báo cáo của công cụ |
 | Nguyễn Bá Tú                     	| - Tạo AST từ mã nguồn </br> - Xây dựng CFG từ AST </br> - Lấy các đường thi hành có thể có của chương trình javascript |
 
-#### 5. Khóa học ISTQB
+#### 6. Khóa học ISTQB
 Các thành viên trong nhóm đều học và thực hiện đầy đủ khóa học ISTQB và có chứng chỉ của khóa học.
