@@ -1,6 +1,6 @@
 **Nhóm Report tự nhận xét**
 
-*** Đánh giá điểm: *  **
+*** Đánh giá điểm: ***
 
 - Hoàng Thanh Hằng:  9.5/10
 
@@ -8,13 +8,13 @@
 
 - Nguyễn Thị Hồng Hải: 9.0/10
  
- *** Đạt được : *** 
+*** Đạt được : *** 
 
 ** 1. Phân chia công việc hàng tuần: **
 	Hàng tuần, các bạn trong nhóm em đã tự học các bài tập được giao trên khóa học online, và tự tổng hợp kiến thức. 
 	Một bạn sẽ làm slide và 2 bạn còn lại sẽ cùng thảo luận đánh giá để có một slide thuyết trình tốt.
 
-	#### Kết quả: Nắm được kiến thức cơ bản về kiểm thử.
+#### Kết quả: Nắm được kiến thức cơ bản về kiểm thử.
 
 ** 2. Viết Test case bằng Cypress: **
 
@@ -41,7 +41,7 @@
 
 ** 4. Khóa học ISTQB: **
 
- Các thành viên đều đã tự hoàn thành hết khóa học và đạt được chứng chỉ của khóa học.
+#### Kết quả: Các thành viên đều đã tự hoàn thành hết khóa học và đạt được chứng chỉ của khóa học.
 
 ** 5. Dịch câu hỏi **
 
@@ -51,13 +51,15 @@
 
 - Nguyễn Thị Hồng Hải: Dịch 20 câu sau sang tiếng việt.
 
+
+
 *** Chưa đạt : ***
 
 ** 1. Code kiểm thử hộp trắng **
 
-		Mới chỉ ở mức đọc -hiểu của nhóm Dev's Nightmare
+	Mới chỉ ở mức đọc hiểu của nhóm Dev's Nightmare
 
 ** 2. Code cypress**
 
-		Còn 2 kịch bản mới chỉ tự động 80%.
+	Còn 2 kịch bản mới chỉ tự động 80%.
 
