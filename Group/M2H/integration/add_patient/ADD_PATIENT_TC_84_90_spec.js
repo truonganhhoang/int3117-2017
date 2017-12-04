@@ -1,5 +1,8 @@
 describe('Them moi benh nhan', function() {
+
+  //dang nhap voi tai khoan doctor va vao link them moi benh nhan
   beforeEach(function() {
+
     cy.visit('/signin')
 
     cy.fixture('users').then(users => {
@@ -12,7 +15,8 @@ describe('Them moi benh nhan', function() {
   const getPatientInfoPortlet = function() {
     return cy.get('.portlet').eq(1)
   }
-  //ham hoan thanh cac truong bat buoc
+
+  //ham hoan thanh cac truong bat buoc khac
   const completeRequiredInfo = function() {
     cy.fixture('sample_patient').then(patient => {
 
@@ -43,7 +47,7 @@ describe('Them moi benh nhan', function() {
       // xa tam tru
       cy.doSelect2('div[ng-model="patient.resident_ward_id"]', patient.resident_ward_id)
 
-      /* dien thong tin cmnd
+      /* Đien cac thong tin cmnd
        * Identification type 
        * Number
        * Issued date
@@ -60,6 +64,7 @@ describe('Them moi benh nhan', function() {
     })
   }
   
+  //click button "Submit"
   const submit = function() {
     cy.get('button[type="submit"]').click()
   }
@@ -71,17 +76,6 @@ describe('Them moi benh nhan', function() {
   }
   
   context('Kiem tra truong "Địa chỉ thường trú"', function() {
-
-	afterEach(function(){
-		cy.visit('/signin');
-	    cy.fixture('users').then(users => {
-	      cy.doLoginAs(users.agency);
-	    })
-	    cy.visit('/main/patients')
-	    cy.get('.fa-trash-o').click()
-	    cy.get('.btn-primary')
-	      .contains('Đồng ý').click()
-	})
 	
 	
     it('THEMMOI_BN_84_kiem tra gia trị mac dinh la rong', function() {
@@ -95,11 +89,18 @@ describe('Them moi benh nhan', function() {
     	cy.contains('Tạo mới thành công').should('be.visible')
     })
     
+    /*
+    Tất cả các trường hợp sau đều kiểm tra bằng cách xem ban ghi đầu tiên trong danh sách
+    1. chọn vào icon chỉnh sửa bản ghi đầu tiên trong danh sách bản ghi
+    2. check thông tin hiển thị của trường cần check trong bản ghi vừa thêm mới
+
+    */
     it('THEMMOI_BN_86_kiem tra nhap gia tri dac biet', function(){
     	completeRequiredInfo()
     	typePatientAddress('&^$%#$##')
     	submit()
     	cy.contains('Tạo mới thành công').should('be.visible')
+
     	//kiem tra du lieu hien thi khong bi loi font
     	cy.get('.fa-pencil-square-o').click()
     	cy.get('input[ng-model="patient.address"]')
@@ -114,7 +115,9 @@ describe('Them moi benh nhan', function() {
     	completeRequiredInfo()
     	typePatientAddress('<p>This is some text</p>')
     	submit()
-    	cy.contains('Tạo mới thành công').should('be.visible')
+    	cy.contains('Tạo mới thành công')
+        .should('be.visible')
+
     	//kiem tra du lieu khong bi ma hoa khi view len
     	cy.get('.fa-pencil-square-o').click()
     	cy.get('input[ng-model="patient.address"]')
@@ -125,8 +128,10 @@ describe('Them moi benh nhan', function() {
     	completeRequiredInfo()
     	typePatientAddress(' strim space ')
     	submit()
-    	cy.contains('Tạo mới thành công').should('be.visible')
-    	//kiem tra du lieu da duoc trim space
+    	cy.contains('Tạo mới thành công')
+        .should('be.visible')
+
+    	//kiem tra du lieu da duoc trim space      
     	cy.get('.fa-pencil-square-o').click()
     	cy.get('input[ng-model="patient.address"]')
     	  .should('contain','strim space')
@@ -136,8 +141,10 @@ describe('Them moi benh nhan', function() {
     	completeRequiredInfo()
     	typePatientAddress('tiếng việt có dấu')
     	submit()
-    	cy.contains('Tạo mới thành công').should('be.visible')
-    	//kiem tra hie thi du lieu binh thuong khong bi loi font
+    	cy.contains('Tạo mới thành công')
+        .should('be.visible')
+
+    	//kiem tra hien thi du lieu binh thuong khong bi loi font
     	cy.get('.fa-pencil-square-o').click()
     	cy.get('input[ng-model="patient.address"]')
     	  .should('contain','tiếng việt có dấu')

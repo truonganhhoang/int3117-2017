@@ -33,4 +33,6 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |HMN| Katalon studio |  https://www.youtube.com/watch?v=r85_ajq3MLU&feature=youtu.be|
 |NoMore| https://hackertarget.com/ |  https://www.youtube.com/watch?v=Qq5mtB2KUSc&feature=youtu.be|
 |MID   | BackTrac | https://www.youtube.com/watch?v=nU5gL6AYL-g&feature=youtu.be|
-|Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc
+|Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc |
+|M2H   | http://bbc.github.io/hive-ci/ | https://www.youtube.com/watch?v=IFkX4O7Pm5I&t=1s
+
