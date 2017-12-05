@@ -38,3 +38,4 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc |
 |NHN   | Load Impact | https://www.youtube.com/watch?v=pddCtUgi6gM |
 |M2H   | http://bbc.github.io/hive-ci/ | https://www.youtube.com/watch?v=IFkX4O7Pm5I&t=1s |
+|aloha | https://www.scanmyserver.com/ | https://www.youtube.com/watch?v=DEHtzlLhKPY&feature=youtu.be |
