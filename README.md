@@ -23,7 +23,7 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |QTM   | TestAnywhere | https://www.youtube.com/watch?v=nt3lGzHARis|
 |FOX   | Browsershots | https://www.youtube.com/watch?v=HfYTWA2oy50 |
 |TriH  | Cross Browser Testing| https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be|
-|KT    | Jasmine | https://www.youtube.com/watch?v=_Wo7kJ2FtYw|
+|KT    | Jasmine | https://www.youtube.com/watch?v=Wo7kJ2FtYw |
 |Report| browsershots| https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s |
 |nrop  | Công cụ Selenium| https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be|
 |NOOBS | Công cụ Applitools| https://www.youtube.com/watch?v=oWqUbvQfKn4, https://youtu.be/PexQzkrYQZ4|
@@ -36,5 +36,5 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |NoMore| https://hackertarget.com/ |  https://www.youtube.com/watch?v=Qq5mtB2KUSc&feature=youtu.be|
 |MID   | BackTrac | https://www.youtube.com/watch?v=nU5gL6AYL-g&feature=youtu.be|
 |Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc |
-|M2H   | http://bbc.github.io/hive-ci/ | https://www.youtube.com/watch?v=IFkX4O7Pm5I&t=1s
-
+|NHN   | Load Impact | https://www.youtube.com/watch?v=pddCtUgi6gM |
+|M2H   | http://bbc.github.io/hive-ci/ | https://www.youtube.com/watch?v=IFkX4O7Pm5I&t=1s |
