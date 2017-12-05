@@ -21,17 +21,20 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |BIs   | http://loader.io | https://www.youtube.com/watch?v=SoCJPUdXKqo&feature=youtu.be |
 |AHT   | https://www.blazemeter.com/ |https://www.youtube.com/watch?v=tYd1EB7U3mM&feature=youtu.be |
 |QTM   | TestAnywhere | https://www.youtube.com/watch?v=nt3lGzHARis|
+|FOX   | Browsershots | https://www.youtube.com/watch?v=HfYTWA2oy50 |
 |TriH  | Cross Browser Testing| https://www.youtube.com/watch?v=nyyR3aJHNFY&feature=youtu.be|
-|KT    | Jasmine | https://www.youtube.com/watch?v=_Wo7kJ2FtYw|
+|KT    | Jasmine | https://www.youtube.com/watch?v=Wo7kJ2FtYw |
 |Report| browsershots| https://www.youtube.com/watch?v=8cZq1FZXBAE&t=5s |
 |nrop  | Công cụ Selenium| https://www.youtube.com/watch?v=moNE03B6xIo&feature=youtu.be|
 |NOOBS | Công cụ Applitools| https://www.youtube.com/watch?v=oWqUbvQfKn4, https://youtu.be/PexQzkrYQZ4|
 |DTT   | Công cụ SauceLabs| https://www.youtube.com/watch?v=bZhg7bHVPxk|
 |GGWP  | Link giới thiệu về netcraft| https://youtu.be/6ys5qWL30Cw|
 |M| Browserstack |  https://www.youtube.com/watch?v=Hw21ufTQVTs&t=30s|
+|HAH   | Web Security | https://www.youtube.com/watch?v=n2pn8JKWJos |
 |BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
 |HMN| Katalon studio |  https://www.youtube.com/watch?v=r85_ajq3MLU&feature=youtu.be|
 |NoMore| https://hackertarget.com/ |  https://www.youtube.com/watch?v=Qq5mtB2KUSc&feature=youtu.be|
 |MID   | BackTrac | https://www.youtube.com/watch?v=nU5gL6AYL-g&feature=youtu.be|
-|Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc
-|NHN   | Load Impact | https://www.youtube.com/watch?v=pddCtUgi6gM
+|Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc |
+|NHN   | Load Impact | https://www.youtube.com/watch?v=pddCtUgi6gM |
+|M2H   | http://bbc.github.io/hive-ci/ | https://www.youtube.com/watch?v=IFkX4O7Pm5I&t=1s |
