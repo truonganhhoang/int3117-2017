@@ -1,71 +1,51 @@
-# Nhóm Report tự nhận xét
+# TỰ ĐÁNH GIÁ - nhóm REPORT
+# KIỂM THỬ VÀ ĐẢM BẢO CHẤT LƯỢNG PHẦN MỀM
+## Thành viên - chấm điểm
+- Hoàng Thanh Hằng: 9.5/10
+- Nguyễn Thanh Bình: 9.0/10
+- Nguyễn Thị Hồng Hải: 9.0/10
 
-## Đánh giá điểm:
-	- Hoàng Thanh Hằng:  9.5/10
-        - Nguyễn Thanh Bình: 9.0/10
-	- Nguyễn Thị Hồng Hải: 9.0/10
-	
-## Đạt được : 
-
-	1. Phân chia công việc hàng tuần:
-
-		Hàng tuần, các bạn trong nhóm em đã tự học các bài tập được giao trên khóa học online, và tự tổng hợp kiến thức. 
-		Một bạn sẽ làm slide và 2 bạn còn lại sẽ cùng thảo luận đánh giá để có một slide thuyết trình tốt.
-
-		Kết quả: Nắm được kiến thức cơ bản về kiểm thử.
-
-	2. Viết Test case bằng Cypress: 
-
-		- Hoàng Thanh Hằng   : Phân tích kịch bản , viết testcase kiểm tra cho Chức Năng Xóa ( 3 test case - CommonTC_F12 - 14)
-
-		- Nguyễn Thanh Bình  : Viết testcase cho chức năng kiểm tra trường "Nơi giới thiệu" ( 7 test case - Themmoi_BN_55 - 61)
-
-		- Nguyễn Thị Hồng Hải: Viết testcase kiểm thử chức năng Checkbox, Radio ( 3 test case - CommonTC_F12 - 14) (Do không có radio và checkbox ở trang web chính, nên nhóm đã sử dụng một trang web khác có chứa radio và checkbox để test)
-
-		Kết quả	: Hiểu rõ về hệ thống tool kiếm thử tự động cypress.
-
-	3. Tìm hiểu công cụ kiểm thử Browsershots 
-
-		- Video giới thiệu và demo: https://www.youtube.com/watch?v=8cZq1FZXBAE  (Đã có trên 100 like)
-
-		- Hoàng Thanh Hằng	: Tìm hiểu và thực hiện chính. Hướng dẫn các thành viên trong nhóm về công cụ này.
-
-		- Nguyễn Thanh Bình	: Tìm hiểu công cụ theo hướng dẫn của Hoàng Hằng. 
-
-		- Nguyễn Thị Hồng Hải	: Tìm hiểu công cụ theo hướng dẫn của Hoàng Hằng. 
-
-		Kết quả: Được tìm hiểu thêm về một công cụ kiểm thử khác.
-		
-	4. Thực hiện review code
-	
-		- Nguyễn Thị Hồng Hải- Reader : Đưa ra được một số lỗi tiềm ẩn
-		
-		- Nguyễn Thanh Bình- Reviewer : Tìm được nguyên nhân, đưa ra giải pháp và hoàn thiện sửa đổi đầy đủ theo yêu cầu
-		
-		- Hoàng Thanh Hằng- Thư kí : Theo dõi và ghi lại chi tiết biên bản cuộc họp
-		
-		Các thành viên tích cực thảo luận , làm tốt vai trò của mình, hoàn thành báo, cuộc họp diễn ra thành công.
-
-	5. Khóa học ISTQB:
-
-		Kết quả: Các thành viên đều đã tự hoàn thành hết khóa học và đạt được chứng chỉ của khóa học.
-		
-	6. Dịch câu hỏi
-		- Hoàng Thanh Hằng: Tổng hợp 40 câu hỏi tiếng anh.
-
-		- Nguyễn Thanh Bình: Dịch 20 câu đầu sang tiếng việt.
-
-		- Nguyễn Thị Hồng Hải: Dịch 20 câu sau sang tiếng việt.
+## Chi tiết đánh giá
+### 1. Bài tập khóa học trực tuyến “Software Testing Fundamentals”
+- Hàng tuần, các bạn trong nhóm em đã tự học các bài tập được giao trên khóa học online, và tự tổng hợp kiến thức.
+- Thứ tự mỗi tuần có một thành viên làm slide và 2 thành viên còn lại cùng thảo luận đánh giá để có slide trình bày kiếm thức tốt.
 
 
+**Đạt được**
+- Hoàn thành khóa học nghiêm túc.
+- Nắm được kiến thức cơ bản về kiểm thử phần mềm.
 
-## Chưa đạt : 
+**Tồn tại**
+ Một số phần hiểu chưa đúng, trả lời các câu hỏi (các bàu quiz) chưa đạt điểm tối đa
 
-	1. Code kiểm thử hộp trắng
+### 2. Bài tập ISTQB
+ Đạt được [chứng chỉ ISTQB](https://github.com/truonganhhoang/int3117-2017/tree/master/istqb/REPORT)chứng chỉ ISTQB hoàn thành khóa học trực tuyến kiểm thử phần mềm mức cơ bản.
 
-		Mới chỉ ở mức đọc hiểu của nhóm Dev's Nightmare
+### 3. Bài tập kiểm thử Cypress ([Link ca kiểm thử](https://docs.google.com/spreadsheets/d/11RIgqDllbbqXd2xu8N1NyJkfWAnSRIqAox3P2OZD4DQ/edit#gid=726209424))
+Tổng cộng: 13 ca kiểm thử
+- Hoàng Thanh Hằng: Phân tích kịch bản , viết testcase kiểm tra cho Chức Năng Xóa (3 test case - CommonTC_F12 - 14)
+- Nguyễn Thanh Bình: Viết testcase cho chức năng kiểm tra trường "Nơi giới thiệu" (7 test case - Themmoi_BN_55 - 61)
+- Nguyễn Thị Hồng Hải: Viết testcase kiểm thử chức năng Checkbox, Radio (3 test case - CommonTC_F12 - 14) (Do không có radio và checkbox ở trang web chính, nên nhóm đã sử dụng một trang web khác có chứa radio và checkbox để test)
 
-	2. Code cypress
 
-		Còn 2 kịch bản mới chỉ tự động 80%.
+**Đạt được**
+- Hiểu rõ về công cụ kiểm thử tự động cypress
+- Thực hiện đầy đủ các test case.
+- Các test case chung (common test case) có thể test được trên nhiều màn hình.
+- Tự động hóa ca kiểm thử đạt gần 100%
+
+**Tồn tại**
+- Còn 2 kịch bản mới chỉ tự động được 80%.
+
+### 4. Bài tập tìm hiểu công cụ Browsershots ([Video hướng dẫn sử dụng](https://www.youtube.com/watch?v=8cZq1FZXBAE))
+- Cả nhóm cùng tìm hiểu công cụ kiểm thử Browsershots.
+- Hoàng Thanh Hằng phụ trách làm video hướng dẫn.
+
+### 5. Dịch câu hỏi
+- Hoàng Thanh Hằng: Tổng hợp 40 câu hỏi tiếng Anh.
+- Nguyễn Thanh Bình: Dịch 20 câu đầu sang tiếng Việt.
+- Nguyễn Thị Hồng Hải: Dịch 20 câu sau sang tiếng Việt.
+ 
+### 6. Code kiểm thử hộp trắng
+ Mới chỉ đạt ở mức đọc hiểu code của nhóm DevNightmare
 
