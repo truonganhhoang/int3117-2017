@@ -30,7 +30,7 @@ Tổng cộng có 13 ca kiểm thử, hoàn thành 13/13 ca kiểm thử (có da
 ### 4. Tìm hiểu công cụ Browsershots
 Link video: https://www.youtube.com/watch?v=HfYTWA2oy50  
 ### 5. Hoàn thành khóa học tìm hiểu ISTQB
-Hoàn thành khóa học và nhập câu hỏi trắc nghiệm vào bảng ([Q11 - FOX](https://docs.google.com/spreadsheets/d/1SRUjhmj-8TLGdvhBpk_-BBZETcQx-8is1PxWL171Wd0/edit#gid=1158584517&range=B516)). Ảnh chụp chứng chỉ:
+Hoàn thành khóa học và nhập câu hỏi trắc nghiệm vào bảng ([Q7 - FOX](https://docs.google.com/spreadsheets/d/1SRUjhmj-8TLGdvhBpk_-BBZETcQx-8is1PxWL171Wd0/edit#gid=1158584517&range=B516)). Ảnh chụp chứng chỉ:
 - Mai Thanh Minh: [MaiThanhMinh.jpg](https://github.com/truonganhhoang/int3117-2017/blob/master/istqb/FOX/MaiThanhMinh.jpg)  
 - Nguyễn Thị Phương Anh: [NguyenThiPhuongAnh.jpg](https://github.com/truonganhhoang/int3117-2017/blob/master/istqb/FOX/NguyenThiPhuongAnh.jpg)
 ### 6. Thực hiện review, inspection nhóm HAH:
