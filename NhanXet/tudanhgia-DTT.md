@@ -22,4 +22,7 @@ Nhóm được giao viết các testcase kiểm thử : "Kiểm tra text - email
 * Trần Thị Thơ phụ trách làm video.
 ### 4. Khóa học ISTQB:
 * Các thành viên đều đã tự hoàn thành hết khóa học và đạt được chứng chỉ của khóa học.
+### 5. Inspection review code:
+* Do không đủ nhóm để ghép nên nhóm tự review code của mình, lấy đó làm cơ sở thực hành phần review code trong quy trình kiểm thử và viết báo cáo inspecttion.
+* [Báo cáo inspection](https://github.com/truonganhhoang/int3117-2017/blob/master/Group/DTT/inspection.md) của nhóm.
 
