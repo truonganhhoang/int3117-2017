@@ -11,7 +11,7 @@
 * Mỗi tuần đều làm slide liên quan tới tuần học đó của khóa học.
 ### 2. Viết testcase kiểm thử Cypress:
 Nhóm được giao viết các testcase kiểm thử : "Kiểm tra text - email" trong Common TC_GUI và "Kiểm tra combo-box Nghề nghiệp" trong Thêm mới bệnh nhân. 
-* Tổng cộng 10 testcase.
+* Tổng cộng 10 testcase, các testcase lưu [tại đây](https://github.com/truonganhhoang/int3117-2017/tree/master/Group/DTT).
 * Chu Thị Thơm: 4 testcase - CommonTC_G_40,41,42 và THEMMOI_BN_37.
 * Trần Thị Thơ: 3 testcase - THEMMOI_BN_34,35,36.
 * Nguyễn Thị Phương Duyên: 3 testcase - CommonTC_G_43,44 và THEMMOI_BN_33.
@@ -22,4 +22,5 @@ Nhóm được giao viết các testcase kiểm thử : "Kiểm tra text - email
 * Trần Thị Thơ phụ trách làm video.
 ### 4. Khóa học ISTQB:
 * Các thành viên đều đã tự hoàn thành hết khóa học và đạt được chứng chỉ của khóa học.
+* Chứng chỉ của các thành viên nằm [tại đây](https://github.com/truonganhhoang/int3117-2017/tree/master/istqb).
 
