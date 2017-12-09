@@ -19,13 +19,34 @@ public class DFGenerator {
         this.cfg = cfg;
         this.graphPaths = graphPaths;
         variableMap = new HashMap<>();
+
+        generateEntryVertexType();
         generateVertexType();
 
 //        System.out.println(variableMap.keySet());
-        JGraphUtils.printGraphWithVertexType(cfg);
+//        JGraphUtils.printGraphWithVertexType(cfg);
 //        JGraphUtils.printPaths(graphPaths);
     }
 
+    /**
+     * Add all parameter as def for Entry vertex
+     */
+    private void generateEntryVertexType() {
+        Vertex entryVertex = cfg.vertexSet().stream()
+                .filter(vertex -> vertex.getType() == Vertex.Type.ENTRY)
+                .findFirst().orElse(null);
+        if (entryVertex == null) return;
+
+        AstNode functionNode = entryVertex.getAstNode();
+        if (functionNode instanceof FunctionNode) {
+            List<AstNode> parameters = ((FunctionNode) functionNode).getParams();
+            parameters.forEach(astNode -> addDefs(getVariableNamesInside(astNode), entryVertex));
+        }
+    }
+
+    /**
+     * Get variables and find out which vertices are def, use of them
+     */
     private void generateVertexType() {
         Set<Vertex> vertexSet = cfg.vertexSet();
         vertexSet.forEach(vertex -> {
@@ -116,5 +137,9 @@ public class DFGenerator {
         public Set<String> getVariableNames() {
             return variableNames;
         }
+    }
+
+    public List<GraphPath> getGraphPaths() {
+        return graphPaths;
     }
 }

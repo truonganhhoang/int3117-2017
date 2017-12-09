@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   	
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="1366.0" style="-fx-background-color: f2f2f2;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Open" onAction="#openFile" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Separator layoutX="233.0" layoutY="27.0" orientation="VERTICAL" prefHeight="744.0" prefWidth="6.0" />
+      <Separator layoutX="233.0" layoutY="361.0" prefHeight="0.0" prefWidth="1132.0" />
+      <ChoiceBox fx:id="choiceBoxTarget" layoutX="255.0" layoutY="389.0" prefWidth="150.0"/>
+      <Button layoutX="459.0" layoutY="389.0" mnemonicParsing="false" text="Thực hiện" onAction="#showResult"/>
+      <ListView layoutX="255.0" layoutY="435.0" prefHeight="322.0" prefWidth="1068.0" />
+      <ChoiceBox fx:id="choiceBoxSource" layoutX="252.0" layoutY="33.0" prefWidth="150.0" />
+      <AnchorPane fx:id="sourceOrCfgPane" layoutX="252.0" layoutY="74.0" prefHeight="274.0" prefWidth="1084.0" />
+      <ListView fx:id="listFunction" layoutX="14.0" layoutY="68.0" prefHeight="697.0" prefWidth="200.0" />
+      <Label fx:id="inputFileNameLabel" layoutX="13.0" layoutY="38.0" prefHeight="25.0" prefWidth="200.0" text="No File Choosen" />
+   </children>
+</AnchorPane>
