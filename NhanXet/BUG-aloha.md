@@ -41,3 +41,15 @@
 
 - Nên vừa demo vừa nói thay vì sử dụng slide và notepad => Người nghe dễ hiểu hơn, tiết kiệm thời gian thừa của video.
 
+## 3. Bài tập độ bao phủ kiểm thử
+
+### 3.1. Ưu điểm
+
+- Hoàn thành bài tập, có hình ảnh kết quả kèm theo.
+
+- Code đơn giản, dễ hiểu
+
+### 3.2. Nhược điểm
+
+- Một số testcase đặt tên chưa có ý nghĩa (Ví dụ: `test()`, `test2()`).
+
