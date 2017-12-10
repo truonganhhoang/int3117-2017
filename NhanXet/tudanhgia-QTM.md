@@ -1,7 +1,7 @@
 # BẢN ĐÁNH GIÁ CÁ NHÂN - nhóm QTM
 ## Môn: Kiểm thử và đảm bảo chất lượng phần mềm
 ## Thành viên - chấm điểm
-- Trần Hữu Minh : 9.5/10
+- Trần Hữu Minh : 10/10
 - Lại Nhật Quang : 9.5/10
 - Nguyễn Ngọc Trung : 9.5/10
 ## Chi tiết đánh giá
