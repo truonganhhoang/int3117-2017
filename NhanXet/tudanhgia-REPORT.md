@@ -19,7 +19,7 @@
  Một số phần hiểu chưa đúng, trả lời các câu hỏi (các bàu quiz) chưa đạt điểm tối đa
 
 ### 2. Bài tập ISTQB
- Đạt được [chứng chỉ ISTQB](https://github.com/truonganhhoang/int3117-2017/tree/master/istqb/REPORT)chứng chỉ ISTQB hoàn thành khóa học trực tuyến kiểm thử phần mềm mức cơ bản.
+ Đạt được [chứng chỉ ISTQB](https://github.com/truonganhhoang/int3117-2017/tree/master/istqb/REPORT) chứng chỉ ISTQB hoàn thành khóa học trực tuyến kiểm thử phần mềm mức cơ bản.
 
 ### 3. Bài tập kiểm thử Cypress ([Link ca kiểm thử](https://docs.google.com/spreadsheets/d/11RIgqDllbbqXd2xu8N1NyJkfWAnSRIqAox3P2OZD4DQ/edit#gid=726209424))
 Tổng cộng: 13 ca kiểm thử
@@ -48,4 +48,8 @@ Tổng cộng: 13 ca kiểm thử
  
 ### 6. Code kiểm thử hộp trắng
  Mới chỉ đạt ở mức đọc hiểu code của nhóm DevNightmare
+ 
+### 7. Thực hiện review mã nguồn
+- Hoàn thành đầy đủ tài liệu review, sửa lỗi khi nhận được báo cáo lỗi.
+- [Biên bản họp review mã nguồn](https://github.com/truonganhhoang/int3117-2017/blob/master/Group/Report/inspection-REPORT-and-BUG.md)
 
