@@ -5,7 +5,7 @@
 #### 1.1. Tốt
  - Hoàn thành 4/14 test-case.
  - Thực hiện khá đúng chuẩn Coding Convention.
- 
+
 #### 1.2. Chưa tốt
  - Nhóm chưa hoàn thành hết số test-case được giao, chỉ đạt 4/14 test-case.
  - Định dạng trình bày một số test-case chưa thống nhất.
@@ -25,6 +25,6 @@ Cả nhóm hoàn thành đầy đủ và đúng deadline.
 ### 4. Bài tập Inspection
 
 ### 5. Điểm thành viên
- - Nguyễn Thị Tú Anh: 8.5/10 
- - Nguyễn Thị Huệ: 8.5/10
- - Vũ Thị Thùy: 8.5/10
+ - Nguyễn Thị Tú Anh: 9/10 
+ - Nguyễn Thị Huệ: 9/10
+ - Vũ Thị Thùy: 9/10
