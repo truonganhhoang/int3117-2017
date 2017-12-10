@@ -1,6 +1,6 @@
 # Nhận xét chéo
 ### Nhóm nhận xét: DevNightmare
-### Nhóm được nhận xét: BUG
+### Nhóm được nhận xét: FOX
 
 #### 1. Bài tập Cypress
 * #### Tốt
