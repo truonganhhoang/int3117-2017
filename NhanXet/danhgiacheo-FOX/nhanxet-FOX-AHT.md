@@ -8,7 +8,6 @@
 
 #### 1.2. Chưa tốt
  - Nhóm chưa hoàn thành hết số test-case được giao, chỉ đạt 4/14 test-case.
- - Định dạng trình bày một số test-case chưa thống nhất.
  - Code dài và chưa rõ ràng. 
 
 ### 2. Video giới thiệu công cụ kiểm thử 
