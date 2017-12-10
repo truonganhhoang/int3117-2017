@@ -1,4 +1,4 @@
-﻿# Đánh giá nhóm NHN
+﻿# Đánh giá nhóm QTM
  ## Đánh giá bởi nhóm HAH
  
  ### 1. Bài tập Cypress
