@@ -40,3 +40,5 @@
 ### 2.2. Nhược điểm
 
 - Nên vừa demo vừa nói thay vì sử dụng slide và notepad => Người nghe dễ hiểu hơn, tiết kiệm thời gian thừa của video.
+## 3. Bài tập ISTQB
+- Cả nhóm đều hoàn thành đầy đủ khoá học.

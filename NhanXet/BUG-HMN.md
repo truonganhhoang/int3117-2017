@@ -39,3 +39,5 @@
 ### 2.2. Nhược điểm
 
 - Không
+## 3. Bài tập ISTQB
+- Cả nhóm đều hoàn thành đầy đủ khoá học.
