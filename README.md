@@ -33,7 +33,7 @@ Các nhóm, chuẩn bị slides, trình bày lại trước lớp vào buổi h�
 |HAH   | Web Security | https://www.youtube.com/watch?v=n2pn8JKWJos |
 |BUG| Assertible |  https://www.youtube.com/watch?v=jDlbkc9ZFbk|
 |HMN| Katalon studio |  https://www.youtube.com/watch?v=r85_ajq3MLU&feature=youtu.be|
-|NoMore| https://hackertarget.com/ |  https://www.youtube.com/watch?v=Qq5mtB2KUSc&feature=youtu.be|
+|NoMore| https://hackertarget.com/ |  https://www.youtube.com/watch?v=aj0Pnv-DyuE&feature=youtu.be|
 |MID   | BackTrac | https://www.youtube.com/watch?v=nU5gL6AYL-g&feature=youtu.be|
 |Dev's Nightmare   | Framework TestNG | https://www.youtube.com/watch?v=VnHvy2G-yZc |
 |NHN   | Load Impact | https://www.youtube.com/watch?v=pddCtUgi6gM |
