@@ -16,6 +16,9 @@
  - Đúng nội dung, nội dung đầy đủ, trình bày khá rõ dàng dễ hiểu.
  - Giải thích rõ ràng, dễ theo dõi và làm theo.
 
+#### 2.2. Chưa tốt
+Không.
+
 ### 3. Khóa học ISTQB
 Cả nhóm hoàn thành đầy đủ và đạt được chứng chỉ khóa học.
 
