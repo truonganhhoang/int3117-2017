@@ -1,27 +1,29 @@
-## Đánh giá nhóm: Hello
+## Đánh giá nhóm: NOOBS
 ## Đánh giá bởi nhóm: GGWP
 
 **Chấm điểm**
 
 |    Thành viên   	    | Điểm 	|
 |:---------------------:|:-----:|
-| Nguyễn Văn Biên  		|  8.5  |
-| Lý Văn Mạnh			|  8 	|
-| Nguyễn Hồng Quân  	|  8 	|
-| Nguyễn Trung Hiếu		|  8.5	|
+| Nguyễn Bá Hữu Chí	 	|  9  	|
+| Nguyễn Văn Quyến		|  9 	|
+| Trần Hữu Tuấn	  		|  8 	|
 
 ### 1.	Bài tập Cypress	
 
 #### 1.1. Ưu điểm
+- Hoàn thành đầy đủ các TC.
+
 
 #### 1.2.	Nhược điểm
-- Chưa hoàn thành hết các TC.
-- Các TC còn lại chưa tách riêng thành các file khác nhau.
+- Không có.
 
-### 2.	Video giới thiệu công cụ tosca testsuite
+### 2.	Video giới thiệu công cụ Applitools
 #### 2.1. Ưu điểm
 - Video chất lượng tốt, màn hình đầy đủ.
 - Video có giọng nói.
+- Có trình bày riêng slide giới thiệu
+- Video demo có nhạc nền hay, tạo cảm giác thích thú khi xem.
 
 #### 2.2. Nhược điểm
 - Không có.
@@ -30,5 +32,5 @@
 - Cả nhóm đều hoàn thành đầy đủ khóa học.
 
 ### 4. Thêm câu hỏi vào excel
-#### 4.1. Nhược điểm
-- Chưa thấy link đến các câu hỏi trong excel.
+#### 4.1. Ưu điểm
+- Hoàn thành đầy đủ.
