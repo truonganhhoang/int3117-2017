@@ -10,14 +10,15 @@
 - Thiếu 7 testcase
 
 ### 2.	Video giới thiệu công cụ HackerTarget
-#### link youtube bị hỏng
-![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/bwh6xhfaps_image.png)
+#### Tốt
+- Cơ bản hiểu và truyền đạt khá chi tiết những kiến thức của công cụ
+- Có hình ảnh, âm thanh rõ ràng, dễ nghe dễ hiểu
 
 ### 3.	Điểm
 
 **Thành viên:**
 
-- Hà Hồng Duyên: 7,5/10
-- Nguyễn Lê Hải: 7,5/10
-- Đỗ Ngọc Hoài Thu: 7/10
-- Lê Thị Xuân: 7/10
+- Hà Hồng Duyên: 8,5/10
+- Nguyễn Lê Hải: 9/10
+- Đỗ Ngọc Hoài Thu: 8,5/10
+- Lê Thị Xuân: 8,5/10
