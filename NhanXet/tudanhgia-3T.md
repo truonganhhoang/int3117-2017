@@ -9,9 +9,9 @@
 ### Đánh giá chi tiết theo từng bài tập
 
 #### 1. Khóa học "Software Testing Fundamentals"
-Các thành viên trong nhóm đều học và làm bài tập của từng tuần theo đúng yêu cầu, do có nhiều thuật ngữ tiếng Anh và từ ngữ chuyên ngành khó hiểu nên hơi vẫn mất thời gian học tập và dịch tài liệu.
-Đều đã hoàn thành hết khóa học.
-Mỗi tuần đều làm slide liên quan tới tuần học đó của khóa học.
+- Các thành viên trong nhóm đều học và làm bài tập của từng tuần theo đúng yêu cầu, do có nhiều thuật ngữ tiếng Anh và từ ngữ chuyên ngành khó hiểu nên hơi vẫn mất thời gian học tập và dịch tài liệu.
+- Đều đã hoàn thành hết khóa học.
+- Mỗi tuần đều làm slide liên quan tới tuần học đó của khóa học.
 
 #### 2. Bài tập kiểm thử Cypress
 Xem mã nguồn các ca kiểm thử Cypress của nhóm 3T [tại đây](https://github.com/truonganhhoang/int3117-2017/tree/master/Group/3T)
@@ -46,12 +46,12 @@ Nhóm 3T đã thực hiện việc review mã nguồn của nhóm MID, đã đư
 Chi tiết: [Bài tập review mã nguồn](https://github.com/truonganhhoang/int3117-2017/blob/master/Group/3T/README.md) 
 
 #### 5. Bài tập kiểm thử hộp trắng
-Mã nguồn công cụ của nhóm thực hiện: [GitHub](https://github.com/batu4404/js-data-flow-testing) 
-Giới thiệu qua về công cụ và quá trình thực hiện  (chi tiết xem tại README.md tại link GitHub của công cụ)
-- Công cụ được viết bởi ngôn ngữ Java, sau khi nhận đầu vào là mã nguồn file javascript, chúng tôi sử dụng một thư viện của Java đó là [Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) để phân tích mã nguồn JS thành AST.
-- Sau đó, công cụ sẽ xây dựng Control Flow Graph (CFG) từ AST
-- Từ CFG, lấy ra các đường thi hành cụ thể tương ứng
-- Đối với từng đường thi hành, lấy các ràng buộc theo từng tiêu chí, đưa ra file smt2 rồi đưa vào bộ giải (Z3 Solver) để sinh ra các ca kiểm thử tương ứng.
+- Mã nguồn công cụ của nhóm thực hiện: [GitHub](https://github.com/batu4404/js-data-flow-testing) 
+- Giới thiệu qua về công cụ và quá trình thực hiện  (chi tiết xem tại README.md tại link GitHub của công cụ)
+	- Công cụ được viết bởi ngôn ngữ Java, sau khi nhận đầu vào là mã nguồn file javascript, chúng tôi sử dụng một thư viện của Java đó là [Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) để phân tích mã nguồn JS thành AST.
+	- Sau đó, công cụ sẽ xây dựng Control Flow Graph (CFG) từ AST
+	- Từ CFG, lấy ra các đường thi hành cụ thể tương ứng
+	- Đối với từng đường thi hành, lấy các ràng buộc theo từng tiêu chí, đưa ra file smt2 rồi đưa vào bộ giải (Z3 Solver) để sinh ra các ca kiểm thử tương ứng.
 #### Phân công chi tiết
 | Thành viên | Công việc |
 |----------------|-----------------------------------------------|
