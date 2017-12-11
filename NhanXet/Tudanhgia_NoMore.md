@@ -38,7 +38,7 @@ Tổng cộng: 7/12 ca kiểm thử.
 **Tồn tại**
 -	Chưa xử lý trường hợp dữ liệu trên máy chủ bị xoá mất hoặc không có dữ liệu để test
 
-### 4. Bài tập tìm hiểu công cụ HackerTarget ([Video hướng dẫn sử dụng](https://www.youtube.com/watch?v=Qq5mtB2KUSc&feature=youtu.be))
+### 4. Bài tập tìm hiểu công cụ HackerTarget ([Video hướng dẫn sử dụng](https://www.youtube.com/watch?v=aj0Pnv-DyuE&feature=youtu.be))
 - Cả nhóm cùng tìm hiểu công cụ kiểm thử HackerTarget.
 - Xuân và Thu dịch tài liệu liên quan.
 - Duyên thiết kế nội dung bài video trình bày.
