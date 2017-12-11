@@ -31,3 +31,9 @@ Không thấy trên github
 	
 ### 5. Bài tập kiểm thử hộp trắng
 Chưa thực hiện.
+
+### Chấm điểm
+
+- Nguyễn Phi Hoàng: 9/10
+- Trần Thị Hằng: 9/10
+- Dương Công Hiệu: 9/10

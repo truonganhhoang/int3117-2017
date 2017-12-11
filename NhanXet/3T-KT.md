@@ -1,4 +1,4 @@
-# BẢN NHẬN XÉT NHÓM: TriH
+# BẢN NHẬN XÉT NHÓM: KT
 
 ## Nhóm thực hiện nhận xét: 3T
 
@@ -24,3 +24,9 @@ Nhóm KT đã thực hiện tốt bài tập review mã nguồn.
 	- Video khá dài, cần chọn lọc các chi tiết nổi bật nhất để thu ngắn video.	
 ### 5. Bài tập kiểm thử hộp trắng
 Chưa thực hiện
+
+### Chấm điểm
+
+- Vũ Thị Hương Ly: 9/10
+- Đào Thị Minh Nguyệt: 9/10
+- Phạm Huy Mạnh: 9/10

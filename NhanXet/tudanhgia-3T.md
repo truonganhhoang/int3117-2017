@@ -32,8 +32,8 @@ Các ca kiểm thử có thể thực hiện tự động đều được thực
 #### Phân công chi tiết
 | Thành viên | Công việc |
 |----------------|-----------------------------------------------|
-| Nguyễn Đức Thuần 	| - CommonTC_G_9: 150 ca kiểm thử (trên tất cả các màn hình) </br> - THEMMOI_BN_5: 1 ca kiểm thử </br>|
-| Phan Thị Hà Trang                 	| - CommonTC_G_10: 50 ca kiểm thử (trên tất cả các màn hình) |
+| Nguyễn Đức Thuần 	| - CommonTC_G_9: 100 ca kiểm thử (trên tất cả các màn hình) </br> - THEMMOI_BN_5: 1 ca kiểm thử </br>|
+| Phan Thị Hà Trang                 	| - CommonTC_G_10: 30 ca kiểm thử (trên tất cả các màn hình) |
 | Nguyễn Bá Tú                     	| - THEMMOI_BN_1: 1 ca kiểm thử |
 
 #### 3. Bài tập tìm hiểu công cụ SiteSpeed.io
