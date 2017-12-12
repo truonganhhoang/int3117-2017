@@ -17,6 +17,6 @@
 5. Bài tập kiểm thử hộp trắng
 - Chưa làm
 6. Điểm
-Nguyễn Văn Hải 9/10
-Hoàng Trung Hiếu 9/10
-Nguyễn Văn Báu 8.5/10
+- Nguyễn Văn Hải 9/10
+- Hoàng Trung Hiếu 9/10
+- Nguyễn Văn Báu 8.5/10
