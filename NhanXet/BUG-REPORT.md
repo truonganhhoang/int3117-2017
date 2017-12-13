@@ -7,8 +7,8 @@
 |      Thành viên     	| Điểm 	|
 |:-------------------:	|:----:	|
 |   Hoàng Thanh Hằng  	|  9.5 	|
-|  Nguyễn Thanh Bình  	|  9.5 	|
-| Nguyễn Thị Hồng Hải 	|  9.5 	|
+|  Nguyễn Thanh Bình  	|   9  	|
+| Nguyễn Thị Hồng Hải 	|   9  	|
 
 ## 1. Bài tập Cypress
 
@@ -28,13 +28,13 @@
 
 ### 2.1. Ưu điểm
 
-- Video chất lượng tốt, màn hình đầy đủ, có nhạc nền.
+- Có sự tìm hiểu về công cụ, nêu được một số đặc điểm về chức năng và các sử dụng.
+
+- Video chất lượng tốt, màn hình đầy đủ.
 
 ### 2.2. Nhược điểm
 
-- Video chỉ dùng slide và chữ hiện lên gây đơn điệu, nhàm chán.
-
-- Chưa có các bước demo sử dụng công cụ Browsershots,
+- Chưa có các bước demo sử dụng công cụ Browsershots. Nên demo kèm thuyết minh lời nói thay vì sử dụng slide và nhạc nền.
  
 - Chưa phân tích kết quả công cụ trả về sau khi test một url.
 
