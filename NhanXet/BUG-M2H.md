@@ -27,7 +27,7 @@
 ### 2.1. Ưu điểm
 
 - Nêu được chức năng, nền tảng, thành phần của công cụ.
-- Video có lời nói và nhạc nền, hình ảnh rõ ràng.
+- Video có lời nói, nhạc nền và hình ảnh rõ ràng.
 
 ### 2.2. Nhược điểm
 
