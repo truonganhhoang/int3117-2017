@@ -1,4 +1,4 @@
-# Đánh giá nhóm: `BIs`
+# Đánh giá nhóm `BIs`
 
 **Đánh giá bởi**: Nhóm `BUG`
 
@@ -6,9 +6,9 @@
 
 |    Thành viên    	| Điểm 	|
 |:----------------:	|:----:	|
-| Phùng Văn Phương 	|  9.5 	|
-| Hoàng Thị Lệ Thu 	|   9  	|
-|    Đỗ Văn Nam    	|   9  	|
+| Phùng Văn Phương 	|   9  	|
+| Hoàng Thị Lệ Thu 	|  8.5 	|
+|    Đỗ Văn Nam    	|  8.5 	|
 
 ## 1.	Bài tập Cypress
 
@@ -20,11 +20,11 @@
 
 - Tự động hóa ca kiểm thử đạt gần 100%.
 
-### 1.2.	Nhược điểm
+### 1.2. Nhược điểm
 
 - `CommonTC_G_23`, `THEMMOI_BN_24` có lỗi syntax, khi mở bằng IDE bị báo đỏ.
 
-## 2.	Video giới thiệu công cụ Loader.io
+## 2. Video giới thiệu công cụ Loader.io
 
 ### 2.1. Ưu điểm
 
