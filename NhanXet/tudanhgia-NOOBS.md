@@ -28,7 +28,7 @@
  * Tuấn, Chí tìm hiểu, làm slide và video giới thiệu Applitools
 
  ### Thực hiện review code cypress nhóm NOOBS
- * Chi tiết được viết trong file [inspection.md](https://github.com/truonganhhoang/int3117-2017/blob/master/Group/GGWP/inspection.md)
+ * Chi tiết được viết trong file [inspection.md]
  #### Đạt được
  * Kĩ năng làm việc nhóm
  * Khả năng tìm hiểu một công cụ kiểm thử
