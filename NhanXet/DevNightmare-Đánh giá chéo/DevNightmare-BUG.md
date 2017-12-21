@@ -17,5 +17,5 @@
 Hoàn thành inspection, đã sửa lỗi theo mô tả.
 #### 5. Điểm thành viên
 * Trần Thị Thanh Huyền : 9/10
-* Nguyễn Thị Lan : 9/10
-* Nguyễn Văn Nhật : 9.5/10
+* Nguyễn Thị Lan : 9.5/10
+* Nguyễn Văn Nhật : 9/10
