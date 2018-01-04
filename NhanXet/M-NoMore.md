@@ -7,7 +7,7 @@
 
 #### b.	Chưa tốt
 - Căn lề, xuống dòng ở một số testcase chưa theo chuẩn.
-- Thiếu 7 testcase
+
 
 ### 2.	Video giới thiệu công cụ HackerTarget
 #### Tốt
